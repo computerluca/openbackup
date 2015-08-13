@@ -87,7 +87,7 @@ public class Commerciale {
         }
         try {
             doc = builder.parse(input);
-        } catch (SAXException | IOException ex) {
+        } catch (SAXException) {
             Logger.getLogger(Commerciale.class.getName()).log(Level.SEVERE, null, ex);
             log.error(ex);
 

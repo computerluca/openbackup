@@ -87,7 +87,7 @@ public class Commerciale {
         }
         try {
             doc = builder.parse(input);
-        } catch (SAXException | IOException ex) {
+        } catch (IOException ex) {
             Logger.getLogger(Commerciale.class.getName()).log(Level.SEVERE, null, ex);
             log.error(ex);
 
@@ -377,7 +377,7 @@ public class Commerciale {
         setXpath2(XPathFactory.newInstance().newXPath());
         String arr = null;
         Double arro = 0.00;
-        List<Double> list = new ArrayList<>();
+        List<Double> list = new ArrayList<Double>();
         String expression2 = "FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DettaglioLinee";
         try {
             this.setNode((NodeList) getXpath2().compile(expression2).evaluate(getDoc(), XPathConstants.NODESET));
