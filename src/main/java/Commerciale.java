@@ -8,7 +8,7 @@ import java.io.IOException;
 import org.xml.sax.SAXException;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
-public class Commerciale(){
+public class Commerciale{
 	public DocumentBuilderFactory builderFactory;
 	public DocumentBuilder builder;
 	public String file;
@@ -41,8 +41,8 @@ public Double somma_iva_dettagli(){
         try {
             prezzo_totale = xpath.compile(expression2).evaluate(this.xmlDocument);
 
-        } catch (XPathExpressionException ex) {
-            Logger.getLogger(FEPACHECKXML.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+        catch (XPathExpressionException ex) {
         }
 
         prezzo_tot = Double.parseDouble(prezzo_totale);
