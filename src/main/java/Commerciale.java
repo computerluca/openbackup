@@ -15,22 +15,22 @@ public class Commerciale{
 	public Document xmlDocument;
 	public XPath xPath;
  public Commerciale (String file_xml){
-	builderFactory = DocumentBuilderFactory.newInstance();
-	builder = null;
+	this.builderFactory = DocumentBuilderFactory.newInstance();
+	this.builder = null;
 try {
-    builder = builderFactory.newDocumentBuilder();
+    this.builder = builderFactory.newDocumentBuilder();
 } catch (ParserConfigurationException e) {
     e.printStackTrace();  
 }
 	this.file=file_xml;
 	try {
-    xmlDocument = builder.parse(new ByteArrayInputStream(file.getBytes()));
+    this.xmlDocument = builder.parse(new ByteArrayInputStream(file.getBytes()));
 } catch (SAXException e) {
     e.printStackTrace();
 } catch (IOException e) {
     e.printStackTrace();
 }
-xpath = XPathFactory.newInstance().newXPath();
+this.xpath = XPathFactory.newInstance().newXPath();
 }
 public Double somma_iva_dettagli(){
  
@@ -39,7 +39,7 @@ public Double somma_iva_dettagli(){
 
         String expression2 = "sum(FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DettaglioLinee/PrezzoTotale)";
         try {
-            prezzo_totale = xpath.compile(expression2).evaluate(this.xmlDocument);
+            prezzo_totale = this.xpath.compile(expression2).evaluate(this.xmlDocument);
 
         } 
         catch (XPathExpressionException ex) {
