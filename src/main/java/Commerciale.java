@@ -24,7 +24,7 @@ try {
 }
 	this.file=file_xml;
 	try {
-    this.xmlDocument = builder.parse(new ByteArrayInputStream(file.getBytes()));
+    this.xmlDocument = this.builder.parse(new ByteArrayInputStream(this.file.getBytes()));
 } catch (SAXException e) {
     e.printStackTrace();
 } catch (IOException e) {
