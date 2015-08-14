@@ -30,7 +30,7 @@ try {
 } catch (IOException e) {
     e.printStackTrace();
 }
-this.xpath = XPathFactory.newInstance().newXPath();
+this.xPath = XPathFactory.newInstance().newXPath();
 }
 public Double somma_iva_dettagli(){
  
@@ -39,7 +39,7 @@ public Double somma_iva_dettagli(){
 
         String expression2 = "sum(FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DettaglioLinee/PrezzoTotale)";
         try {
-            prezzo_totale = this.xpath.compile(expression2).evaluate(this.xmlDocument);
+            prezzo_totale = this.xPath.compile(expression2).evaluate(this.xmlDocument);
 
         } 
         catch (XPathExpressionException ex) {
