@@ -15,21 +15,21 @@ public class JavaVersion {
  private Double somma_iva_dettagli;
 
  public void setiva(Double iva) {
-  JavaVersion.iva = iva;
+  this.iva = iva;
  }
 
  public Double getiva() {
   return iva;
  }
  public void setsomma_iva_dettagli(Double sid) {
-  JavaVersion.somma_iva_dettagli = 10.0;
+  this.somma_iva_dettagli = 10.0;
  }
 
  public Double getsomma_iva_dettagli() {
   return somma_iva_dettagli;
  }
  public void ivacambiata(ValueChangeEvent event) {
-  iva = event.getNewValue().toString();
+  iva = Double.parseDouble(event.getNewValue().toString());
  }
 
 }
