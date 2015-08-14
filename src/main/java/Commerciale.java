@@ -8,6 +8,9 @@ import java.io.IOException;
 import org.xml.sax.SAXException;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
+import java.io.ByteArrayInputStream;
+import javax.xml.xpath.XPathExpressionException;
+
 public class Commerciale{
 	public DocumentBuilderFactory builderFactory;
 	public DocumentBuilder builder;
