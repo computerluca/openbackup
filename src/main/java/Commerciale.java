@@ -52,7 +52,5 @@ public Double somma_iva_dettagli(){
 
         return prezzo_tot;
 }
-public Double somma_iva_riepilogo(){
-	
-}
+
 }
