@@ -38,7 +38,7 @@ public class JavaVersion {
   return somma_iva_dettagli;
  }
  public void ivacambiata(ValueChangeEvent event) {
-  iva = Double.parseDouble(event.getNewValue().toString());
+  this.file = event.getNewValue().toString();
   Commerciale comm = new Commerciale(this.file);
   somma_iva_dettagli= comm.somma_iva_dettagli();
  }

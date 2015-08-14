@@ -11,7 +11,7 @@ public class VersionChangeListener implements ValueChangeListener{
   throws AbortProcessingException {
    JavaVersion javaVersion= (JavaVersion) FacesContext.getCurrentInstance().
     getExternalContext().getSessionMap().get("javaVersion");
-   javaVersion.setsomma_iva_dettagli(Double.parseDouble(event.getNewValue().toString()));
+   javaVersion.setsomma_iva_dettagli(event.getNewValue().toString());
  
  }
  

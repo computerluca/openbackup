@@ -14,15 +14,7 @@
    <div>
 	   
 	   <h:inputTextarea row="10" col="10" value="#{javaVersion.file}"/>
-    <strong>Selected Version : </strong>
-    <h:selectOneMenu value="#{javaVersion.somma_iva_dettagli}"
-     onchange="submit()">
-    <f:valueChangeListener
-     type="com.javacodegeeks.jsfcomplisteners.VersionChangeListener" />
-    <f:selectItems value="#{javaVersion.iva}" />
-    </h:selectOneMenu>
-   </div>
-   <br />
+    
    <div>
     <strong>Release Date : </strong>
     <h:outputText value="#{javaVersion.somma_iva_dettagli}" />
