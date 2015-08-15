@@ -1,7 +1,5 @@
 package com.javacodegeeks.jsfcomplisteners;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -13,7 +11,7 @@ import javax.faces.event.ValueChangeEvent;
 public class JavaVersion {
 
  private Double iva;
- private Double somma_iva_dettagli;
+ private Double somma_iva_dettaglio;
  private String file;
  public void setfile(String file) {
   this.file = file;
@@ -30,17 +28,17 @@ public class JavaVersion {
   return iva;
  }
  
- public void setsomma_iva_dettagli(Double sid) {
-  this.somma_iva_dettagli = 10.0;
+ public void setsomma_iva_dettaglio(Double sid) {
+  this.somma_iva_dettaglio = 10.0;
  }
 
- public Double getsomma_iva_dettagli() {
-  return somma_iva_dettagli;
+ public Double getsomma_iva_dettaglio() {
+  return somma_iva_dettaglio;
  }
  public void ivacambiata(ValueChangeEvent event) {
   this.file = event.getNewValue().toString();
   Commerciale comm = new Commerciale(this.file);
-  somma_iva_dettagli= comm.somma_iva_dettagli();
+  somma_iva_dettaglio= comm.somma_iva_dettagli();
  }
 
 }
