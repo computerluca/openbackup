@@ -31,12 +31,13 @@ this.lista_anomalie = new ArrayList<String>();
  public String getfile() {
   return file;
  }
- public void setlista_anomalie(ArrayList lista){
-	 this.lista_anomalie = lista;
-	}
-	public String getlista_anomalie() {
-  return this.lista_anomalie;
- }
+ public List<String> getLista_anomalie() {
+        return lista_anomalie;
+    }
+
+    public void setLista_anomalie(List<String> lista_anomalie) {
+        this.lista_anomalie = lista_anomalie;
+    }
   public void setiva(Double iva) {
   this.iva = iva;
  }
