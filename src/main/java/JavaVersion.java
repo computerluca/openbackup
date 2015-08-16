@@ -21,8 +21,7 @@ public class JavaVersion {
 	 
 this.lista_anomalie = new ArrayList<String>();
 
-	 this.lista_anomalie.add("Prima anomalia");
-	 this.lista_anomalie.add("Seconda anomalia");
+	
 	}
  public void setfile(String file) {
   this.file = file;
@@ -58,6 +57,11 @@ this.lista_anomalie = new ArrayList<String>();
   this.file = event.getNewValue().toString();
   Commerciale comm = new Commerciale(this.file);
   somma_iva_dettaglio= comm.return_somma_imponibili();
+  final AnomalieQuadratura nuovo2 = new AnomalieQuadratura(jTextArea1.getText());
+                nuovo2.verifica_quadratura_imponibile();
+                nuovo2.verifica_quadratura_iva();
+                nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
+                lista_anomalie = nuovo2.return_lista_anomalie();
  }
 
 }
