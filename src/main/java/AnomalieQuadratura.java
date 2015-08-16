@@ -52,7 +52,7 @@ public class AnomalieQuadratura {
 
     public AnomalieQuadratura(String file) {
         this.comm = new Commerciale(file);
-        this.lista_anomalie = new ArrayList<>();
+        this.lista_anomalie = new ArrayList<String>();
         this.file_xml = file;
 
     }

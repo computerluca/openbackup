@@ -75,7 +75,7 @@ public class Anomalia {
     };
     @SuppressWarnings("UseOfObsoleteCollectionType")
     Hashtable<String, String> numbers
-            = new Hashtable<>();
+            = new Hashtable<String>();
 
     public Anomalia() {
         Riferimento_Linea = null;
