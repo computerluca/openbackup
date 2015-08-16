@@ -489,7 +489,7 @@ public class Commerciale {
         setXpath2(XPathFactory.newInstance().newXPath());
         String arr = null;
         Double arro = 0.00;
-        List<Double> list = new ArrayList<>();
+        List<Double> list = new ArrayList<Double>();
         String expression2 = "FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DatiRiepilogo";
         try {
             this.setNode((NodeList) getXpath2().compile(expression2).evaluate(getDoc(), XPathConstants.NODESET));
