@@ -57,7 +57,7 @@ this.lista_anomalie = new ArrayList<String>();
   this.file = event.getNewValue().toString();
   Commerciale comm = new Commerciale(this.file);
   somma_iva_dettaglio= comm.return_somma_imponibili();
-  final AnomalieQuadratura nuovo2 = new AnomalieQuadratura(jTextArea1.getText());
+  final AnomalieQuadratura nuovo2 = new AnomalieQuadratura(this.file);
                 nuovo2.verifica_quadratura_imponibile();
                 nuovo2.verifica_quadratura_iva();
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
