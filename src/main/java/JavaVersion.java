@@ -61,14 +61,15 @@ this.lista_anomalie = new ArrayList<String>();
   somma_iva_dettaglio= comm.return_somma_imponibili();
   try{
   final AnomalieQuadratura nuovo2 = new AnomalieQuadratura(this.file);
+   nuovo2.verifica_quadratura_imponibile();
+                nuovo2.verifica_quadratura_iva();
+                nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
+                lista_anomalie = nuovo2.return_lista_anomalie();
 }
 catch (XPathExpressionException ex) {
                
             }
-                nuovo2.verifica_quadratura_imponibile();
-                nuovo2.verifica_quadratura_iva();
-                nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
-                lista_anomalie = nuovo2.return_lista_anomalie();
+               
  }
 
 }
