@@ -715,7 +715,7 @@ public class Commerciale {
         
          */
         setXpath2(XPathFactory.newInstance().newXPath());
-        List<String> anomalie = new ArrayList<>();
+        List<String> anomalie = new ArrayList<String>();
         String pu;
         Double put;
         put = null;
