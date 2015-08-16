@@ -16,7 +16,7 @@ public class JavaVersion {
  private Double iva;
  private Double somma_iva_dettaglio;
  private String file;
- public List<String> lista_anomalie;
+ private List<String> lista_anomalie;
  public JavaVersion(){
 	 
 this.lista_anomalie = new ArrayList<String>();
@@ -30,6 +30,12 @@ this.lista_anomalie = new ArrayList<String>();
 
  public String getfile() {
   return file;
+ }
+ public void setlista_anomalie(List<String> lista){
+	 this.lista_anomalie = lista;
+	}
+	public String getlista_anomalie() {
+  return this.lista_anomalie;
  }
   public void setiva(Double iva) {
   this.iva = iva;
