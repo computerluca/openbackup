@@ -15,6 +15,13 @@ public class JavaVersion {
  private Double somma_iva_dettaglio;
  private String file;
  public List<String> lista_anomalie;
+ public JavaVersion(){
+	 
+this.lista_anomalie = new ArrayList<String>();
+
+	 this.lista_anomalie.add("Prima anomalia");
+	 this.lista_anomalie.add("Seconda anomalia");
+	}
  public void setfile(String file) {
   this.file = file;
  }
@@ -38,10 +45,7 @@ public class JavaVersion {
   return somma_iva_dettaglio;
  }
  public void ivacambiata(ValueChangeEvent event) {
-	         this.lista_anomalie = new ArrayList<String>();
-
-	 this.lista_anomalie.add("Prima anomalia");
-	 this.lista_anomalie.add("Seconda anomalia");
+	         
   this.file = event.getNewValue().toString();
   Commerciale comm = new Commerciale(this.file);
   somma_iva_dettaglio= comm.return_somma_imponibili();
