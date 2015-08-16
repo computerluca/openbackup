@@ -38,9 +38,10 @@ public class JavaVersion {
   return somma_iva_dettaglio;
  }
  public void ivacambiata(ValueChangeEvent event) {
-	 lista_anomalie = new ArrayList<String>();
-	 lista_anomalie.add("Prima anomalia");
-	 lista_anomalie.add("Seconda anomalia");
+	         this.lista_anomalie = new ArrayList<String>();
+
+	 this.lista_anomalie.add("Prima anomalia");
+	 this.lista_anomalie.add("Seconda anomalia");
   this.file = event.getNewValue().toString();
   Commerciale comm = new Commerciale(this.file);
   somma_iva_dettaglio= comm.return_somma_imponibili();
