@@ -31,7 +31,7 @@ this.lista_anomalie = new ArrayList<String>();
  public String getfile() {
   return file;
  }
- public void setlista_anomalie(List<String> lista){
+ public void setlista_anomalie(ArrayList lista){
 	 this.lista_anomalie = lista;
 	}
 	public String getlista_anomalie() {
