@@ -81,10 +81,11 @@ public class Commerciale {
         }
         try {
             doc = builder.parse(input);
-        } catch (SAXException) {
-            Logger.getLogger(Commerciale.class.getName()).log(Level.SEVERE, null, ex);
-
-        }
+        } catch (SAXException e) {
+    e.printStackTrace();
+} catch (IOException e) {
+    e.printStackTrace();
+}
 
     }
 
