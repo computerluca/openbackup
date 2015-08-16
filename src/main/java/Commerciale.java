@@ -595,7 +595,7 @@ public class Commerciale {
          sommo pertanto gli importi che ho calcolato e li confronto con il totale.
          la stessa cosa per la maggiorazioni solo con i segni invertiti
          */
-        List<String> lista_anomalie = new ArrayList<>();
+        List<String> lista_anomalie = new ArrayList<String>();
         setXpath2(XPathFactory.newInstance().newXPath());
         String expression2 = "FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DettaglioLinee[NumeroLinea=" + n_linea + "]/ScontoMaggiorazione";
         NodeList nodo = ((NodeList) getxPath().compile(expression2).evaluate(getDoc(), XPathConstants.NODESET));
