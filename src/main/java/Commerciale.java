@@ -776,7 +776,7 @@ public class Commerciale {
     public List<String> check_iva() throws XPathExpressionException {
         Anomalia an = new Anomalia();
         XPath xpath4 = XPathFactory.newInstance().newXPath();
-        List<String> lista_anomalie = new ArrayList<>();
+        List<String> lista_anomalie = new ArrayList<String>();
         String expression3;
         expression3 = "FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DatiRiepilogo";
         String expression4;
@@ -998,7 +998,7 @@ public class Commerciale {
         setxPath(XPathFactory.newInstance().newXPath());
         Double aliquota = 0.00;
         String aliquota1 = null;
-        List<Double> aliquote = new ArrayList<>();
+        List<Double> aliquote = new ArrayList<Double>();
 
         String expression = "FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DatiRiepilogo";
         try {
@@ -1034,7 +1034,7 @@ public class Commerciale {
         setxPath(XPathFactory.newInstance().newXPath());
         Double aliquota = 0.00;
         String aliquota1 = null;
-        List<Double> aliquote = new ArrayList<>();
+        List<Double> aliquote = new ArrayList<Double>();
 
         String expression = "FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DettaglioLinee";
         try {
