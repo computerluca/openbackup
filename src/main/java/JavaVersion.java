@@ -38,7 +38,7 @@ public class JavaVersion {
  public void ivacambiata(ValueChangeEvent event) {
   this.file = event.getNewValue().toString();
   Commerciale comm = new Commerciale(this.file);
-  somma_iva_dettaglio= comm.somma_iva_dettagli();
+  somma_iva_dettaglio= comm.return_somma_imponibili();
  }
 
 }
