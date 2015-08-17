@@ -3,6 +3,8 @@
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.event.ValueChangeEvent;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import java.util.List;import java.util.ArrayList;
 import javax.xml.xpath.XPathExpressionException;
 
@@ -87,7 +89,7 @@ this.lista_aliquote = new ArrayList<Double>();
    
                 
            throw new XPathExpressionException("Errore nell'elaborazione del file xml");         
-                
+                        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Errore", "Si è verificato un    errore che ha reso la funzione instabile"));
                 
 }
 catch (XPathExpressionException ex) {
