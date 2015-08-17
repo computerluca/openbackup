@@ -76,9 +76,9 @@ this.lista_aliquote = new ArrayList<Double>();
 
   try{
 	  this.file = event.getNewValue().toString();
-  Commerciale comm = new Commerciale(this.file);
+		Commerciale comm = new Commerciale(this.file);
   somma_iva_dettaglio= comm.return_somma_imponibili();
-	    AnomalieQuadratura nuovo2 = new AnomalieQuadratura(this.file);
+	    AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
 
    nuovo2.verifica_quadratura_imponibile();
                 nuovo2.verifica_quadratura_iva();
