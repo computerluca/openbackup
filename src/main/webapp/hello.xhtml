@@ -26,7 +26,10 @@
         <p:outputLabel for="basic" value="Riepilogo per aliquota" />
         <p:selectOneListbox id="basic" value="#{javaVersion.aliquota}" onchange="submit()" valueChangeListener="#{javaVersion.aliquotacambiata}"    >
         <f:selectItems value="#{javaVersion.lista_aliquote}" />        </p:selectOneListbox>
-         <h:outputText value="#{javaVersion.somma_iva_dettaglio}" />
+           <strong>Somma iva dettagli </strong>
+  <h:outputText value="#{javaVersion.somma_iva_dettaglio}" />
+      <strong>Somma iva riepilogo</strong>
+
     <h:outputText value="#{javaVersion.somma_iva_riepilogo}" />
         </p:tab>
            

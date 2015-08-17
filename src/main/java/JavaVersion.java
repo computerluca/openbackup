@@ -128,7 +128,7 @@ this.lista_aliquote = new ArrayList<Double>();
 catch (XPathExpressionException ex) {
 	                                FacesContext context = FacesContext.getCurrentInstance();
 
-        context.addMessage(null, new FacesMessage(this.aliquota.toString()));
+        context.addMessage(null, new FacesMessage("Stai visualizzando il riepilogo per aliquota"+this.aliquota.toString()));
             }
                
  }
