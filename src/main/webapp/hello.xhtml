@@ -25,8 +25,7 @@
         <p:tab title="Riepilogo per aliquota">
         <p:outputLabel for="basic" value="Riepilogo per aliquota" />
         <p:selectOneListbox id="basic" value="#{javaVersion.lista_aliquote}" var ="aliquota">
-            <f:selectItem itemLabel="#{aliquota}" itemValue="#{aliquota}" />
-        </p:selectOneListbox>
+        <f:selectItems value="#{javaVersion.lista_aliquote}" />        </p:selectOneListbox>
         </p:tab>
         
         <p:tab title="Righe Dettaglio">
