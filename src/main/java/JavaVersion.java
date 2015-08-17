@@ -73,7 +73,7 @@ this.lista_aliquote = new ArrayList<Double>();
  public Double getsomma_iva_dettaglio() {
   return somma_iva_dettaglio;
  }
- public void aliquotacambiata(ValueChangeEvent event throws XPathExpressionException) {
+ public void aliquotacambiata(ValueChangeEvent event ) throws XPathExpressionException{
 	         
   
 
