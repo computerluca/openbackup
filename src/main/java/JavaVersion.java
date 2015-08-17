@@ -28,7 +28,7 @@ public class JavaVersion {
 	 
 this.lista_anomalie = new ArrayList<String>();
 this.lista_aliquote = new ArrayList<Double>();
-
+this.lista_aliquote.add(-1.0);
 
 	
 	}
