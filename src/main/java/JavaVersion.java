@@ -17,6 +17,7 @@ public class JavaVersion {
  private String file;
  private List<String> lista_anomalie;
  private List<Double> lista_aliquote;
+ private Double aliquota;
  public JavaVersion(){
 	 
 this.lista_anomalie = new ArrayList<String>();
@@ -32,6 +33,13 @@ this.lista_aliquote.add(10.0);
     public void setLista_aliquote(List<Double> lista_aliquote) {
         this.lista_aliquote = lista_aliquote;
     }
+    public void setAliquota(Double aliquota) {
+  this.aliquota = aliquota;
+ }
+
+ public Double getAliquota() {
+  return aliquota;
+ }
  public void setfile(String file) {
   this.file = file;
  }
