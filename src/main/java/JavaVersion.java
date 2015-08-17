@@ -13,7 +13,6 @@ import javax.xml.xpath.XPathExpressionException;
 public class JavaVersion {
 
  private Double iva;
- private Double somma_iva_dettaglio;
  private String file;
  private List<String> lista_anomalie;
  private List<Double> lista_aliquote;
