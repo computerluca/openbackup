@@ -22,8 +22,7 @@ public class JavaVersion {
 	 
 this.lista_anomalie = new ArrayList<String>();
 this.lista_aliquote = new ArrayList<Double>();
-this.lista_aliquote.add(20.0);
-this.lista_aliquote.add(10.0);
+
 	
 	}
 	public List<Double> getlista_aliquote() {
@@ -81,6 +80,7 @@ this.lista_aliquote.add(10.0);
                 nuovo2.verifica_quadratura_iva();
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
+                this.lista_aliquote = nuovo2.return_lista_aliquote();
 }
 catch (XPathExpressionException ex) {
                
