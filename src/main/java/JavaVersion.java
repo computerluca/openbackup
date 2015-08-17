@@ -81,6 +81,10 @@ this.lista_aliquote = new ArrayList<Double>();
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
                 this.lista_aliquote = nuovo2.return_lista_aliquote();
+                
+                
+                
+                
 }
 catch (XPathExpressionException ex) {
                
