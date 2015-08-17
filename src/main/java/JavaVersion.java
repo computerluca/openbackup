@@ -16,12 +16,22 @@ public class JavaVersion {
  private Double somma_iva_dettaglio;
  private String file;
  private List<String> lista_anomalie;
+ private List<Double> lista_aliquote;
  public JavaVersion(){
 	 
 this.lista_anomalie = new ArrayList<String>();
-
+this.lista_aliquote = new ArrayList<Double>();
+this.lista_aliquote.add(20.0);
+this.lista_aliquote.add(10.0);
 	
 	}
+	public List<Double> getlista_aliquote() {
+        return lista_aliquote;
+    }
+
+    public void setLista_aliquote(List<Double> lista_aliquote) {
+        this.lista_aliquote = lista_aliquote;
+    }
  public void setfile(String file) {
   this.file = file;
  }
