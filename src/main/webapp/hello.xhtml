@@ -24,9 +24,12 @@
    </div>         </p:tab>
         <p:tab title="Riepilogo per aliquota">
         <p:outputLabel for="basic" value="Riepilogo per aliquota" />
-        <p:selectOneListbox id="basic" value="#{javaVersion.aliquota}">
+        <p:selectOneListbox id="basic" value="#{javaVersion.aliquota}" onchange="submit()" valueChangeListener="#{javaVersion.aliquotacambiata}"    >
         <f:selectItems value="#{javaVersion.lista_aliquote}" />        </p:selectOneListbox>
         </p:tab>
+            <h:outputText value="#{javaVersion.somma_iva_dettaglio}" />
+    <h:outputText value="#{javaVersion.somma_iva_riepilogo}" />
+
         
         <p:tab title="Righe Dettaglio">
             

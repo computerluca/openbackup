@@ -18,6 +18,10 @@ public class JavaVersion {
  private List<String> lista_anomalie;
  private List<Double> lista_aliquote;
  private Double aliquota;
+ public Double somma_iva_dettaglio;
+ public Double somma_iva_riepilogo;
+ public Double somma_dettaglio;
+ public Double somma_imponibile_riepilogo;
 
  public JavaVersion(){
 	 
@@ -69,6 +73,28 @@ this.lista_aliquote = new ArrayList<Double>();
 
  public Double getsomma_iva_dettaglio() {
   return somma_iva_dettaglio;
+ }
+ public void aliquotacambiata(ValueChangeEvent event) {
+	         
+  
+
+  try{
+	  this.aliquota = event.getNewValue();
+		Commerciale comm = new Commerciale(this.file);
+  this.somma_dettaglio= comm.return_somma_imponibili_riepilogo_per_aliquota(this.aliquota);
+  this.somma_imponibile_riepilogo = comm.return_somma_dett_per_aliquota();
+   this.somma_iva_dettaglio = comm.return_somma_dett_per_aliquota(this.aliquota);
+   this.somma_iva_riepilogo = comm.return_somma_imponibili_riepilogo_per_aliquota(this.aliquota);
+   
+                
+                
+                
+                
+}
+catch (XPathExpressionException ex) {
+               
+            }
+               
  }
  public void ivacambiata(ValueChangeEvent event) {
 	         
