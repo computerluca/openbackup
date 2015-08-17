@@ -96,7 +96,7 @@ this.lista_aliquote = new ArrayList<Double>();
 catch (XPathExpressionException ex) {
 	                                FacesContext context = FacesContext.getCurrentInstance();
 
-        context.addMessage(null, new FacesMessage(this.aliquota));
+        context.addMessage(null, new FacesMessage(this.aliquota.toString()));
             }
                
  }
