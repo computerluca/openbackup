@@ -73,7 +73,7 @@ this.lista_aliquote = new ArrayList<Double>();
  public Double getsomma_iva_dettaglio() {
   return somma_iva_dettaglio;
  }
- public void aliquotacambiata(ValueChangeEvent event ) throws XPathExpressionException{
+ public void aliquotacambiata(ValueChangeEvent event ) {
 	         
   
 
@@ -86,7 +86,7 @@ this.lista_aliquote = new ArrayList<Double>();
    this.somma_iva_riepilogo = comm.return_somma_imponibili_riepilogo_per_aliquota(this.aliquota);
    
                 
-                
+           throw new XPathExpressionException("Errore nell'elaborazione del file xml");         
                 
                 
 }
