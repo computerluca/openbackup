@@ -80,7 +80,7 @@ this.lista_aliquote = new ArrayList<Double>();
                 nuovo2.verifica_quadratura_iva();
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
-                this.lista_aliquote = nuovo2.return_lista_aliquote();
+                this.lista_aliquote = comm.return_lista_aliquote();
                 
                 
                 
