@@ -1,12 +1,9 @@
-package com.javacodegeeks.jsfcomplisteners;
 
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.event.ValueChangeEvent;
 import java.util.List;import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import javax.xml.xpath.XPathExpressionException;
 
 

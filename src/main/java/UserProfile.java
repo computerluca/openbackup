@@ -1,4 +1,3 @@
-package com.javacodegeeks.jsfcomplisteners;
 
 import java.util.Calendar;
 

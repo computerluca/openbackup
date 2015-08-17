@@ -1,4 +1,3 @@
-package com.javacodegeeks.jsfcomplisteners;
 
 import javax.faces.context.FacesContext;
 import javax.faces.event.AbortProcessingException;
