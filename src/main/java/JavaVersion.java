@@ -89,7 +89,8 @@ this.lista_aliquote = new ArrayList<Double>();
    
                 
            throw new XPathExpressionException("Errore nell'elaborazione del file xml");         
-                        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Errore", "Si è verificato un    errore che ha reso la funzione instabile"));
+                               FacesContext context = FacesContext.getCurrentInstance();
+                        context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Errore", "Si è verificato un    errore che ha reso la funzione instabile"));
                 
 }
 catch (XPathExpressionException ex) {
