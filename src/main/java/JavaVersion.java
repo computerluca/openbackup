@@ -19,10 +19,10 @@ public class JavaVersion {
  private List<String> lista_anomalie;
  private List<Double> lista_aliquote;
  private Double aliquota;
- public Double somma_iva_dettaglio;
- public Double somma_iva_riepilogo;
- public Double somma_dettaglio;
- public Double somma_imponibile_riepilogo;
+ private Double somma_iva_dettaglio;
+ private Double somma_iva_riepilogo;
+ private Double somma_dettaglio;
+ private Double somma_imponibile_riepilogo;
 
  public JavaVersion(){
 	 
@@ -32,6 +32,38 @@ this.lista_aliquote = new ArrayList<Double>();
 
 	
 	}
+	 public Double getSomma_iva_dettaglio() {
+        return somma_iva_dettaglio;
+    }
+
+    public void setSomma_iva_dettaglio(Double somma_iva_dettaglio) {
+        this.somma_iva_dettaglio = somma_iva_dettaglio;
+    }
+
+    public Double getSomma_iva_riepilogo() {
+        return somma_iva_riepilogo;
+    }
+
+    public void setSomma_iva_riepilogo(Double somma_iva_riepilogo) {
+        this.somma_iva_riepilogo = somma_iva_riepilogo;
+    }
+
+    public Double getSomma_dettaglio() {
+        return somma_dettaglio;
+    }
+
+    public void setSomma_dettaglio(Double somma_dettaglio) {
+        this.somma_dettaglio = somma_dettaglio;
+    }
+
+    public Double getSomma_imponibile_riepilogo() {
+        return somma_imponibile_riepilogo;
+    }
+
+    public void setSomma_imponibile_riepilogo(Double somma_imponibile_riepilogo) {
+        this.somma_imponibile_riepilogo = somma_imponibile_riepilogo;
+    }
+	
 	public List<Double> getlista_aliquote() {
         return lista_aliquote;
     }
