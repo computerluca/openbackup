@@ -82,7 +82,7 @@ this.lista_aliquote = new ArrayList<Double>();
 	  this.aliquota = event.getNewValue();
 		Commerciale comm = new Commerciale(this.file);
   this.somma_dettaglio= comm.return_somma_imponibili_riepilogo_per_aliquota(this.aliquota);
-  this.somma_imponibile_riepilogo = comm.return_somma_dett_per_aliquota();
+  this.somma_imponibile_riepilogo = comm.return_somma_dett_per_aliquota(this.aliquota);
    this.somma_iva_dettaglio = comm.return_somma_dett_per_aliquota(this.aliquota);
    this.somma_iva_riepilogo = comm.return_somma_imponibili_riepilogo_per_aliquota(this.aliquota);
    
