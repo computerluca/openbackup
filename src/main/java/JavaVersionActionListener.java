@@ -8,7 +8,8 @@ public class JavaVersionActionListener implements ActionListener{
 	public void processAction(ActionEvent event)
 		throws AbortProcessingException {
 		
-		JavaVersion.resetta();
+		JavaVersion jv = new JavaVersion();
+		jv.resetta();
 	
 	}
 	
