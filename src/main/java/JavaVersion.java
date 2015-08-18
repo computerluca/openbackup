@@ -114,10 +114,10 @@ this.lista_aliquote.add(-1.0);
   try{
 	  this.aliquota = Double.parseDouble(event.getNewValue().toString());
 		Commerciale comm = new Commerciale(this.file);
-  this.somma_dettaglio= comm.return_somma_imponibili_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString()));
-  this.somma_imponibile_riepilogo = comm.return_somma_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString()));
-   this.somma_iva_dettaglio = comm.return_somma_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString()));
-   this.somma_iva_riepilogo = comm.return_somma_imponibili_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString()));
+  this.somma_imponibile_riepilogo= comm.round(comm.return_somma_imponibili_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
+  this.somma_dettaglio = comm.round(comm.return_somma_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
+   this.somma_iva_dettaglio = comm.round(comm.return_somma_iva_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
+   this.somma_iva_riepilogo = comm.round(comm.return_somma_iva_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
    
                 
            throw new XPathExpressionException("Errore nell'elaborazione del file xml");         
