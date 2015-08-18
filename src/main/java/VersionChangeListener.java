@@ -6,13 +6,17 @@ import javax.faces.event.ValueChangeListener;
 
 public class VersionChangeListener implements ValueChangeListener{
 
- public void processValueChange(ValueChangeEvent event)
+ public JavaVersion javaVersion = new JavaVersion();
+
+public void processValueChange(ValueChangeEvent event)
   throws AbortProcessingException {
-   JavaVersion javaVersion= (JavaVersion) FacesContext.getCurrentInstance().
-    getExternalContext().getSessionMap().get("javaVersion");
-   javaVersion.setfile(event.getNewValue().toString());
+   javaVersion = ((JavaVersion) FacesContext.getCurrentInstance().
+    getExternalContext().getSessionMap().get("javaVersion"));
+   javaVersion.setfile((event.getNewValue().toString()));
  
  }
+
+
  
 
 }

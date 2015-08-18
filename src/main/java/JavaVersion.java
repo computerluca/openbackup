@@ -9,7 +9,7 @@ import java.util.List;import java.util.ArrayList;
 import javax.xml.xpath.XPathExpressionException;
 
 
-@ManagedBean(name = "javaVersion", eager = true)
+@ManagedBean(name = "javaVersion")
 @SessionScoped
 
 public class JavaVersion {
@@ -32,6 +32,13 @@ this.lista_aliquote.add(-1.0);
 
 	
 	}
+ public  String getfile() {
+		return file;
+	}
+	public void setfile(String file) {
+		this.file = file;
+	}
+
 	 public Double getSomma_iva_dettaglio() {
         return somma_iva_dettaglio;
     }
@@ -78,13 +85,7 @@ this.lista_aliquote.add(-1.0);
  public Double getAliquota() {
   return aliquota;
  }
- public void setfile(String file) {
-  this.file = file;
- }
-
- public String getfile() {
-  return file;
- }
+ 
  public List<String> getLista_anomalie() {
         return lista_anomalie;
     }
@@ -137,7 +138,7 @@ catch (XPathExpressionException ex) {
   
 
   try{
-	  this.file = event.getNewValue().toString();
+	  this.file= (event.getNewValue().toString());
 		Commerciale comm = new Commerciale(this.file);
   somma_iva_dettaglio= comm.return_somma_imponibili();
 	    AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
@@ -156,6 +157,10 @@ catch (XPathExpressionException ex) {
                
             }
                
+ }
+ public static void resetta(){
+	
+	 
  }
 
 }

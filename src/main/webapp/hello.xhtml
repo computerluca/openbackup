@@ -12,6 +12,10 @@
     <p:tabView orientation="left">
         <p:tab title="Commerciale">
  <h3>Pannello Commerciale</h3>
+ <h:commandButton id="submitButton" 
+		value="Reset" >
+		<f:actionListener type="JavaVersionActionListener" />
+	  </h:commandButton>
    
 	   
 	   <h:inputTextarea value="#{javaVersion.file}" onchange="submit()"
