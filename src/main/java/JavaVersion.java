@@ -161,8 +161,8 @@ catch (XPathExpressionException ex) {
  public void resetta(){
 	this.somma_iva_dettaglio = 0.00;
 	this.somma_iva_riepilogo = 0.00;
-	this.lista_aliquote = 0.00;
-	this.lista_anomalie = 0.00;
+	this.lista_aliquote = null;
+	this.lista_anomalie = null;
 	this.file = "";
 	 
  }
