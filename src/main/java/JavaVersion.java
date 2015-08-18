@@ -29,6 +29,11 @@ public class JavaVersion {
 this.lista_anomalie = new ArrayList<String>();
 this.lista_aliquote = new ArrayList<Double>();
 this.lista_aliquote.add(-1.0);
+this.somma_dettaglio = 0.00;
+this.somma_imponibile_riepilogo = 0.00;
+this.somma_iva_dettaglio = 0.00;
+this.somma_iva_riepilogo = 0.00;
+this.file = "";
 
 	
 	}
@@ -138,6 +143,7 @@ catch (XPathExpressionException ex) {
   
 
   try{
+	  if((event.getNewValue().toString()) != ""){
 	  this.file= (event.getNewValue().toString());
 		Commerciale comm = new Commerciale(this.file);
   somma_iva_dettaglio= comm.return_somma_imponibili();
@@ -151,19 +157,29 @@ catch (XPathExpressionException ex) {
                 
                 
                 
-                
+     }           
 }
 catch (XPathExpressionException ex) {
                
             }
                
  }
- public void resetta(){
+	public void resetta(){
 	this.somma_iva_dettaglio = 0.00;
 	this.somma_iva_riepilogo = 0.00;
-	this.lista_aliquote = null;
-	this.lista_anomalie = null;
+	this.lista_aliquote.clear();
+        this.lista_aliquote.add(-1.0);
+	this.lista_anomalie.clear();
+        this.lista_anomalie.add("Anomalie non ancora calcolate");
 	this.file = "";
+        this.somma_dettaglio = 0.00;
+        this.somma_imponibile_riepilogo = 0.00;
+        this.somma_iva_dettaglio = 0.00;
+        this.somma_iva_riepilogo = 0.00;
+	 
+ 
+	 
+
 	 
  }
 
