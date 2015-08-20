@@ -6,7 +6,7 @@ import javax.faces.event.ActionListener;
 public class JavaVersionActionListener implements ActionListener{
 	public String buttonId; 
          @Override
-	 public void processAction(ActionEvent arg0) 
+	 public void processAction(ActionEvent event) 
    throws AbortProcessingException {
       //access userData bean directly
       JavaVersion userData = (JavaVersion) FacesContext.getCurrentInstance().
