@@ -35,6 +35,15 @@
     <artifactId>primefaces</artifactId>  
     <version>5.2</version>  
 </dependency> 
+<dependencies>
+
+  <dependency>
+    <groupId>org.omnifaces</groupId>
+    <artifactId>omnifaces</artifactId>
+    <version>1.6.1</version>
+  </dependency>
+
+</dependencies>
   </dependencies>
   <profiles>
     <profile>

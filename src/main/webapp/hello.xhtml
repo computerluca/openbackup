@@ -2,10 +2,12 @@
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:p="http://primefaces.org/ui">
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:o="http://omnifaces.org/ui">
 <h:head>
     <script name="jquery/jquery.js" library="primefaces"></script>
 </h:head>
+<o:cache>
 <h:form style="width:500px;">
     <p:growl id="message"></p:growl>
     <p:outputLabel value="Pannello Commerciale"></p:outputLabel>
@@ -13,7 +15,7 @@
         <p:tab title="Commerciale">
  <h3>Pannello Commerciale</h3>
  <h:commandButton id="submitButton" 
-		value="Reset" >
+		value="Reset">
 		<f:actionListener type="JavaVersionActionListener" />
 	  </h:commandButton>
    
@@ -55,4 +57,5 @@
     </p:tabView>
     
 </h:form>
+</o:cache>
 </html>
