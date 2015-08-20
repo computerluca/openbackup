@@ -66,17 +66,13 @@ public class FormatXML {
             DocumentBuilder db = dbf.newDocumentBuilder();
             InputSource is = new InputSource(new StringReader(in));
             return db.parse(is);
-        } catch (ParserConfigurationException){
-			throw new RuntimeException(e);
-        catch SAXException e) {
-            throw new RuntimeException(e);
-        
-         catch (IOException e) {
-			 
         }
-        return null;
+        catch (SAXException e) {
+            throw new RuntimeException(e);
+        }
+       return null;  
     }
-
+}
     /**
      * Takes an XML Document object and makes an XML String. Just a utility
      * function.
