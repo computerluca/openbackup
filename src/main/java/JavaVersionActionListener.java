@@ -11,7 +11,7 @@ public class JavaVersionActionListener implements ActionListener{
       //access userData bean directly
       JavaVersion userData = (JavaVersion) FacesContext.getCurrentInstance().
          getExternalContext().getSessionMap().get("javaVersion"); 
-         		this.buttonId = event.getComponent().getClientId().toString();
+         		this.buttonId = userData.getComponent().getClientId().toString();
 			if(buttonId=="reset"){
 				userData.resetta();
 			}
