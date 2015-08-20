@@ -17,6 +17,9 @@ public class JavaVersionActionListener implements ActionListener{
 			}
 			if(buttonId=="format"){
 				userData.format();
+				
+				
+				System.out.println("ciao a tutti");
 			}
    }
    
