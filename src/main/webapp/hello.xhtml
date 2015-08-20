@@ -8,6 +8,7 @@
     <script name="jquery/jquery.js" library="primefaces"></script>
 </h:head>
 <h:body>
+	<o:cache>
 <h:form style="width:500px;">
     <p:growl id="message"></p:growl>
     <p:outputLabel value="Pannello Commerciale"></p:outputLabel>
@@ -32,7 +33,6 @@
     
    </div>         </p:tab>
         <p:tab title="Riepilogo per aliquota">
-			<o:cache>
        <p:outputLabel for="basic" value="Riepilogo per aliquota" />
         <p:selectOneListbox id="basic" value="#{javaVersion.aliquota}" onchange="submit()" valueChangeListener="#{javaVersion.aliquotacambiata}"    >
         <f:selectItems value="#{javaVersion.lista_aliquote}" />        </p:selectOneListbox>
