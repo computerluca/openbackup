@@ -66,9 +66,13 @@ public class FormatXML {
             DocumentBuilder db = dbf.newDocumentBuilder();
             InputSource is = new InputSource(new StringReader(in));
             return db.parse(is);
-        } catch (ParserConfigurationException | SAXException e) {
+        } catch (ParserConfigurationException){
+			throw new RuntimeException(e);
+        catch SAXException e) {
             throw new RuntimeException(e);
-        } catch (IOException e) {
+        
+         catch (IOException e) {
+			 
         }
         return null;
     }
