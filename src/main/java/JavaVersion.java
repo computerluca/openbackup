@@ -118,6 +118,13 @@ this.file = "";
   
 
   try{
+	  if(Double.parseDouble(event.getNewValue().toString())==-1.0){
+		  this.somma_dettaglio = 0.00;
+	        this.somma_imponibile_riepilogo = 0.00;
+	        this.somma_iva_dettaglio = 0.00;
+	        this.somma_iva_riepilogo = 0.00;
+	  }
+	  else{
 	  this.aliquota = Double.parseDouble(event.getNewValue().toString());
 		Commerciale comm = new Commerciale(this.file);
   this.somma_imponibile_riepilogo= comm.round(comm.return_somma_imponibili_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
@@ -128,7 +135,7 @@ this.file = "";
                 
            throw new XPathExpressionException("Errore nell'elaborazione del file xml");         
          
-        
+	  }   
                 
 }
 catch (XPathExpressionException ex) {
@@ -168,10 +175,9 @@ catch (XPathExpressionException ex) {
 	this.somma_iva_dettaglio = 0.00;
 	this.somma_iva_riepilogo = 0.00;
 	this.lista_aliquote.clear();
-        this.lista_aliquote.add(-1.0);
 	this.lista_anomalie.clear();
-        this.lista_anomalie.add("Anomalie non ancora calcolate");
 	this.file = "";
+	this.lista_aliquote.add(-1.0);
         this.somma_dettaglio = 0.00;
         this.somma_imponibile_riepilogo = 0.00;
         this.somma_iva_dettaglio = 0.00;
