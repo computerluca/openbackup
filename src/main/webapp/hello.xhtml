@@ -32,11 +32,11 @@
     
    </div>         </p:tab>
         <p:tab title="Riepilogo per aliquota">
+			<o:cache>
        <p:outputLabel for="basic" value="Riepilogo per aliquota" />
         <p:selectOneListbox id="basic" value="#{javaVersion.aliquota}" onchange="submit()" valueChangeListener="#{javaVersion.aliquotacambiata}"    >
         <f:selectItems value="#{javaVersion.lista_aliquote}" />        </p:selectOneListbox>
            <strong>Somma iva dettagli </strong> 
-  	<o:cache>
 <h:outputText value="#{javaVersion.somma_iva_dettaglio}" /><br />
       <strong>Somma iva riepilogo</strong>
 
