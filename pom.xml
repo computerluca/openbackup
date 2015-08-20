@@ -39,8 +39,8 @@
   <dependency>
     <groupId>org.omnifaces</groupId>
     <artifactId>omnifaces</artifactId>
-    <version>1.6.1</version>
-  </dependency>
+    <version>2.1</version>
+</dependency>
 
 </dependencies>
   <profiles>
