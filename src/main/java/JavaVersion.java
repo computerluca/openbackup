@@ -189,7 +189,7 @@ catch (XPathExpressionException ex) {
 	 
  }
  public void format(){
-	 
+	 try{
 	 FormatXML formatter = new
     
     
@@ -197,9 +197,16 @@ catch (XPathExpressionException ex) {
     
      FormatXML();
 	  String book =  this.file.toString();
+	  
      String ciao = formatter.format(book);
      this.file = ciao;  
 	 
+}
+catch(IOException e){
+	
+	
+}
+
 }
 
 }
