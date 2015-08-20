@@ -190,7 +190,12 @@ catch (XPathExpressionException ex) {
  }
  public void format(){
 	 
-	 
+	 FormatXML formatter = new
+    
+    
+    
+    
+     FormatXML();
 	  String book =  this.file.toString();
      String ciao = formatter.format(book);
      this.file = ciao;  

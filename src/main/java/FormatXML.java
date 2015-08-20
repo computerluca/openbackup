@@ -76,7 +76,6 @@ public class FormatXML {
         catch(IOException e){
                     throw new RuntimeException(e);
 		}
-       return null;  
     }
 
     /**
