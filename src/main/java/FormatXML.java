@@ -68,6 +68,10 @@ public class FormatXML {
         }
         catch (SAXException e) {
             throw new RuntimeException(e);
+         }
+        catch(ParserConfigurationException e){
+			            throw new RuntimeException(e);
+
         }
        return null;  
     }
