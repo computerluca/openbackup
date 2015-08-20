@@ -8,7 +8,6 @@
     <script name="jquery/jquery.js" library="primefaces"></script>
 </h:head>
 <h:body>
-	<o:cache>
 <h:form style="width:500px;">
     <p:growl id="message"></p:growl>
     <p:outputLabel value="Pannello Commerciale"></p:outputLabel>
@@ -37,7 +36,8 @@
         <p:selectOneListbox id="basic" value="#{javaVersion.aliquota}" onchange="submit()" valueChangeListener="#{javaVersion.aliquotacambiata}"    >
         <f:selectItems value="#{javaVersion.lista_aliquote}" />        </p:selectOneListbox>
            <strong>Somma iva dettagli </strong> 
-  <h:outputText value="#{javaVersion.somma_iva_dettaglio}" /><br />
+  	<o:cache>
+<h:outputText value="#{javaVersion.somma_iva_dettaglio}" /><br />
       <strong>Somma iva riepilogo</strong>
 
     <h:outputText value="#{javaVersion.somma_iva_riepilogo}" /><br />
@@ -47,6 +47,7 @@
        <strong>Somma imponibile di riepilogo</strong>
 
     <h:outputText value="#{javaVersion.somma_imponibile_riepilogo}" /><br />
+    </o:cache>
         </p:tab>
 
            
@@ -62,6 +63,5 @@
     </p:tabView>
     
 </h:form>
-</o:cache>
 </h:body>
 </html>
