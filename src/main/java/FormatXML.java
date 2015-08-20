@@ -72,7 +72,7 @@ public class FormatXML {
         }
        return null;  
     }
-}
+
     /**
      * Takes an XML Document object and makes an XML String. Just a utility
      * function.
@@ -115,6 +115,6 @@ public class FormatXML {
      String ciao = formatter.format(book);
      System.out.println(ciao);
      }*/
-
 }
+
 
