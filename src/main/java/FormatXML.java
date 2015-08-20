@@ -93,8 +93,13 @@ public class FormatXML {
                 DOMSource source = new DOMSource(doc);
                 trans.transform(source, result);
                 xmlString = sw.toString();
-            } catch (IllegalArgumentException | TransformerException e) {
+            } catch (IllegalArgumentException e){
+				
+				
+			}	
+				catch (TransformerException e) {
             }
+            
         }
         return xmlString;
     }
