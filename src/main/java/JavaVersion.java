@@ -188,5 +188,13 @@ catch (XPathExpressionException ex) {
 
 	 
  }
+ public void format(){
+	 
+	 
+	  String book =  this.file.toString();
+     String ciao = formatter.format(book);
+     this.file = ciao;  
+	 
+}
 
 }
