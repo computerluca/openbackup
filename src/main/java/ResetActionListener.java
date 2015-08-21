@@ -3,19 +3,36 @@ import javax.faces.event.AbortProcessingException;
 import javax.faces.event.ActionEvent;
 import javax.faces.event.ActionListener;
 
-public class JavaVersionActionListener implements ActionListener{
-	public String buttonId; 
+public class ResetActionListener implements ActionListener{
+ 
+    /**
+     *
+     */
+    private String buttonId; 
          @Override
 	 public void processAction(ActionEvent event) 
    throws AbortProcessingException {
       //access userData bean directly
       JavaVersion userData = (JavaVersion) FacesContext.getCurrentInstance().
          getExternalContext().getSessionMap().get("javaVersion"); 
-         		this.buttonId = event.getComponent().getClientId();
-			   userData.setfile((event.getNewValue().toString()));
-
+userData.setfile("lkjdsl");
    
 	
 }
+
+    /**
+     * @return the buttonId
+     */
+    public String getButtonId() {
+        return buttonId;
+    }
+
+    /**
+     * @param buttonId the buttonId to set
+     */
+    public void setButtonId(String buttonId) {
+        this.buttonId = buttonId;
+    }
          
 }
+
