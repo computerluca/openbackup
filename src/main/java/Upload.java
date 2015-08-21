@@ -13,6 +13,6 @@ public class Upload {
     public void handleFileUpload(FileUploadEvent event) {
          FacesContext context = FacesContext.getCurrentInstance();
 
-        context.addMessage(null, new FacesMessage("Stai visualizzando il riepilogo per aliquota"+this.aliquota.toString()));
+        context.addMessage(null, new FacesMessage("Stai visualizzando il riepilogo per aliquota"));
     }
 }
