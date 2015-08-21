@@ -12,9 +12,12 @@ public class JavaVersionActionListener implements ActionListener{
       JavaVersion userData = (JavaVersion) FacesContext.getCurrentInstance().
          getExternalContext().getSessionMap().get("javaVersion"); 
          		this.buttonId = event.getComponent().getClientId();
-			
+			if("reset".equals(buttonId)){
 				userData.resetta();
-			
+                        }
+                        if("format".equals(buttonId)){
+                            userData.format();
+                        }
 		
    
 	
