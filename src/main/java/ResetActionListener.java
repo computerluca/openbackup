@@ -15,7 +15,7 @@ public class ResetActionListener implements ActionListener{
       //access userData bean directly
       JavaVersion userData = (JavaVersion) FacesContext.getCurrentInstance().
          getExternalContext().getSessionMap().get("javaVersion"); 
-userData.setfile("lkjdsl");
+userData.format();
    
 	
 }
