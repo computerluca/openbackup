@@ -11,12 +11,11 @@
     <p:growl id="message"></p:growl>
     <p:outputLabel value="Upload file xml"></p:outputLabel>
 
-<h:form enctype="multipart/form-data">
+<h:form>
+    <p:fileUpload fileUploadListener="#{upload.handleFileUpload}" mode="advanced" dragDropSupport="false"
+           update="messages" sizeLimit="100000" fileLimit="3" allowTypes="/(\.|\/)(xml)$/" />
+ 
     <p:growl id="messages" showDetail="true" />
- 
-    <p:fileUpload value="#{upload.file}" mode="simple" skinSimple="true"/>
- 
-    <p:commandButton value="Submit" ajax="false" actionListener="#{upload.upload}" />
 </h:form>
 
 
