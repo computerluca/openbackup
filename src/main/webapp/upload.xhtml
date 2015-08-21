@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:o="http://omnifaces.org/ui">
+<h:head>
+    <script name="jquery/jquery.js" library="primefaces"></script>
+</h:head>
+<h:body>
+    <p:growl id="message"></p:growl>
+    <p:outputLabel value="Upload file xml"></p:outputLabel>
+
+<h:form enctype="multipart/form-data">
+    <p:growl id="messages" showDetail="true" />
+ 
+    <p:fileUpload value="#{upload.file}" mode="simple" skinSimple="true"/>
+ 
+    <p:commandButton value="Submit" ajax="false" actionListener="#{upload.upload}" disabled="true" />
+</h:form>
+
+
+</h:form>
+</h:body>
+</html>
