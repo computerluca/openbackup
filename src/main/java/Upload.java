@@ -11,8 +11,8 @@ import org.primefaces.model.UploadedFile;
 public class Upload {
  
     public void handleFileUpload(FileUploadEvent event) {
-        FacesMessage message = new FacesMessage("Succesful", event.getFile().getFileName() + " is uploaded.");
-        	                                FacesContext context = FacesContext.getCurrentInstance();
+        FacesMessage message = new FacesMessage(event.getFile().getFileName() + " is uploaded.");
+        FacesContext context = FacesContext.getCurrentInstance();
 
         context.addMessage(null, message);
     }
