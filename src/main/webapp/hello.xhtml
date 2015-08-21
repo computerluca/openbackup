@@ -8,13 +8,13 @@
     <script name="jquery/jquery.js" library="primefaces"></script>
 </h:head>
 <h:body>
-<h:form style="width:500px;">
+<h:form style="width:1500px;">
     <p:growl id="message"></p:growl>
     <p:outputLabel value="Pannello Commerciale"></p:outputLabel>
     <p:tabView orientation="left">
         <p:tab title="Commerciale">
  <h3>Pannello Commerciale</h3>
- <h:commandButton id="reset" 
+ <h:commandButton id="reset"  
 		value="Reset">
 		<f:actionListener type="JavaVersionActionListener" />
 
@@ -23,7 +23,7 @@
 	  </h:commandButton>
 	  <h:commandButton id="format" 
 		value="Format XML">
-		<f:actionListener type="JavaVersionActionListener" />
+		<f:actionListener type="ResetActionListener" />
 
 
 
@@ -31,7 +31,7 @@
    
 	   
 	   <h:inputTextarea value="#{javaVersion.file}" onchange="submit()"
-	valueChangeListener="#{javaVersion.ivacambiata}"/>
+	valueChangeListener="#{javaVersion.ivacambiata}" style="width:1000px;heigth:2000px;"/>
     
    <div>
     <strong>Somma dettagli </strong>
