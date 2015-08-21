@@ -11,9 +11,8 @@ import org.primefaces.model.UploadedFile;
 public class Upload {
  
     public void handleFileUpload(FileUploadEvent event) {
-        FacesMessage message = new FacesMessage(event.getFile().getFileName() + " is uploaded.");
-        FacesContext context = FacesContext.getCurrentInstance();
+         FacesContext context = FacesContext.getCurrentInstance();
 
-        context.addMessage(null, message);
+        context.addMessage(null, new FacesMessage("Stai visualizzando il riepilogo per aliquota"+this.aliquota.toString()));
     }
 }
