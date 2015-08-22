@@ -42,10 +42,27 @@ public class RigheDettaglio implements Serializable{
 		 this.file_xml=this.userData.getfile();
 			this.comm = new Commerciale(this.file_xml);
 			this.righe_dettaglio=comm.get_righe_dettaglio();
-		 	Order prova = new Order("dkjdl","sdlkjd");
 		 	this.orderList = new ArrayList<Order>();
+		 	for (int i = 0; i < righe_dettaglio.getLength(); i++) {
+            Node nNode = righe_dettaglio.item(i);
+            System.out.println("\nCurrent Element :"
+                    + nNode.getNodeName());
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nNode;
+                String merda = eElement.getElementsByTagName("NumeroLinea").item(0).getTextContent().trim();
+                String prezzoUnitario;
+                prezzoUnitario = eElement.getElementsByTagName("PrezzoUnitario").item(0).getTextContent();
+                		 	Order prova = new Order(merda,prezzoUnitario);
+
 		 	this.orderList.add(prova);
-	}
+
+}
+	
+	
+	
+}
+	
+}
 	    public void setorderList(List<Order> orderList) {
   this.orderList = orderList;
  }
