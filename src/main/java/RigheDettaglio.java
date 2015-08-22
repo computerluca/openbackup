@@ -35,7 +35,7 @@ public class RigheDettaglio implements Serializable{
 
 	public Commerciale comm;
 	NodeList righe_dettaglio;
-	public List<Order>  orderList;
+	private List<Order>  orderList;
     
 
 	 public void inizializza(){
