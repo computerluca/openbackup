@@ -39,7 +39,7 @@ public class RigheDettaglio implements Serializable{
 
 
 	 public RigheDettaglio(){
-			this.file_xml=userData.getfile();
+			this.file_xml=this.userData.getfile();
 			this.comm = new Commerciale(this.file_xml);
 		 	Order prova = new Order("dkjdl","sdlkjd");
 		 	this.orderList.add(prova);
