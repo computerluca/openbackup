@@ -12,7 +12,7 @@ public class RigheDettaglio implements Serializable{
 	JavaVersion userData = (JavaVersion) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("javaVersion"); 
 		public String file_xmljdkjlfk=userData.getfile();
 
-	Commerciale comm = new Commerciale();
+	Commerciale comm = new Commerciale(file_xmljdkjlfk);
 	
 	private static final Order[] orderList = new Order[] {
 		
