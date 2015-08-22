@@ -6,7 +6,7 @@ import javax.faces.bean.SessionScoped;
  
 @ManagedBean(name="righedettaglio")
 @SessionScoped
-public class RigheDettaglioBean implements Serializable{
+public class RigheDettaglio implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
