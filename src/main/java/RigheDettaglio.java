@@ -9,8 +9,10 @@ import javax.faces.bean.SessionScoped;
 public class RigheDettaglio implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
 
 	private static final Order[] orderList = new Order[] {
+		
 		
 		new Order("A0001", "Intel CPU"),
 				
