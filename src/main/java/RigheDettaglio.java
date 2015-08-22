@@ -14,6 +14,7 @@ public class RigheDettaglio implements Serializable{
 		public String file_xmljdkjlfk=userData.getfile();
 
 	Commerciale comm = new Commerciale(file_xmljdkjlfk);
+	NodeList righe_dettaglio = comm.get_righe_dettaglio();
 	
 	private static final Order[] orderList = new Order[] {
 		
@@ -53,7 +54,10 @@ public class RigheDettaglio implements Serializable{
 				
 		
 	};
-	 
+	 public RigheDettaglio(){
+		 
+		 
+		}
 	public Order[] getOrderList() {
  
 		return orderList;
