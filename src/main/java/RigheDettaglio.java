@@ -5,6 +5,26 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
  import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import static java.lang.Math.abs;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 @ManagedBean(name="righedettaglio")
 @SessionScoped
 public class RigheDettaglio implements Serializable{
