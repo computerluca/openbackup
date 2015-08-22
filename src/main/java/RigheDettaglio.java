@@ -25,7 +25,7 @@ public class RigheDettaglio implements Serializable{
  
 	}
 	
-	static class Order{
+	 public static class Order{
 		String orderNo;
 		String productName;
 		/*BigDecimal price;*/
