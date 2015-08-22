@@ -9,8 +9,11 @@ import javax.faces.bean.SessionScoped;
 public class RigheDettaglio implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	
+	JavaVersion userData = (JavaVersion) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("javaVersion"); 
+		public String file_xmljdkjlfk=userData.getfile();
 
+	Commerciale comm = new Commerciale();
+	
 	private static final Order[] orderList = new Order[] {
 		
 		
