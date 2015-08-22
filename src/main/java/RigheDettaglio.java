@@ -45,15 +45,22 @@ public class RigheDettaglio implements Serializable{
 		 	this.orderList = new ArrayList<Order>();
 		 	for (int i = 0; i < righe_dettaglio.getLength(); i++) {
             Node nNode = righe_dettaglio.item(i);
-            System.out.println("\nCurrent Element :"
+            System.out.println("\n Current Element :"
                     + nNode.getNodeName());
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) nNode;
-                String merda = eElement.getElementsByTagName("NumeroLinea").item(0).getTextContent().trim();
-                String prezzoUnitario;
-                prezzoUnitario = eElement.getElementsByTagName("PrezzoUnitario").item(0).getTextContent();
-                		 	Order prova = new Order(merda,prezzoUnitario);
-
+                String nrlinea = eElement.getElementsByTagName("NumeroLinea").item(0).getTextContent().trim();
+                String descrizione = eElement.getElementsByTagName("Descrizione").item(0).getTextContent().trim();
+                Double prezzoUnitario;
+                prezzoUnitario = Double.parseDouble(eElement.getElementsByTagName("PrezzoUnitario").item(0).getTextContent().trim());
+                Double quantita;
+				quantita = Double.parseDouble(eElement.getElementsByTagName("Quantita").item(0).getTextContent().trim());
+                Double prezzo_totale = Double.parseDouble(eElement.getElementsByTagName("PrezzoTotale").item(0).getTextContent().trim());
+                Double aliquota = Double.parseDouble(eElement.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim());
+                Double importo_iva = this.comm.round((prezzo_totale*importo_iva)/100);
+                Double totale = this.comm.round(prezzo_totale+importo_iva);
+                		 	Order prova = new Order(nrlinea,descrizione,prezzoUnitario,quantita,prezzo_totale,aliquota,importo_iva,totale);
+				
 		 	this.orderList.add(prova);
 
 }
@@ -78,16 +85,77 @@ public class RigheDettaglio implements Serializable{
 	 public class Order{
 		String orderNo;
 		String productName;
+		Double prezzo_unitario;
+		Double quantita;
+		Double prezzo_totale;
+		Double aliquota_iva;
+		Double importo_iva;
+		Double totale;
 		/*BigDecimal price;*/
 		/*int qty;*/
 
-		public Order(String orderNo, String productName)
-                                /*BigDecimal price, int qty*/ {
+		public Order(String orderNo, String productName, Double prezzo_unitario, Double quantita, Double prezzo_totale, Double aliquota_iva, Double importo_iva, Double totale) {
+            this.orderNo = orderNo;
+            this.productName = productName;
+            this.prezzo_unitario = prezzo_unitario;
+            this.quantita = quantita;
+            this.prezzo_totale = prezzo_totale;
+            this.aliquota_iva = aliquota_iva;
+            this.importo_iva = importo_iva;
+            this.totale = totale;
+        }
+		public Double getPrezzo_unitario() {
+            return prezzo_unitario;
+        }
 
-			this.orderNo = orderNo;
-			this.productName = productName;
-			/*this.price = price;
-			this.qty = qty;*/
+        public void setPrezzo_unitario(Double prezzo_unitario) {
+            this.prezzo_unitario = prezzo_unitario;
+        }
+
+        public Double getQuantita() {
+            return quantita;
+        }
+
+        public void setQuantita(Double quantita) {
+            this.quantita = quantita;
+        }
+
+        public Double getPrezzo_totale() {
+            return prezzo_totale;
+        }
+
+        public void setPrezzo_totale(Double prezzo_totale) {
+            this.prezzo_totale = prezzo_totale;
+        }
+
+        public Double getAliquota_iva() {
+            return aliquota_iva;
+        }
+
+        public void setAliquota_iva(Double aliquota_iva) {
+            this.aliquota_iva = aliquota_iva;
+        }
+
+        public Double getImporto_iva() {
+            return importo_iva;
+        }
+
+        public void setImporto_iva(Double importo_iva) {
+            this.importo_iva = importo_iva;
+        }
+
+        public Double getTotale() {
+            return totale;
+        }
+
+        public void setTotale(Double totale) {
+            this.totale = totale;
+        }
+		public Double getprezzo_unitario() {
+			return prezzo_unitario;
+		}
+		public void setprezzo_unitario(Double prezzo_unitario) {
+			this.prezzo_unitario = prezzo_unitario;
 		}
 		public String getOrderNo() {
 			return orderNo;
