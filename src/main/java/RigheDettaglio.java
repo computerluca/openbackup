@@ -35,8 +35,11 @@ public class RigheDettaglio implements Serializable{
 
 	Commerciale comm = new Commerciale(file_xmljdkjlfk);
 	NodeList righe_dettaglio = comm.get_righe_dettaglio();
-	
-	private static final Order[] orderList = new Order[] {
+			 	public Order[] orderList;
+
+
+	 public RigheDettaglio(){
+		 	this.orderList=new Order[] {
 		
 		
 		new Order("A0001", "Intel CPU"),
@@ -74,8 +77,6 @@ public class RigheDettaglio implements Serializable{
 				
 		
 	};
-	 public RigheDettaglio(){
-		 
 		 
 		}
 	public Order[] getOrderList() {
