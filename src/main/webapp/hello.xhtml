@@ -59,7 +59,33 @@
 
         
         <p:tab title="Righe Dettaglio">
-            
+            <p:dataTable var="car" value="#{righedettaglio.lista_righe}">
+    <p:column headerText="Numero Riga">
+        <h:outputText value="#{car.orderNo}" />
+    </p:column>
+ 
+    <p:column headerText="Descrizione">
+        <h:outputText value="#{car.productName}" />
+    </p:column>
+   <!-- Anche questo commento non verrà renderizzato 
+       <p:column headerText="PrezzoUnitario">
+        <h:outputText value="#{car.pu}" />
+    </p:column>
+ 
+    <p:column headerText="Quantità">
+        <h:outputText value="#{car.q}" />
+    </p:column>
+    <p:column headerText="Imponibile">
+        <h:outputText value="#{car.imponibile}" />
+    </p:column>
+    <p:column headerText="AliquotaIVA">
+        <h:outputText value="#{car.aliquota}" />
+    </p:column>
+    <p:column headerText="Totale">
+        <h:outputText value="#{car.totale}" />
+    </p:column>-->
+    
+</p:dataTable>
         </p:tab>
         <p:tab title="Visualizza Anomalie">
              <h3 style="margin-top: 0">Lista Anomalie (vengono caricate automaticamente)</h3>
