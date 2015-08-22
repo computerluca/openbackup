@@ -12,9 +12,9 @@ public class RigheDettaglioBean implements Serializable{
 
 	private static final Order[] orderList = new Order[] {
 		
-		new Order("A0001", "Intel CPU");
+		new Order("A0001", "Intel CPU"),
 				
-		new Order("A0002", "Harddisk 10TB"); 
+		new Order("A0002", "Harddisk 10TB"),
 				
 		
 	};
