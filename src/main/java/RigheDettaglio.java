@@ -46,7 +46,14 @@ public class RigheDettaglio implements Serializable{
 		 	this.orderList = new ArrayList<Order>();
 		 	this.orderList.add(prova);
 	}
-		 
+	    public void setorderList(List<Order> orderList) {
+  this.orderList = orderList;
+ }
+
+ public List<Order> getorderList() {
+  return orderList;
+ }
+ 	 
 	
 		
 	
