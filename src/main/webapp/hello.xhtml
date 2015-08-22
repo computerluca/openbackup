@@ -73,7 +73,24 @@
     <p:column headerText="Descrizione" sortBy="productName" footerText="contains" filterMatchMode="contains">
         <h:outputText value="#{car.productName}" />
     </p:column>
-    
+    <p:column headerText="PrezzoUnitario" >
+        <h:outputText value="#{car.prezzo_unitario}" />
+    </p:column>
+    <p:column headerText="Quantità">
+        <h:outputText value="#{car.quantita}" />
+    </p:column>
+    <p:column headerText="PrezzoTotale" >
+        <h:outputText value="#{car.prezzo_totale}" />
+    </p:column>
+    <p:column headerText="AliquotaIVA" >
+        <h:outputText value="#{car.aliquota_iva}" />
+    </p:column>
+    <p:column headerText="ImportoIva" >
+        <h:outputText value="#{car.importo_iva}" />
+    </p:column>
+    <p:column headerText="Totale" >
+        <h:outputText value="#{car.totale}" />
+    </p:column>
    <!-- Anche questo commento non verrà renderizzato 
        <p:column headerText="PrezzoUnitario">
         <h:outputText value="#{car.pu}" />
