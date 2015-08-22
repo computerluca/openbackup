@@ -163,7 +163,8 @@ catch (XPathExpressionException ex) {
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
                 this.lista_aliquote = comm.return_lista_aliquote();
                 
-                
+           	JavaVersion userData = (JavaVersion) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("righedettaglio"); 
+            userData.inizializza();
                 
      }           
 }
