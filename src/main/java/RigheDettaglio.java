@@ -3,7 +3,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
- 
+ import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 @ManagedBean(name="righedettaglio")
 @SessionScoped
 public class RigheDettaglio implements Serializable{
