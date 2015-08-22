@@ -34,14 +34,16 @@ public class RigheDettaglio implements Serializable{
 		public String file_xml;
 
 	public Commerciale comm;
-	NodeList righe_dettaglio = comm.get_righe_dettaglio();
-	public List<Order>  orderList = new ArrayList<Order>();
+	NodeList righe_dettaglio;
+	public List<Order>  orderList;
     
 
 	 public void inizializza(){
 		 this.file_xml=this.userData.getfile();
 			this.comm = new Commerciale(this.file_xml);
+			this.righe_dettaglio=comm.get_righe_dettaglio();
 		 	Order prova = new Order("dkjdl","sdlkjd");
+		 	this.orderList = new ArrayList<Order>();
 		 	this.orderList.add(prova);
 	}
 		 
