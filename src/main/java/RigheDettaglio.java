@@ -35,7 +35,7 @@ public class RigheDettaglio implements Serializable{
 
 	public Commerciale comm;
 	NodeList righe_dettaglio = comm.get_righe_dettaglio();
-	public List<Order>  orderList;
+	public List<Order>  orderList = new ArrayList<Order>();
 
 
 	 public RigheDettaglio(){
