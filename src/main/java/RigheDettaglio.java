@@ -48,11 +48,7 @@ public class RigheDettaglio implements Serializable{
 		 
 	
 		
-	public Order[] getOrderList() {
- 
-		return orderList;
- 
-	}
+	
 	
 	 public static class Order{
 		String orderNo;
