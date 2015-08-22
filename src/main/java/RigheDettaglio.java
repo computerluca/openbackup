@@ -35,7 +35,7 @@ public class RigheDettaglio implements Serializable{
 
 	Commerciale comm = new Commerciale(file_xmljdkjlfk);
 	NodeList righe_dettaglio = comm.get_righe_dettaglio();
-			 	public Order[] orderList;
+			 	public List<Order>  orderList;
 
 
 	 public RigheDettaglio(){
