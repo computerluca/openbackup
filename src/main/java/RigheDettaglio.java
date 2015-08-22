@@ -39,46 +39,15 @@ public class RigheDettaglio implements Serializable{
 
 
 	 public RigheDettaglio(){
-		 	this.orderList=new Order[] {
-		
-		
-		new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),
-		new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),
-		new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),
-		new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),
-		new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),
-		new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),
-		new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),
-		new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),
-		new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),
-		new Order("A0001", "Intel CPU"),
-				
-		new Order("A0002", "Harddisk 10TB"),
+		 
+		 	Order prova = new Order("dkjdl","sdlkjd");
+		 	this.orderList.add(prova);
 				
 		
 	};
 		 
-		}
+	
+		
 	public Order[] getOrderList() {
  
 		return orderList;
