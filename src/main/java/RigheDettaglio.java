@@ -58,7 +58,8 @@ public class RigheDettaglio implements Serializable{
                 Double prezzo_totale = Double.parseDouble(eElement.getElementsByTagName("PrezzoTotale").item(0).getTextContent().trim());
                 Double aliquota = 0.00;
                 aliquota = Double.parseDouble(eElement.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim());
-                Double importo_iva = this.comm.round((prezzo_totale*importo_iva)/100);
+                Double importo_iva = 0.00;
+                importo_iva = this.comm.round((prezzo_totale*importo_iva)/100);
                 Double totale = this.comm.round(prezzo_totale+importo_iva);
                 		 	Order prova = new Order(nrlinea,descrizione,prezzoUnitario,quantita,prezzo_totale,aliquota,importo_iva,totale);
 				
