@@ -30,16 +30,17 @@ import org.xml.sax.SAXException;
 public class RigheDettaglio implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	JavaVersion userData = (JavaVersion) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("javaVersion"); 
-		public String file_xmljdkjlfk=userData.getfile();
+	public JavaVersion userData = (JavaVersion) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("javaVersion"); 
+		public String file_xml;
 
-	Commerciale comm = new Commerciale(file_xmljdkjlfk);
+	public Commerciale comm;
 	NodeList righe_dettaglio = comm.get_righe_dettaglio();
 	public List<Order>  orderList;
 
 
 	 public RigheDettaglio(){
-		 
+			this.file_xml=userData.getfile();
+			this.comm = new Commerciale(this.file_xml);
 		 	Order prova = new Order("dkjdl","sdlkjd");
 		 	this.orderList.add(prova);
 				
