@@ -32,7 +32,7 @@ public class User
     SOMMA_IMPONIBILI,
     SOMMA_DETTAGLI,
     IVA_DETTAGLI,
-    IVA_IMPONIBILE // opzionalmente può terminare con ";"
+    IVA_IMPONIBILE; // opzionalmente può terminare con ";"
 }
 public Giorno g;
     public Double somma;
@@ -181,7 +181,7 @@ catch (XPathExpressionException ex) {
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
                 this.lista_aliquote = comm.return_lista_aliquote();
-                this.somme.put(
+                
                 
            	RigheDettaglio userData = (RigheDettaglio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("righedettaglio"); 
             userData.inizializza();
