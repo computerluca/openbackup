@@ -224,6 +224,8 @@ catch (XPathExpressionException ex) {
    nuovo2.verifica_quadratura_imponibile();
                 nuovo2.verifica_quadratura_iva();
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
+                RigheDettaglio userData = (RigheDettaglio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("righedettaglio"); 
+            userData.inizializza();
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
                 this.lista_aliquote = comm.return_lista_aliquote();
                 for(Double aliquote : this.lista_aliquote){
@@ -236,8 +238,7 @@ catch (XPathExpressionException ex) {
    this.somma_iva_dettaglio = comm.round(comm.return_somma_iva_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
    this.somma_iva_riepilogo = comm.round(comm.return_somma_iva_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
 	*/		    }
-           	RigheDettaglio userData = (RigheDettaglio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("righedettaglio"); 
-            userData.inizializza();
+           	
                 
      }           
 }
