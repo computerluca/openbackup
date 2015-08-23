@@ -172,16 +172,16 @@ this.file = "";
 	  this.aliquota = Double.parseDouble(event.getNewValue().toString());
 		Commerciale comm = new Commerciale(this.file);	
 		for (User p:this.lista_somme){
-			if((p.getAliquota()==this.aliquota) && (p.getGiorno()=="SOMMA_IMPONIBILI")){
+			if((p.getAliquota()==Double.parseDouble(event.getNewValue().toString())) && (p.getGiorno()=="SOMMA_IMPONIBILI")){
 				this.somma_imponibile_riepilogo = p.getSomma();
 			}
-			if((p.getAliquota()==this.aliquota) && (p.getGiorno()=="SOMMA_DETTAGLI")){
+			if((p.getAliquota()==Double.parseDouble(event.getNewValue().toString())) && (p.getGiorno()=="SOMMA_DETTAGLI")){
 				this.somma_dettaglio = p.getSomma();
 			}
-			if((p.getAliquota()==this.aliquota) && (p.getGiorno()=="IVA_DETTAGLI")){
+			if((p.getAliquota()==Double.parseDouble(event.getNewValue().toString())) && (p.getGiorno()=="IVA_DETTAGLI")){
 				this.somma_iva_dettaglio = p.getSomma();
 			}
-			if((p.getAliquota()==this.aliquota) && (p.getGiorno()=="IVA_IMPONIBILE")){
+			if((p.getAliquota()==Double.parseDouble(event.getNewValue().toString())) && (p.getGiorno()=="IVA_IMPONIBILE")){
 				this.somma_iva_riepilogo = p.getSomma();
 			}
     //che si traduce esattamente in "per ogni Person p in listaPersone"
