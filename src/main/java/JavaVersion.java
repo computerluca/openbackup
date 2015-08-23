@@ -185,9 +185,6 @@ this.file = "";
 				this.somma_iva_riepilogo = p.getSomma();
 			}
     //che si traduce esattamente in "per ogni Person p in listaPersone"
-	   
-
-
 }
 
 		/*
