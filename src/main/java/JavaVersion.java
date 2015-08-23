@@ -14,7 +14,7 @@ import java.io.IOException;
 @SessionScoped
 
 public class JavaVersion {
-
+ 
  private Double iva;
  private String file;
  private List<String> lista_anomalie;
@@ -24,7 +24,26 @@ public class JavaVersion {
  private Double somma_iva_riepilogo;
  private Double somma_dettaglio;
  private Double somma_imponibile_riepilogo;
+public class User
+{
+    public Double Aliquota;
+    public enum Giorno {
+     
+    SOMMA_IMPONIBILI,
+    SOMMA_DETTAGLI,
+    IVA_DETTAGLI,
+    IVA_IMPONIBILE // opzionalmente può terminare con ";"
+}
+public Giorno g;
+    public Double somma;
 
+    public User(Double Aliquota, Giorno G,Double somma) {
+        this.Aliquota = Aliquota;
+        this.somma = somma;
+        this.g = G;
+    } 
+} 
+private List<User> lista_somme= new ArrayList<User>();
  public JavaVersion(){
 	 
 this.lista_anomalie = new ArrayList<String>();
@@ -162,6 +181,7 @@ catch (XPathExpressionException ex) {
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
                 this.lista_aliquote = comm.return_lista_aliquote();
+                this.somme.put(
                 
            	RigheDettaglio userData = (RigheDettaglio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("righedettaglio"); 
             userData.inizializza();
