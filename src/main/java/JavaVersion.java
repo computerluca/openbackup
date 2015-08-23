@@ -24,7 +24,7 @@ public class JavaVersion {
  private Double somma_iva_riepilogo;
  private Double somma_dettaglio;
  private Double somma_imponibile_riepilogo;
-public class User
+public static class User
 {
     public Double Aliquota;
     public enum Giorno {
