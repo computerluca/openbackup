@@ -41,9 +41,7 @@
     <system-properties>
        <property name="org.apache.coyote.http11.Http11Protocol.COMPRESSION" value="on"/>
     </system-properties>
-    <system-properties>
- <property name="org.apache.tomcat.util.http.Parameters.MAX_COUNT" value="800"/>
-</system-properties>
+   
 
     <management>
         <management-interfaces>
