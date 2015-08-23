@@ -228,7 +228,7 @@ catch (XPathExpressionException ex) {
                 this.lista_aliquote = comm.return_lista_aliquote();
                 for(Double aliquote : lista_aliquote){
                     lista_somme.add(new User(aliquote,"SOMMA_IMPONIBILI", comm.round(comm.return_somma_imponibili_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())))));
-                    lista_somme.add(new User(aliquote, "SOMMA_DETTAGLI", comm.round(comm.return_somma_dett_per_aliquota_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())))));
+                    lista_somme.add(new User(aliquote, "SOMMA_DETTAGLI", comm.round(comm.return_somma_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString())))));
 					lista_somme.add(new User(aliquote, "IVA_DETTAGLI",comm.round(comm.return_somma_iva_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString())))));
 					lista_somme.add(new User(aliquote,"IVA_IMPONIBILE",comm.round(comm.return_somma_iva_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())))));
   /*this.somma_imponibile_riepilogo= comm.round(comm.return_somma_imponibili_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
