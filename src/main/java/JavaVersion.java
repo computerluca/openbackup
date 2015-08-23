@@ -24,27 +24,51 @@ public class JavaVersion {
  private Double somma_iva_riepilogo;
  private Double somma_dettaglio;
  private Double somma_imponibile_riepilogo;
-public static class User
+ public List<User> lista_somme= new ArrayList<User>();
+
+ public  class User
 {
     public Double Aliquota;
-    public enum Giorno {
-     
-    SOMMA_IMPONIBILI,
-    SOMMA_DETTAGLI,
-    IVA_DETTAGLI,
-    IVA_IMPONIBILE; // opzionalmente può terminare con ";"
-}
-public Giorno g;
+    
+public String giorno;
     public Double somma;
 
-    public User(Double Aliquota, Giorno G,Double somma) {
+    public User(Double Aliquota, String giorno, Double somma) {
         this.Aliquota = Aliquota;
+        this.giorno = giorno;
         this.somma = somma;
-        this.g = G;
-    } 
+    }
+
+    public Double getAliquota() {
+        return Aliquota;
+    }
+
+    public void setAliquota(Double Aliquota) {
+        this.Aliquota = Aliquota;
+    }
+
+    public String getGiorno() {
+        return giorno;
+    }
+
+    public void setGiorno(String giorno) {
+        this.giorno = giorno;
+    }
+
+    public Double getSomma() {
+        return somma;
+    }
+
+    public void setSomma(Double somma) {
+        this.somma = somma;
+    }
+    
+
+    
 } 
-private List<User> lista_somme= new ArrayList<User>();
+
  public JavaVersion(){
+	
 	 
 this.lista_anomalie = new ArrayList<String>();
 this.lista_aliquote = new ArrayList<Double>();
@@ -146,17 +170,38 @@ this.file = "";
 	  }
 	  else{
 	  this.aliquota = Double.parseDouble(event.getNewValue().toString());
-		Commerciale comm = new Commerciale(this.file);
+		Commerciale comm = new Commerciale(this.file);	
+		for (User p:this.lista_somme){
+			if((p.getAliquota()==this.aliquota) && (p.getGiorno()=="SOMMA_IMPONIBILI")){
+				this.somma_imponibile_riepilogo = p.getSomma();
+			}
+			if((p.getAliquota()==this.aliquota) && (p.getGiorno()=="SOMMA_DETTAGLI")){
+				this.somma_dettaglio = p.getSomma();
+			}
+			if((p.getAliquota()==this.aliquota) && (p.getGiorno()=="IVA_DETTAGLI")){
+				this.somma_iva_dettaglio = p.getSomma();
+			}
+			if((p.getAliquota()==this.aliquota) && (p.getGiorno()=="IVA_IMPONIBILE")){
+				this.somma_iva_riepilogo = p.getSomma();
+			}
+    //che si traduce esattamente in "per ogni Person p in listaPersone"
+	   
+
+
+}
+
+		/*
   this.somma_imponibile_riepilogo= comm.round(comm.return_somma_imponibili_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
   this.somma_dettaglio = comm.round(comm.return_somma_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
    this.somma_iva_dettaglio = comm.round(comm.return_somma_iva_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
    this.somma_iva_riepilogo = comm.round(comm.return_somma_iva_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
-   
-                
+    
+sognoesondesto2
+    */            
            throw new XPathExpressionException("Errore nell'elaborazione del file xml");         
          
-	  }   
-                
+	    
+ }               
 }
 catch (XPathExpressionException ex) {
 	                                FacesContext context = FacesContext.getCurrentInstance();
@@ -181,8 +226,16 @@ catch (XPathExpressionException ex) {
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
                 this.lista_aliquote = comm.return_lista_aliquote();
-                
-                
+                for(Double aliquote : lista_aliquote){
+                    lista_somme.add(new User(aliquote,"SOMMA_IMPONIBILI", comm.round(comm.return_somma_imponibili_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())))));
+                    lista_somme.add(new User(aliquote, "SOMMA_DETTAGLI", comm.round(comm.return_somma_dett_per_aliquota_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())))));
+					lista_somme.add(new User(aliquote, "IVA_DETTAGLI",comm.round(comm.return_somma_iva_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString())))));
+					lista_somme.add(new User(aliquote,"IVA_IMPONIBILE",comm.round(comm.return_somma_iva_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())))));
+  /*this.somma_imponibile_riepilogo= comm.round(comm.return_somma_imponibili_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
+  this.somma_dettaglio = comm.round(comm.return_somma_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
+   this.somma_iva_dettaglio = comm.round(comm.return_somma_iva_dett_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
+   this.somma_iva_riepilogo = comm.round(comm.return_somma_iva_riepilogo_per_aliquota(Double.parseDouble(event.getNewValue().toString())));
+	*/		    }
            	RigheDettaglio userData = (RigheDettaglio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("righedettaglio"); 
             userData.inizializza();
                 
@@ -232,3 +285,4 @@ catch(IOException e){
 }
 
 }
+
