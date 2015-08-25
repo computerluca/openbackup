@@ -65,7 +65,7 @@
                          paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                          rowsPerPageTemplate="5,10,15"
                                         emptyMessage="Nessun risultato trovato">
-    <p:column headerText="Numero Riga" sortBy="#{car.orderNo}">
+    <p:column headerText="Numero Riga" sortBy="#{car.orderNo}" editable="true">
         <h:outputText value="#{car.orderNo}" />
     </p:column>
  
