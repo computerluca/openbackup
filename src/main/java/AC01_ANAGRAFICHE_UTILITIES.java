@@ -1,4 +1,3 @@
-package computerlucaworld.createfepa.ac.business;
  
 import java.io.Serializable;
 import java.sql.Connection;
@@ -19,7 +18,7 @@ String DB_NAME = "computerlucaworld";
 String FORNAME_URL = "com.mysql.jdbc.Driver";
 String URL = "jdbc:"+"mysql://127.13.47.2:3306/"+ DB_NAME;
 Connection m_connection = DriverManager.getConnection(URL , USERNAME , PASSWORD);
-    
+    return m_connection;
 }  
 public static List select_all_ac01_anagrafiche(){
 	Connection conn = get_connection();

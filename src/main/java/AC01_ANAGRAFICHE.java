@@ -12,7 +12,10 @@ public class AC01_ANAGRAFICHE{
 	public String provincia;
 	public String nazione;
 	public int id_configurazione;
-
+public AC01_ANAGRAFICHE (){
+	
+	
+}
 public AC01_ANAGRAFICHE(int id_anagrafica, String partita_iva, String codice_fiscale, String denominazione, String indirizzo, String cap, String comune, String provincia, String nazione, int id_configurazione) {
         this.id_anagrafica = id_anagrafica;
         this.partita_iva = partita_iva;
