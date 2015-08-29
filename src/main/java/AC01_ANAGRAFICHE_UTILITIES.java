@@ -15,8 +15,7 @@ public class AC01_ANAGRAFICHE_UTILITIES{
  
         String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-String DB_NAME = System.getenv("OPENSHIFT_APP_NAME");
-String FORNAME_URL = "com.mysql.jdbc.Driver";
+
 String URL = "jdbc:mysql://127.0.0.1:3307/computerlucaworld";
 Connection m_connection = null;
 try{
@@ -24,8 +23,8 @@ m_connection = DriverManager.getConnection(URL , USERNAME , PASSWORD);
 
 }
 catch(SQLException e){
+	System.out.println(e.toString());
 }   
-
 return m_connection;
 
 }  
