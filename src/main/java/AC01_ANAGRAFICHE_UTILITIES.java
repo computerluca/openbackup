@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AC01_ANAGRAFICHE_UTILITIES{
+	
 	/* Classe con metodi riutilizzabili nei managed beans */
 	public static Connection get_connection (){
  
@@ -29,12 +30,12 @@ catch(SQLException e){
 return m_connection;
 
 }  
-public static List select_all_ac01_anagrafiche(){
+public static List select_all_ac01_anagrafiche_tipo_principale(){
 	Connection conn = get_connection();
 	
 	List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
 try{
-        PreparedStatement pstmt = conn.prepareStatement("select partita_iva,codice_fiscale,denominazione from ac01_anagrafiche");
+        PreparedStatement pstmt = conn.prepareStatement("select partita_iva,codice_fiscale,denominazione from ac01_anagrafiche and id_configurazione = 1");
 
         ResultSet rs = pstmt.executeQuery();
 
