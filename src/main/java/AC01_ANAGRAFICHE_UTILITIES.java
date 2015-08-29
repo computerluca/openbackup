@@ -17,17 +17,24 @@ String PASSWORD = "CcNHwzdNVza9";
 String DB_NAME = "computerlucaworld";
 String FORNAME_URL = "com.mysql.jdbc.Driver";
 String URL = "jdbc:"+"mysql://127.13.47.2:3306/"+ DB_NAME;
-Connection m_connection = DriverManager.getConnection(URL , USERNAME , PASSWORD);
-    return m_connection;
+Connection m_connection = null;
+try{
+m_connection = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
+
+}
+catch(SQLException e){
+	System.out.println(e);
+}   
+
+return m_connection;
+
 }  
 public static List select_all_ac01_anagrafiche(){
 	Connection conn = get_connection();
 	
 	List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
-
-        PreparedStatement pstmt = conn
-
-                .prepareStatement("select partita_iva,codice_fiscale,denominazione from ac01_anagrafiche");
+try{
+        PreparedStatement pstmt = conn.prepareStatement("select partita_iva,codice_fiscale,denominazione from ac01_anagrafiche");
 
         ResultSet rs = pstmt.executeQuery();
 
@@ -57,8 +64,10 @@ public static List select_all_ac01_anagrafiche(){
 
         pstmt.close();
 
-        conn.close();
-
+        conn.close();}
+catch(SQLException e){
+	
+}
         return cars;
 
     
@@ -66,4 +75,6 @@ public static List select_all_ac01_anagrafiche(){
 }
 	  
 }
+
+
 
