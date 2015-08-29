@@ -57,6 +57,7 @@ System.out.println(pstmt.toString());
 			car.setCodice_fiscale(rs.getString("codice_fiscale"));
 			car.setPartita_iva(rs.getString("partita_iva"));
 			car.setDenominazione(rs.getString("denominazione"));
+			cars.add(car);
         }
 
         rs.close();
