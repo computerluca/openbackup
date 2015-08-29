@@ -16,7 +16,7 @@ public class AC01_ANAGRAFICHE_UTILITIES{
         String USERNAME = "adminT2hJwLi";
 String PASSWORD = "CcNHwzdNVza9";
 String DB_NAME = "computerlucaworld";
-String URL = "jdbc:"+"mysql://localhost:3306/"+ DB_NAME;
+String URL = "jdbc:"+"mysql://localhost:3306/"+DB_NAME;
 Connection m_connection = null;
 try{
 m_connection = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
