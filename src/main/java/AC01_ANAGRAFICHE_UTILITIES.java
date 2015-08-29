@@ -33,7 +33,7 @@ public static List select_all_ac01_anagrafiche_tipo_principale(){
 	
 	List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
 try{
-        PreparedStatement pstmt = conn.prepareStatement("select partita_iva,codice_fiscale,denominazione from ac01_anagrafiche where id_configurazione = 1");
+        PreparedStatement pstmt = conn.prepareStatement("select partita_iva,codice_fiscale,denominazione from AC01_ANAGRAFICHE where id_configurazione = 1");
 System.out.println(pstmt.toString());
         ResultSet rs = pstmt.executeQuery();
 
