@@ -13,11 +13,11 @@ public class AC01_ANAGRAFICHE_UTILITIES{
 	/* Classe con metodi riutilizzabili nei managed beans */
 	public static Connection get_connection (){
  
-        String USERNAME = System.getEnv("OPENSHIFT_MYSQL_DB_USERNAME");
-String PASSWORD = System.getEnv("OPENSHIFT_MYSQL_DB_PASSWORD");
-String DB_NAME = System.getEnv("OPENSHIFT_APP_NAME");
+        String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+String DB_NAME = System.getenv("OPENSHIFT_APP_NAME");
 String FORNAME_URL = "com.mysql.jdbc.Driver";
-String URL = "jdbc:"+System.getEnv("OPENSHIFT_MYSQL_DB_URL")+ DB_NAME;
+String URL = "jdbc:"+System.getenv("OPENSHIFT_MYSQL_DB_URL")+ DB_NAME;
 Connection m_connection = null;
 try{
 m_connection = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
