@@ -16,7 +16,7 @@ public class AC01_ANAGRAFICHE_UTILITIES{
         String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 
-String URL = "jdbc:mysql://127.0.0.1:3306/computerlucaworld";
+String URL = "jdbc:mysql://127.13.47.2:3306/computerlucaworld";
 Connection m_connection = null;
 try{
 m_connection = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
