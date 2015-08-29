@@ -19,9 +19,8 @@ public class Configurazione {
 	public String nazione;
 	public int id_configurazione;
 	public Configurazione(){
-		AC01_ANAGRAFICHE_UTILITIES aau = new AC01_ANAGRAFICHE_UTILITIES();
 			List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
-			cars.addAll(aau.select_all_ac01_anagrafiche_tipo_principale());
+			cars.addAll(AC01_ANAGRAFICHE_UTILITIES.select_all_ac01_anagrafiche_tipo_principale());
 			for (AC01_ANAGRAFICHE car:cars){
 				this.codice_fiscale = car.getCodice_fiscale();
 				this.denominazione = car.getDenominazione();
