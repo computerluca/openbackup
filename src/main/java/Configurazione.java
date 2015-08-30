@@ -18,6 +18,7 @@ public class Configurazione {
 	public String provincia;
 	public String nazione;
 	public int id_configurazione;
+	public String titolo;
 	
 	public Configurazione(){
 			List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
@@ -32,10 +33,13 @@ public class Configurazione {
 				this.comune = car.getComune();
 				this.provincia = car.getProvincia();
 				this.nazione = car.getNazione();
+				this.titolo = "Configurazione -> Modifica";
 				
 			}
 		}
-		
+		else{
+			this.titolo = "Configurazione -> Nuovo";
+		}	
 	}
 
     public int getId_anagrafica() {
