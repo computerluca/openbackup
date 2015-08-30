@@ -10,14 +10,39 @@
 </h:head>
 <h:body>
 
- Configurazione
-
-    <h:outputText value="#{configurazione.denominazione}" /><br />
-      <strong>Somma imponibile di dettaglio</strong>
-
-    <h:outputText value="#{configuazione.partita_iva}" /><br />
-       <strong>Somma imponibile di riepilogo</strong>
-
+ 
+ <h:form id="form">
+             
+    <p:growl id="msgs" showDetail="true" />
+ 
+    <h3 style="margin-top:0">Basic</h3>
+    <p:tabView>
+        <p:tab title="Dati fiscali">
+            <h:panelGrid columns="2" cellpadding="10">
+  <h3>CODICE FISCALE</h3>
+      <h:inputText value="#{configurazione.codice_fiscale}"/>
+      <h3>PARTITA IVA</h3>
+      <h:inputText value="#{configurazione.partita_iva}"/>
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Dati anagrafici">
+            <h:panelGrid columns="2" cellpadding="10">
+              <h3>CODICE FISCALE</h3>
+      <h:inputText value="#{configurazione.denominazione}"/>
+      <h3>PARTITA IVA</h3>
+      <h:inputText value="#{configurazione.indirizzo}"/>
+      <h3>CAP</h3>
+      <h:inputText value="#{configurazione.cap}"/>
+      <h3>COMUNE</h3>
+      <h:inputText value="#{configurazione.comune}"/>
+      <h3>PROVINCIA</h3>
+      <h:inputText value="#{configurazione.provincia}"/>
+      <h3>NAZIONE</h3>
+      <h:inputText value="#{configurazione.nazione}"/>
+            </h:panelGrid>
+        </p:tab>
+        
+    </p:tabView>
     
 </h:body>
 </html>
