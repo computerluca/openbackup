@@ -41,7 +41,13 @@ public class Configurazione {
 			this.titolo = "Configurazione -> Nuovo";
 		}	
 	}
-
+	public void annulla(){
+		this.denominazione = "annulla";
+		
+	}
+	public void salva(){
+		this.denominazione = "salva";
+	}
     public int getId_anagrafica() {
         return id_anagrafica;
     }
