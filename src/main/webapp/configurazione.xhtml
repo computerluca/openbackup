@@ -10,9 +10,9 @@
 </h:head>
 <h:body>
 
- 
+              <h:outputText value="#{configurazione.titolo}" />
+
  <h:form id="form">
-             <h:outputText value="#{configurazione.titolo}" />
     <p:growl id="msgs" showDetail="true" />
  
     <h3 style="margin-top:0">Configurazione</h3>
@@ -41,6 +41,7 @@
       <h:inputText value="#{configurazione.nazione}"/>
             </h:panelGrid>
         </p:tab>
+        
         
     </p:tabView>
     </h:form>
