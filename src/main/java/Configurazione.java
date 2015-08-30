@@ -57,6 +57,13 @@ public class Configurazione {
     public void setPartita_iva(String partita_iva) {
         this.partita_iva = partita_iva;
     }
+    public String getTitolo() {
+        return titolo;
+    }
+
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
+    }
 
     public String getCodice_fiscale() {
         return codice_fiscale;
