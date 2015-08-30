@@ -20,25 +20,25 @@
         <p:tab title="Dati fiscali">
             <h:panelGrid columns="2" cellpadding="10">
   <h3>CODICE FISCALE</h3>
-      <h:inputText value="#{configurazione.codice_fiscale}"/>
+      <h:inputText value="#{configurazione.codice_fiscale}" required="true"/>
       <h3>PARTITA IVA</h3>
-      <h:inputText value="#{configurazione.partita_iva}"/>
+      <h:inputText value="#{configurazione.partita_iva}" required="true"/>
             </h:panelGrid>
         </p:tab>
         <p:tab title="Dati anagrafici">
             <h:panelGrid columns="2" cellpadding="10">
               <h3>DENOMINAZIONE</h3>
-      <h:inputText value="#{configurazione.denominazione}"/>
+      <h:inputText value="#{configurazione.denominazione}" required="true"/>
       <h3>INDIRIZZO</h3>
-      <h:inputText value="#{configurazione.indirizzo}"/>
+      <h:inputText value="#{configurazione.indirizzo}" required="true"/>
       <h3>CAP</h3>
-      <h:inputText value="#{configurazione.cap}"/>
+      <h:inputText value="#{configurazione.cap}" required="true"/>
       <h3>COMUNE</h3>
-       <h:inputText value="#{configurazione.comune}"/>
+       <h:inputText value="#{configurazione.comune}" required="true"/>
       <h3>PROVINCIA</h3>
-      <h:inputText value="#{configurazione.provincia}"/>
+      <h:inputText value="#{configurazione.provincia}" required="true"/>
       <h3>NAZIONE</h3>
-      <h:inputText value="#{configurazione.nazione}"/>
+      <h:inputText value="#{configurazione.nazione}" required="true"/>
             </h:panelGrid>
         </p:tab>    
     </p:tabView>
