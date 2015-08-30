@@ -20,7 +20,7 @@
         <p:tab title="Dati fiscali">
             <h:panelGrid columns="2" cellpadding="10">
   <h3>CODICE FISCALE</h3>
-      <h:inputText value="#{configurazione.codice_fiscale}" required="true"/>
+      <h:inputText value="#{configurazione.codice_fiscale}" required="true" validatormessage="#{configurazione.requiredMessage}"/>
       <h3>PARTITA IVA</h3>
       <h:inputText value="#{configurazione.partita_iva}" required="true"/>
             </h:panelGrid>

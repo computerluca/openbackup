@@ -19,6 +19,7 @@ public class Configurazione {
 	public String nazione;
 	public int id_configurazione;
 	public String titolo;
+	public String requiredMessage;
 	
 	public Configurazione(){
 			List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
@@ -34,7 +35,7 @@ public class Configurazione {
 				this.provincia = car.getProvincia();
 				this.nazione = car.getNazione();
 				this.titolo = "Configurazione -> Modifica";
-				
+				this.requiredMessage ="Campo non definito";
 			}
 		}
 		else{
@@ -62,6 +63,13 @@ public class Configurazione {
 
     public void setPartita_iva(String partita_iva) {
         this.partita_iva = partita_iva;
+    }
+    public String getrequiredMessage() {
+        return requiredMessage;
+    }
+
+    public void setrequiredMessage(String requiredMessage) {
+        this.requiredMessage = requiredMessage;
     }
     public String getTitolo() {
         return titolo;
