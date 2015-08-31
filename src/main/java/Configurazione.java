@@ -146,7 +146,7 @@ public class Configurazione {
 		
  String componentId = e.getComponent().getClientId();
  String[] parts = componentId.split(":");
-        System.out.println(parts[parts.size()-1]);
+        System.out.println(parts[parts.length-1]);
         	}
 }
 
