@@ -143,7 +143,7 @@ public class Configurazione {
         this.id_configurazione = id_configurazione;
     }
     public void valueChangeMethod(ValueChangeEvent e){
-		this.partita_iva = e.toString();
+		System.out.println(e.toString());
 	}
 }
 
