@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-
+import javax.faces.event.ValueChangeEvent;
 @ManagedBean(name = "configurazione")
 
 @RequestScoped
@@ -142,6 +142,9 @@ public class Configurazione {
     public void setId_configurazione(int id_configurazione) {
         this.id_configurazione = id_configurazione;
     }
+    public void valueChangeMethod(ValueChangeEvent e){
+		this.partita_iva = e.toString();
+	}
 }
 
 
