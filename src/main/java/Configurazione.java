@@ -143,6 +143,7 @@ public class Configurazione {
         this.id_configurazione = id_configurazione;
     }
     public void valueChangeMethod(ValueChangeEvent e){
+		
  String componentId = e.getComponent().getClientId();
         System.out.println(componentId);	}
 }

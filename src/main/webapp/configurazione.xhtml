@@ -24,23 +24,30 @@
       onchange="submit()"
 	valueChangeListener="#{configurazione.valueChangeMethod}"/>
       <h3>PARTITA IVA</h3>
-      <h:inputText value="#{configurazione.partita_iva}" required="true"/>
+      <h:inputText value="#{configurazione.partita_iva}" required="true" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="partita_iva"/>
             </h:panelGrid>
         </p:tab>
         <p:tab title="Dati anagrafici">
             <h:panelGrid columns="2" cellpadding="10">
               <h3>DENOMINAZIONE</h3>
-      <h:inputText value="#{configurazione.denominazione}" required="true"/>
+      <h:inputText value="#{configurazione.denominazione}" required="true" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="denominazione"/>
       <h3>INDIRIZZO</h3>
-      <h:inputText value="#{configurazione.indirizzo}" required="true"/>
+      <h:inputText value="#{configurazione.indirizzo}" required="true" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="indirizzo"/>
       <h3>CAP</h3>
-      <h:inputText value="#{configurazione.cap}" required="true"/>
+      <h:inputText value="#{configurazione.cap}" required="true" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="cap" />
       <h3>COMUNE</h3>
-       <h:inputText value="#{configurazione.comune}" required="true"/>
+       <h:inputText value="#{configurazione.comune}" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="comune" required="true"/>
       <h3>PROVINCIA</h3>
-      <h:inputText value="#{configurazione.provincia}" required="true"/>
+      <h:inputText value="#{configurazione.provincia}" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="provincia" required="true"/>
       <h3>NAZIONE</h3>
-      <h:inputText value="#{configurazione.nazione}" required="true"/>
+      <h:inputText value="#{configurazione.nazione}" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="nazione" required="true"/>
             </h:panelGrid>
         </p:tab>    
     </p:tabView>
