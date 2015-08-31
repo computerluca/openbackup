@@ -145,7 +145,9 @@ public class Configurazione {
     public void valueChangeMethod(ValueChangeEvent e){
 		
  String componentId = e.getComponent().getClientId();
-        System.out.println(componentId);	}
+ String[] parts = componentID.split(":");
+        System.out.println(parts[parts.size()-1]);
+        	}
 }
 
 
