@@ -20,8 +20,10 @@ public class Configurazione {
 	public int id_configurazione;
 	public String titolo;
 	public String requiredMessage;
-	
+				public SaveManager sm;
+
 	public Configurazione(){
+		sm = new SaveManager();
 			List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
 			cars.addAll(AC01_ANAGRAFICHE_UTILITIES.select_all_ac01_anagrafiche_tipo_principale());
 			if(cars.size()==1){
@@ -43,11 +45,10 @@ public class Configurazione {
 		}	
 	}
 	public void annulla(){
-		this.denominazione = "annulla";
 		
 	}
 	public void salva(){
-		this.denominazione = "salva";
+		this.sm.Salva();
 	}
     public int getId_anagrafica() {
         return id_anagrafica;
@@ -147,6 +148,9 @@ public class Configurazione {
  String componentId = e.getComponent().getClientId();
  String[] parts = componentId.split(":");
         System.out.println(parts[parts.length-1]);
+        	String campo = parts[parts.length-1];
+        	String valore = e.getNewValue();
+        	this.sm.aggiungi_campo(campo,valore);
         	}
 }
 
