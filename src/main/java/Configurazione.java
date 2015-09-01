@@ -9,6 +9,7 @@ import javax.faces.event.ValueChangeEvent;
 @RequestScoped
 public class Configurazione {
 	public int id_anagrafica;
+	 @Size(min = 11, max=11, message = "Il campo deve essere di 11 caratteri")
 	public String partita_iva;
 	public String codice_fiscale;
 	public String denominazione;
