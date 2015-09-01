@@ -31,9 +31,9 @@ import java.util.List;
 for(String key:keys){
             //System.out.println("Value of "+key+" is: "+hm.get(key));
 ciao.append(key);
-ciao.append("=");
+ciao.append("='");
 ciao.append(campi_modificati.get(key));
-ciao.append(",");
+ciao.append("',");
 	}
 	          return ciao.toString();
 
