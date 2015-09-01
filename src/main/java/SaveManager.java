@@ -41,6 +41,7 @@ ciao.append("',");
 	}
 	public void Salva(){
 		if(this.campi_modificati.size()>0){
+			
 			String query = componi_campi();
 			String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
@@ -53,6 +54,7 @@ PreparedStatement pstmt = conn.prepareStatement("update AC01_ANAGRAFICHE set "
 +query + "id_configurazione =1 where id_configurazione = 1");
 System.out.println(pstmt.toString());
         pstmt.executeUpdate();
+        this.campi_modificati.clear();
 }
 catch(SQLException e){
 	System.out.println(e.toString());
