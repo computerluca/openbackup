@@ -148,8 +148,8 @@ public class Configurazione {
  String componentId = e.getComponent().getClientId();
  String[] parts = componentId.split(":");
         System.out.println(parts[parts.length-1]);
-        	String campo = parts[parts.length-1];
-        	String valore = e.getNewValue();
+        	String campo = parts[parts.length-1].toString();
+        	String valore = e.getNewValue().toString();
         	this.sm.aggiungi_campo(campo,valore);
         	}
 }
