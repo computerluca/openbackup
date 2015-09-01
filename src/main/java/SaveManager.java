@@ -50,9 +50,9 @@ Connection conn = null;
 try{
 conn = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
 PreparedStatement pstmt = conn.prepareStatement("update AC01_ANAGRAFICHE set "
-+query + "where id_configurazione = 1");
++query + "configurazione =1 where id_configurazione = 1");
 System.out.println(pstmt.toString());
-        pstmt.executeQuery();
+        pstmt.executeUpdate();
 }
 catch(SQLException e){
 	System.out.println(e.toString());
