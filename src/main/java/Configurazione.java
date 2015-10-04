@@ -46,6 +46,8 @@ public class Configurazione {
 		else{
 			this.titolo = "Configurazione -> Nuovo";
 			this.sm.inserisci_nuova_configurazione_principale();
+			
+			
 		}	
 	}
 	public void annulla(){
