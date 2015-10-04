@@ -71,7 +71,7 @@ String URL = "jdbc:mysql://127.13.47.2:3306/computerlucaworld";
 Connection conn = null;
 try{
 conn = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
-PreparedStatement pstmt = conn.prepareStatement("INSERT INTO AC01_ANAGRAFICHE (ID_CONFIGURAZIONE)VALUES(1)");
+PreparedStatement pstmt = conn.prepareStatement("INSERT INTO AC01_ANAGRAFICHE (ID_ANAGRAFICA,ID_CONFIGURAZIONE)VALUES(NULL,1)");
 		        pstmt.executeUpdate();
 
 	}
