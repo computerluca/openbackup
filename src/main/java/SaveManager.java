@@ -75,7 +75,7 @@ conn = DriverManager.getConnection(URL , USERNAME , PASSWORD);
 
 PreparedStatement pstmt = conn.prepareStatement("INSERT INTO AC01_ANAGRAFICHE (ID_ANAGRAFICA,ID_CONFIGURAZIONE)VALUES(NULL,1)");
 		        pstmt.executeUpdate();
-
+Salva();
 	}
 	catch(SQLException e){
 	System.out.println(e.toString());
