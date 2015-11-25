@@ -11,12 +11,12 @@
 <navigation-rule>
 	<from-view-id>anamana.xhtml</from-view-id>
 	<navigation-case>
-		<from-action>#{pageController.newana}</from-action>
+		<from-action>#{anamana.newana}</from-action>
 		<from-outcome>success</from-outcome>
 		<to-view-id>newana.xhtml</to-view-id>
 	</navigation-case>
 	<navigation-case>
-		<from-action>#{pageController.configurazione}</from-action>
+		<from-action>#{anamana.configurazione}</from-action>
 		<from-outcome>success</from-outcome>
 		<to-view-id>configurazione.xhtml</to-view-id>
 	</navigation-case>
