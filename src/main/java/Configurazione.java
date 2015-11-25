@@ -50,7 +50,21 @@ public class Configurazione {
 		}	
 	}
 	public void annulla(){
-		
+		List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
+			cars.addAll(AC01_ANAGRAFICHE_UTILITIES.select_all_ac01_anagrafiche_tipo_principale());
+			if(cars.size()==1){
+			for (AC01_ANAGRAFICHE car:cars){
+				this.codice_fiscale = car.getCodice_fiscale();
+				this.partita_iva = car.getPartita_iva();
+				this.denominazione = car.getDenominazione();
+				this.indirizzo = car.getIndirizzo();
+				this.cap = car.getCap();
+				this.comune = car.getComune();
+				this.provincia = car.getProvincia();
+				this.nazione = car.getNazione();
+				this.titolo = "Configurazione -> Modifica";
+				this.requiredMessage ="Campo non definito";
+			}
 	}
 	public void salva(){
 		this.sm.Salva();
