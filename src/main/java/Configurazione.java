@@ -66,6 +66,8 @@ public class Configurazione {
 				this.requiredMessage ="Campo non definito";
 			}
 	}
+	
+}
 	public void salva(){
 		this.sm.Salva();
 	}
