@@ -10,50 +10,49 @@
 </h:head>
 <h:body>
 
-              <h:outputText value="#{configurazione.titolo}" />
 
  <h:form id="form">
     <p:growl id="msgs" showDetail="true" />
  
-    <h3 style="margin-top:0">Configurazione</h3>
+    <h3 style="margin-top:0">Gestione Nuova Anagrafica</h3>
     <p:tabView>
         <p:tab title="Dati fiscali">
             <h:panelGrid columns="2" cellpadding="10">
   <h3>CODICE FISCALE</h3>
-      <h:inputText value="#{configurazione.codice_fiscale}" id="codice_fiscale" required="true" 
+      <h:inputText value="#{newana.codice_fiscale}" id="codice_fiscale" required="true" 
       onchange="submit()"
-	valueChangeListener="#{configurazione.valueChangeMethod}">
+	valueChangeListener="#{newana.valueChangeMethod}">
 	  </h:inputText>
       <h3>PARTITA IVA</h3>
-      <h:inputText value="#{configurazione.partita_iva}" required="true" onchange="submit()"
-	valueChangeListener="#{configurazione.valueChangeMethod}" id="partita_iva"/>
+      <h:inputText value="#{newana.partita_iva}" required="true" onchange="submit()"
+	valueChangeListener="#{newana.valueChangeMethod}" id="partita_iva"/>
             </h:panelGrid>
         </p:tab>
         <p:tab title="Dati anagrafici">
             <h:panelGrid columns="2" cellpadding="10">
               <h3>DENOMINAZIONE</h3>
-      <h:inputText value="#{configurazione.denominazione}" required="true" onchange="submit()"
-	valueChangeListener="#{configurazione.valueChangeMethod}" id="denominazione"/>
+      <h:inputText value="#{newana.denominazione}" required="true" onchange="submit()"
+	valueChangeListener="#{newana.valueChangeMethod}" id="denominazione"/>
       <h3>INDIRIZZO</h3>
-      <h:inputText value="#{configurazione.indirizzo}" required="true" onchange="submit()"
-	valueChangeListener="#{configurazione.valueChangeMethod}" id="indirizzo"/>
+      <h:inputText value="#{newana.indirizzo}" required="true" onchange="submit()"
+	valueChangeListener="#{newana.valueChangeMethod}" id="indirizzo"/>
       <h3>CAP</h3>
-      <h:inputText value="#{configurazione.cap}" required="true" onchange="submit()"
-	valueChangeListener="#{configurazione.valueChangeMethod}" id="cap" />
+      <h:inputText value="#{newana.cap}" required="true" onchange="submit()"
+	valueChangeListener="#{newana.valueChangeMethod}" id="cap" />
       <h3>COMUNE</h3>
-       <h:inputText value="#{configurazione.comune}" onchange="submit()"
-	valueChangeListener="#{configurazione.valueChangeMethod}" id="comune" required="true"/>
+       <h:inputText value="#{newana.comune}" onchange="submit()"
+	valueChangeListener="#{newana.valueChangeMethod}" id="comune" required="true"/>
       <h3>PROVINCIA</h3>
-      <h:inputText value="#{configurazione.provincia}" onchange="submit()"
-	valueChangeListener="#{configurazione.valueChangeMethod}" id="provincia" required="true"/>
+      <h:inputText value="#{newana.provincia}" onchange="submit()"
+	valueChangeListener="#{newana.valueChangeMethod}" id="provincia" required="true"/>
       <h3>NAZIONE</h3>
-      <h:inputText value="#{configurazione.nazione}" onchange="submit()"
-	valueChangeListener="#{configurazione.valueChangeMethod}" id="nazione" required="true"/>
+      <h:inputText value="#{newana.nazione}" onchange="submit()"
+	valueChangeListener="#{newana.valueChangeMethod}" id="nazione" required="true"/>
             </h:panelGrid>
         </p:tab>    
     </p:tabView>
-<h:commandButton value="Annulla" type="submit" actionListener="#{configurazione.annulla}" />	
-<h:commandButton value="Salva" type="submit" actionListener="#{configurazione.salva}" />
+<h:commandButton value="Annulla" type="submit" actionListener="#{newana.annulla}" />	
+<h:commandButton value="Salva" type="submit" actionListener="#{newana.salva}" />
 	    </h:form>
 </h:body>
 </html>
