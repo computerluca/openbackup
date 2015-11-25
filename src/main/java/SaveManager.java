@@ -39,6 +39,17 @@ ciao.append("',");
 
 	 
 	}
+	public String componi_campi2(){
+		StringBuilder ciao = new StringBuilder();
+		        Set<String> keys = this.campi_modificati.keySet();
+for(String key:keys){
+	ciao.append(campi_modificati.get(key));
+	ciao.append(",");
+}
+	          return ciao.toString();
+
+	 
+	}
 	public void Salva(){
 		if(this.campi_modificati.size()>0){
 			
@@ -52,6 +63,29 @@ try{
 conn = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
 PreparedStatement pstmt = conn.prepareStatement("update AC01_ANAGRAFICHE set "
 +query + "id_configurazione =1 where id_configurazione = 1");
+System.out.println(pstmt.toString());
+        pstmt.executeUpdate();
+        this.campi_modificati.clear();
+}
+catch(SQLException e){
+	System.out.println(e.toString());
+}  
+		}
+		
+		
+	}
+	public void Salva2(){
+		if(this.campi_modificati.size()>0){
+			
+			String query = componi_campi();
+			String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+
+String URL = "jdbc:mysql://127.13.47.2:3306/computerlucaworld";
+Connection conn = null;
+try{
+PreparedStatement pstmt = conn.prepareStatement("INSERT INTO AC01_ANAGRAFICHE VALUES("+componi_campi2()+")");
+		        pstmt.executeUpdate();
 System.out.println(pstmt.toString());
         pstmt.executeUpdate();
         this.campi_modificati.clear();
@@ -81,5 +115,23 @@ Salva();
 	System.out.println(e.toString());
 }
 }
+/* public void inserisci_nuova_anagrafica(){
+		String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+
+String URL = "jdbc:mysql://127.13.47.2:3306/computerlucaworld";
+Connection conn = null;
+try{
+conn = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
+
+
+PreparedStatement pstmt = conn.prepareStatement("INSERT INTO AC01_ANAGRAFICHE (ID_ANAGRAFICA,ID_CONFIGURAZIONE)VALUES(NULL,1)");
+		        pstmt.executeUpdate();
+Salva2();
+	}
+	catch(SQLException e){
+	System.out.println(e.toString());
+}
+}*/
 
 }

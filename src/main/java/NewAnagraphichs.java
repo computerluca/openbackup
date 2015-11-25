@@ -48,7 +48,7 @@ public class NewAnagraphichs {
 	
 }
 	public void salva(){
-		this.sm.Salva();
+		this.sm.Salva2();
 	}
     public int getId_anagrafica() {
         return id_anagrafica;
