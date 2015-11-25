@@ -8,5 +8,20 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
 </servlet-mapping>
+<navigation-rule>
+	<from-view-id>anamana.xhtml</from-view-id>
+	<navigation-case>
+		<from-action>#{pageController.newana}</from-action>
+		<from-outcome>success</from-outcome>
+		<to-view-id>newana.xhtml</to-view-id>
+	</navigation-case>
+	<navigation-case>
+		<from-action>#{pageController.configurazione}</from-action>
+		<from-outcome>success</from-outcome>
+		<to-view-id>configurazione.xhtml</to-view-id>
+	</navigation-case>
+    </navigation-rule>	
 
 </faces-config>
+
+

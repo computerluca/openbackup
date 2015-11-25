@@ -14,7 +14,10 @@
  
     <h3 style="margin-top:0">Gestione Anagrafiche</h3>
     
-           <h:commandButton action="newana.xhtml" value="Crea Nuova Anagrafica" />
-</h:body>
+<h:form>
+    	<h:commandButton action="#{pageController.newana}" value="Crea nuova anagrafica" />
+    	<h:commandButton action="#{pageController.configurazione}" value="Configura anagrafica principale" />
+      </h:form>
+      </h:body>
 </html>
 
