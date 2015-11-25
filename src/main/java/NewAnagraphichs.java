@@ -9,7 +9,7 @@ import javax.validation.constraints.*;
 @ManagedBean(name = "newana")
 
 @RequestScoped
-public class Configurazione {
+public class NewAna {
 	public int id_anagrafica;
 	public String partita_iva;
 	public String codice_fiscale;
@@ -24,7 +24,7 @@ public class Configurazione {
 	public String requiredMessage;
 				public SaveManager sm;
 
-	public Configurazione(){
+	public NewAna(){
 		sm = new SaveManager();
 			List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
 			cars.addAll(AC01_ANAGRAFICHE_UTILITIES.select_all_ac01_anagrafiche_tipo_principale());
