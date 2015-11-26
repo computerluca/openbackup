@@ -43,7 +43,7 @@ ciao.append("',");
 		StringBuilder ciao = new StringBuilder();
 		        Set<String> keys = this.campi_modificati.keySet();
 for(String key:keys){
-	ciao.append(campi_modificati.get(key));
+	ciao.append(this.campi_modificati.get(key));
 	ciao.append(",");
 }
 	          return ciao.toString();
