@@ -76,7 +76,6 @@ catch(SQLException e){
 	public void Salva2(){
 		if(this.campi_modificati.size()>0){
 			
-			String query = componi_campi();
 			String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 
