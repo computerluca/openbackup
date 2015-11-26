@@ -42,7 +42,17 @@ ciao.append("',");
 	public String componi_campi2(){
 		StringBuilder ciao2 = new StringBuilder();
 		        Set<String> keys = this.campi_modificati.keySet();
+		        ciao2.append("(");
+	for(String key:keys){
+	
+	ciao2.append(key);
+	ciao2.append(",");
+	
+}	       
+ciao2.append(")");
+
 for(String key:keys){
+	
 	ciao2.append(this.campi_modificati.get(key));
 	ciao2.append(",");
 }
