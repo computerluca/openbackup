@@ -51,6 +51,7 @@ ciao.append("',");
 	ciao2.append("id_configurazione");
        
 ciao2.append(")");
+ciao2.append("VALUES (");
 
 for(String key:keys){
 	
@@ -58,6 +59,7 @@ for(String key:keys){
 	ciao2.append(",");
 }
 ciao2.append("3");
+ciao2.append(")");
 	          return ciao2.toString();
  
 	}
