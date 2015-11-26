@@ -47,7 +47,7 @@ ciao.append("',");
 	
 	ciao2.append(key);
 	ciao2.append(",");
-	
+	ciao2.append("id_configurazione");
 }	       
 ciao2.append(")");
 
@@ -56,6 +56,7 @@ for(String key:keys){
 	ciao2.append(this.campi_modificati.get(key));
 	ciao2.append(",");
 }
+ciao2.append("3");
 	          return ciao2.toString();
  
 	}
@@ -86,7 +87,7 @@ catch(SQLException e){
 	public void Salva2(){
 		
 		String ciao = componi_campi2();
-		String query = "INSERT INTO AC01_ANAGRAFICHE VALUES("+ciao+")";
+		String query = "INSERT INTO AC01_ANAGRAFICHE" +ciao;
 System.out.println(ciao);
 System.out.println(query);
 		if(this.campi_modificati.size()>0){
