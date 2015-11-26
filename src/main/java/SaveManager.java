@@ -74,6 +74,11 @@ catch(SQLException e){
 		
 	}
 	public void Salva2(){
+		
+		String ciao = componi_campi2();
+		String query = "INSERT INTO AC01_ANAGRAFICHE VALUES("+ciao+")";
+System.out.println(ciao);
+Syste.out.println(query);
 		if(this.campi_modificati.size()>0){
 			
 			String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
@@ -81,9 +86,8 @@ String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 
 String URL = "jdbc:mysql://127.13.47.2:3306/computerlucaworld";
 Connection conn = null;
-String ciao = componi_campi2();
 try{
-PreparedStatement pstmt = conn.prepareStatement("INSERT INTO AC01_ANAGRAFICHE VALUES("+ciao+")");
+PreparedStatement pstmt = conn.prepareStatement(query);
 		        pstmt.executeUpdate();
 System.out.println(pstmt.toString());
         pstmt.executeUpdate();
