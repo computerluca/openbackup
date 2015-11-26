@@ -54,11 +54,12 @@ ciao2.append(")");
 ciao2.append("VALUES (");
 
 for(String key:keys){
-	
+	ciao2.append("'");
 	ciao2.append(this.campi_modificati.get(key));
+	ciao2.append("'");
 	ciao2.append(",");
 }
-ciao2.append("3");
+ciao2.append("'3'");
 ciao2.append(")");
 	          return ciao2.toString();
  
