@@ -47,8 +47,7 @@ for(String key:keys){
 	ciao.append(",");
 }
 	          return ciao.toString();
-
-	 
+ 
 	}
 	public void Salva(){
 		if(this.campi_modificati.size()>0){

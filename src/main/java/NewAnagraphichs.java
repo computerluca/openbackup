@@ -27,7 +27,6 @@ public class NewAnagraphichs {
 	public NewAnagraphichs(){
 		sm = new SaveManager();
 			this.titolo = "Anagrafiche -> Crea Nuova";
-			this.requiredMessage ="Campo non definito";
 			
 			
 	}
@@ -41,8 +40,6 @@ public class NewAnagraphichs {
 				this.comune = " ";
 				this.provincia = " ";
 				this.nazione = " ";
-				this.titolo = "Configurazione -> Modifica";
-				this.requiredMessage ="Campo non definito";
 		
 
 	
