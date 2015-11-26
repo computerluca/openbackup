@@ -87,6 +87,8 @@ String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 String URL = "jdbc:mysql://127.13.47.2:3306/computerlucaworld";
 Connection conn = null;
 try{
+	conn = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
+
 PreparedStatement pstmt = conn.prepareStatement(query);
 		        pstmt.executeUpdate();
 System.out.println(pstmt.toString());
