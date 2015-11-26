@@ -21,7 +21,6 @@ public class NewAnagraphichs {
 	public String nazione;
 	public int id_configurazione;
 	public String titolo;
-	public String requiredMessage;
 				public SaveManager sm;
 
 	public NewAnagraphichs(){
@@ -62,13 +61,7 @@ public class NewAnagraphichs {
     public void setPartita_iva(String partita_iva) {
         this.partita_iva = partita_iva;
     }
-    public String getrequiredMessage() {
-        return requiredMessage;
-    }
-
-    public void setrequiredMessage(String requiredMessage) {
-        this.requiredMessage = requiredMessage;
-    }
+   
     public String getTitolo() {
         return titolo;
     }
