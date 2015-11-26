@@ -40,11 +40,11 @@ ciao.append("',");
 	 
 	}
 	public String componi_campi2(){
-		StringBuilder ciao = new StringBuilder();
+		StringBuilder ciao2 = new StringBuilder();
 		        Set<String> keys = this.campi_modificati.keySet();
 for(String key:keys){
-	ciao.append(this.campi_modificati.get(key));
-	ciao.append(",");
+	ciao2.append(this.campi_modificati.get(key));
+	ciao2.append(",");
 }
 	          return ciao.toString();
  
