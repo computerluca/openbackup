@@ -82,8 +82,9 @@ String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 
 String URL = "jdbc:mysql://127.13.47.2:3306/computerlucaworld";
 Connection conn = null;
+String ciao = componi_campi2();
 try{
-PreparedStatement pstmt = conn.prepareStatement("INSERT INTO AC01_ANAGRAFICHE VALUES("+componi_campi2()+")");
+PreparedStatement pstmt = conn.prepareStatement("INSERT INTO AC01_ANAGRAFICHE VALUES("+ciao+")");
 		        pstmt.executeUpdate();
 System.out.println(pstmt.toString());
         pstmt.executeUpdate();
