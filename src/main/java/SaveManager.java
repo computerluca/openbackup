@@ -46,7 +46,7 @@ for(String key:keys){
 	ciao2.append(this.campi_modificati.get(key));
 	ciao2.append(",");
 }
-	          return ciao.toString();
+	          return ciao2.toString();
  
 	}
 	public void Salva(){
