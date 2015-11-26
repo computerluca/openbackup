@@ -133,7 +133,7 @@ public class NewAnagraphichs {
     public void setId_configurazione(int id_configurazione) {
         this.id_configurazione = id_configurazione;
     }
-    public void valueChangeMethod(ValueChangeEvent e){
+    public synchronized void valueChangeMethod(ValueChangeEvent e){
 		
  String componentId = e.getComponent().getClientId();
  String[] parts = componentId.split(":");
