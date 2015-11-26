@@ -147,7 +147,7 @@ public class NewAnagraphichs {
         System.out.println(parts[parts.length-1]);
         	String campo = parts[parts.length-1].toString();
         	String valore = e.getNewValue().toString();
-        	this.sm.aggiungi_campo(campo,valore);
+        	this.sm.aggiungi_campo2(campo,valore);
         	}
 }
 
