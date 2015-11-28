@@ -10,7 +10,7 @@ public class anamana implements Serializable {
 	public AC01_ANAGRAFICHE_UTILITIES lista_anagrafiche = new AC01_ANAGRAFICHE_UTILITIES();
 	public List lista_anagrafiche_lista;
 	 public List getlista_anagrafiche_lista() {
-        return id_anagrafica;
+        return lista_anagrafiche_lista;
     }
 
     public void setlista_anagrafiche_lista(List id_anagrafica) {
