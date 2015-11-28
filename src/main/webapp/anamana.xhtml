@@ -17,8 +17,21 @@
 <h:form>
     	<h:commandButton action="#{anamana.newana}" value="Crea nuova anagrafica" />
     	<h:commandButton action="#{anamana.configurazione}" value="Configura anagrafica principale" />
-      <h:outputText value="#{param['id']}" />
-      
+      <h:outputText id="anagrafica" value="#{param['id']}" />
+      <h:dataTable value="#{anamana.lista_anagrafiche_lista}" var="employee"
+   styleClass="employeeTable"
+   headerClass="employeeTableHeader"
+   rowClasses="employeeTableOddRow,employeeTableEvenRow">
+   <h:column>    				
+      <f:facet name="header">Codice Fiscale</f:facet>    				
+      #{employee.partita_iva}
+   </h:column>
+   <h:column>
+      <f:facet name="header">Partita IVA</f:facet>
+      #{employee.codice_fiscale}
+   </h:column>
+   
+</h:dataTable>
       </h:form>
       </h:body>
 </html>
