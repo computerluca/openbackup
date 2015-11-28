@@ -14,7 +14,7 @@ public class anamana implements Serializable {
     }
 
     public void setlista_anagrafiche_lista(List id_anagrafica) {
-        this.id_anagrafica = id_anagrafica;
+        this.lista_anagrafiche_lista = id_anagrafica;
     } 
 	
 	public void inizializza(){
