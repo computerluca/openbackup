@@ -13,7 +13,7 @@ public class anamana implements Serializable {
         return id_anagrafica;
     }
 
-    public void setlista_anagrafiche_lista(int id_anagrafica) {
+    public void setlista_anagrafiche_lista(List id_anagrafica) {
         this.id_anagrafica = id_anagrafica;
     } 
 	
