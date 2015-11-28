@@ -9,6 +9,9 @@ public class anamana implements Serializable {
 	private static final long serialVersionUID = 1L;
 	public AC01_ANAGRAFICHE_UTILITIES lista_anagrafiche = new AC01_ANAGRAFICHE_UTILITIES();
 	public List lista_anagrafiche_lista;
+	public anamana(){
+		inizializza();
+	}
 	 public List getlista_anagrafiche_lista() {
         return lista_anagrafiche_lista;
     }
