@@ -36,7 +36,6 @@ public class RigheDettaglio implements Serializable{
 	public Commerciale comm;
 	NodeList righe_dettaglio;
 	private List<Order>  orderList;
-    
 
 	 public void inizializza(){
 		 this.file_xml=this.userData.getfile();
