@@ -24,7 +24,6 @@ public class anabene implements Serializable {
 		this.lista_beni=beni.select_all_ac02_beni();
 	}
 	public String newbene(){
-		return "success";
 	}
 	
 	
