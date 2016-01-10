@@ -106,8 +106,6 @@ catch(SQLException e){
 	}
 	public void Salva3(){
 		
-		String ciao = componi_campi3();
-		String query = "INSERT INTO AC02_BENI" +ciao;
 
 		if(this.campi_modificati.size()>0){
 			
@@ -121,7 +119,7 @@ try{
 
 String insertTableSQL = "INSERT INTO AC02_BENI"
 		+ "(id_bene, codice_bene, descrizione) VALUES"
-		+ "(?,?,?,?)";
+		+ "(?,?,?)";
 PreparedStatement preparedStatement = conn.prepareStatement(insertTableSQL);
 preparedStatement.setInt(1, 11);
 preparedStatement.setString(2, this.campi_modificati.get("codice_bene"));
