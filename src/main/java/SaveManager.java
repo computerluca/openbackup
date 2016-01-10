@@ -111,7 +111,7 @@ catch(SQLException e){
 	}
 	public void Salva3(){
 		
-		String ciao = componi_campi2();
+		String ciao = componi_campi3();
 		String query = "INSERT INTO AC02_BENI" +ciao;
 
 		if(this.campi_modificati.size()>0){
