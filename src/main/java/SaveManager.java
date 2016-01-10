@@ -67,15 +67,8 @@ ciao2.append(")");
 	public String componi_campi3(){
 		StringBuilder ciao3= new StringBuilder();
 		        Set<String> keys = this.campi_modificati.keySet();
-		        ciao3.append("(");
-	for(String key:keys){
 	
-	ciao3.append(key);
-	ciao3.append(",");
-}	
        
-ciao3.append(")");
-ciao3.append("VALUES (");
 
 for(String key:keys){
 	ciao3.append("'");
@@ -83,7 +76,6 @@ for(String key:keys){
 	ciao3.append("'");
 	ciao3.append(",");
 }
-ciao3.append(")");
 System.out.println(ciao3);
 	          return ciao3.toString();
  
@@ -127,10 +119,15 @@ Connection conn = null;
 try{
 	conn = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
 
-PreparedStatement pstmt = conn.prepareStatement(query);
-        System.out.println(query);
-
-		        pstmt.executeUpdate();
+String insertTableSQL = "INSERT INTO AC02_BENI"
+		+ "(id_bene, codice_bene, descrizione) VALUES"
+		+ "(?,?,?,?)";
+PreparedStatement preparedStatement = dbConnection.prepareStatement(insertTableSQL);
+preparedStatement.setInt(1, 11);
+preparedStatement.setString(2, this.campi_modificati.get("codice_bene"));
+preparedStatement.setString(3, this.campi_modificati.get("descrizione"));
+// execute insert SQL stetement
+preparedStatement .executeUpdate();
         this.campi_modificati.clear();
 }
 catch(SQLException e){
