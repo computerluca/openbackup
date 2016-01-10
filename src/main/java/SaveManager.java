@@ -65,26 +65,26 @@ ciao2.append(")");
  
 	}
 	public String componi_campi3(){
-		StringBuilder ciao2 = new StringBuilder();
+		StringBuilder ciao3= new StringBuilder();
 		        Set<String> keys = this.campi_modificati.keySet();
-		        ciao2.append("(");
+		        ciao3.append("(");
 	for(String key:keys){
 	
-	ciao2.append(key);
-	ciao2.append(",");
+	ciao3.append(key);
+	ciao3.append(",");
 }	
        
-ciao2.append(")");
-ciao2.append("VALUES (");
+ciao3.append(")");
+ciao3.append("VALUES (");
 
 for(String key:keys){
-	ciao2.append("'");
-	ciao2.append(this.campi_modificati.get(key));
-	ciao2.append("'");
-	ciao2.append(",");
+	ciao3.append("'");
+	ciao3.append(this.campi_modificati.get(key));
+	ciao3.append("'");
+	ciao3.append(",");
 }
-ciao2.append(")");
-	          return ciao2.toString();
+ciao3.append(")");
+	          return ciao3.toString();
  
 	}
 	public void Salva(){
