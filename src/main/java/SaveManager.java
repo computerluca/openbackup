@@ -84,6 +84,7 @@ for(String key:keys){
 	ciao3.append(",");
 }
 ciao3.append(")");
+System.out.println(ciao3);
 	          return ciao3.toString();
  
 	}
