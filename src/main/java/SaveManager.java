@@ -71,6 +71,7 @@ ciao2.append(")");
 	for(String key:keys){
 	
 	ciao2.append(key);
+	ciao2.append(",");
 }	
        
 ciao2.append(")");
