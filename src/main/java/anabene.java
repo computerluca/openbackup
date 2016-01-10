@@ -21,7 +21,7 @@ public class anabene implements Serializable {
     } 
 	
 	public void inizializza(){
-		this.lista_beni=lista_beni.select_all_ac02_beni();
+		this.lista_beni=beni.select_all_ac02_beni();
 	}
 	public String newbene(){
 		return "success";
