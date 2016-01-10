@@ -44,9 +44,9 @@ System.out.println(pstmt.toString());
             //un elemento a una lista
 
           
-			car.setcodice_bene(rs.getString("CODICE_BENE"));
-			car.setdescrizione(rs.getString("DESCRIZIONE"));
-			
+			car.setcodice_bene(rs.getString("codice_bene"));
+			car.setdescrizione(rs.getString("descrizione"));
+
 			cars.add(car);
         }
 
