@@ -46,9 +46,11 @@ System.out.println(pstmt.toString());
           
 			car.setcodice_bene(rs.getString("codice_bene"));
 			car.setdescrizione(rs.getString("descrizione"));
-
+			
 			cars.add(car);
+			System.out.println("car");
         }
+        
 
         rs.close();
 
