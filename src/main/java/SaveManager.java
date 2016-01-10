@@ -71,7 +71,7 @@ ciao2.append(")");
 	for(String key:keys){
 	
 	ciao2.append(key);
-	ciao2.append(",");
+	ciao2.append("),");
 }	
 	
 ciao2.append("VALUES (");
@@ -82,6 +82,7 @@ for(String key:keys){
 	ciao2.append("'");
 }
 ciao2.append(")");
+System.out.println(ciao2.toString);
 	          return ciao2.toString();
  
 	}
