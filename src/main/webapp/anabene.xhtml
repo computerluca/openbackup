@@ -16,8 +16,6 @@
     <h3 style="margin-top:0">Gestione Anagrafiche</h3>
     
 <h:form>
-    	<h:commandButton action="#{anabene.newbene}" value="Crea nuovo bene" />
-      <h:outputText id="anagrafica" value="#{param['id']}" />
       <h:dataTable value="#{anabene.lista_beni}" var="employee"
    styleClass="employeeTable"
    headerClass="employeeTableHeader"
