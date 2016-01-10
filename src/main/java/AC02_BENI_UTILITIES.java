@@ -45,7 +45,7 @@ System.out.println(pstmt.toString());
 
           
 			car.setcodice_bene(rs.getString("CODICE_BENE"));
-			car.setPartita_iva(rs.getString("DESCRIZIONE"));
+			car.setdescrizione(rs.getString("DESCRIZIONE"));
 			
 			cars.add(car);
         }
