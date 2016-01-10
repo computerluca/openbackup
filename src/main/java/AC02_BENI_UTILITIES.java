@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AC02_BENI{
+public class AC02_BENI_UTILITIES{
 	
 	/* Classe con metodi riutilizzabili nei managed beans */
 	public static Connection get_connection (){
