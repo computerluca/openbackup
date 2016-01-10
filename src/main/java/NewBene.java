@@ -9,14 +9,14 @@ import javax.validation.constraints.*;
 @ManagedBean(name = "newbene")
 
 @RequestScoped
-public class NewAnagraphichs {
+public class NewBene {
 	public int id_bene;
 	public String codice_bene;
 	public String descrizione;
 
 	public SaveManager sm;
 
-	public NewAnagraphichs(){
+	public NewBene(){
 		sm = new SaveManager();
 			this.titolo = "Bene/Servizio -> Creazione";
 			

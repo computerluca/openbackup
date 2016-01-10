@@ -4,7 +4,7 @@ import java.io.Serializable;
  import java.util.*;
 @ManagedBean
 @SessionScoped
-public class anamana implements Serializable {
+public class anabene implements Serializable {
  
 	private static final long serialVersionUID = 1L;
 	public AC02_BENI beni = new AC02_BENI_UTILITIES();
