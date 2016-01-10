@@ -17,19 +17,17 @@ public class anabene implements Serializable {
     }
 
     public void setlista_beni(List id_bene) {
-        this.id_bene = id_bene;
+        this.lista_beni = id_bene;
     } 
 	
 	public void inizializza(){
 		this.lista_beni=lista_beni.select_all_ac02_beni();
 	}
-	public String newana(){
+	public String newbene(){
 		return "success";
 	}
 	
-	public String configurazione(){
-		return "success";
-	}
+	
 }
 
 
