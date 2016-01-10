@@ -64,6 +64,27 @@ ciao2.append(")");
 	          return ciao2.toString();
  
 	}
+	public String componi_campi3(){
+		StringBuilder ciao2 = new StringBuilder();
+		        Set<String> keys = this.campi_modificati.keySet();
+		        ciao2.append("(");
+	for(String key:keys){
+	
+	ciao2.append(key);
+	ciao2.append(",");
+}	
+	
+ciao2.append("VALUES (");
+
+for(String key:keys){
+	ciao2.append("'");
+	ciao2.append(this.campi_modificati.get(key));
+	ciao2.append("'");
+}
+ciao2.append(")");
+	          return ciao2.toString();
+ 
+	}
 	public void Salva(){
 		if(this.campi_modificati.size()>0){
 			
@@ -83,6 +104,33 @@ System.out.println(pstmt.toString());
 }
 catch(SQLException e){
 	System.out.println(e.toString());
+}  
+		}
+		
+		
+	}
+	public void Salva3(){
+		
+		String ciao = componi_campi2();
+		String query = "INSERT INTO AC02_BENI" +ciao;
+
+		if(this.campi_modificati.size()>0){
+			
+			String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+
+String URL = "jdbc:mysql://127.13.47.2:3306/computerlucaworld";
+Connection conn = null;
+try{
+	conn = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
+
+PreparedStatement pstmt = conn.prepareStatement(query);
+		        pstmt.executeUpdate();
+        this.campi_modificati.clear();
+}
+catch(SQLException e){
+	System.out.println(e.toString());
+	
 }  
 		}
 		
