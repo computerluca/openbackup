@@ -7,7 +7,7 @@ import java.io.Serializable;
 public class anabene implements Serializable {
  
 	private static final long serialVersionUID = 1L;
-	public AC02_BENI beni = new AC02_BENI_UTILITIES();
+	public AC02_BENI_UTILITIES beni = new AC02_BENI_UTILITIES();
 	public List lista_beni;
 	public void anabeni(){
 		inizializza();
