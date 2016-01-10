@@ -33,7 +33,7 @@ public class NewBene {
 	
 }
 	public void salva(){
-		this.sm.Salva2();
+		this.sm.Salva3();
 	}
     public int getId_bene() {
         return id_bene;
