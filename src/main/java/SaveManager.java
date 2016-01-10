@@ -71,7 +71,7 @@ ciao2.append(")");
 	for(String key:keys){
 	
 	ciao2.append(key);
-	ciao2.append(")");
+	ciao2.append("");
 }	
 	
 ciao2.append(",VALUES (");
@@ -79,7 +79,7 @@ ciao2.append(",VALUES (");
 for(String key:keys){
 	ciao2.append("'");
 	ciao2.append(this.campi_modificati.get(key));
-	ciao2.append("'");
+	ciao2.append("',");
 }
 ciao2.append(")");
 System.out.println(ciao2.toString());
