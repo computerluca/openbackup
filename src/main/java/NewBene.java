@@ -13,6 +13,7 @@ public class NewBene {
 	public int id_bene;
 	public String codice_bene;
 	public String descrizione;
+	public String titolo;
 
 	public SaveManager sm;
 
@@ -58,6 +59,15 @@ public class NewBene {
     public void setdescrizione(String descrizione) {
         this.descrizione = descrizione;
     }
+     
+    public String gettitolo() {
+        return titolo;
+    }
+
+    public void settitolo(String titolo) {
+        this.titolo = titolo;
+    }
+    
     
     public synchronized void valueChangeMethod(ValueChangeEvent e){
 		
