@@ -25,7 +25,6 @@ public class NewBene {
 	}
 	public void annulla(){
 		
-				this.id_bene = " ";
 				this.codice_bene = " ";
 				this.descrizione = " ";
 				
