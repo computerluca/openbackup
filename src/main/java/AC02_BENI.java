@@ -6,12 +6,12 @@ public class AC02_BENI{
 	public String codice_bene;
 	public String descrizione;
 	
-		public AC02_BENI (){
+		AC02_BENI (){
 	
 	
 		}
 		
-	public AC01_ANAGRAFICHE(int id_bene, String codice_bene, String descrizione) {
+	 AC02_BENI(int id_bene, String codice_bene, String descrizione) {
         this.id_bene = id_bene;
         this.codice_bene = codice_bene;
         this.descrizione = descrizione;

@@ -9,7 +9,7 @@ public class anamana implements Serializable {
 	private static final long serialVersionUID = 1L;
 	public AC02_BENI beni = new AC02_BENI_UTILITIES();
 	public List lista_beni;
-	public anabeni(){
+	public void anabeni(){
 		inizializza();
 	}
 	 public List getlista_beni() {
