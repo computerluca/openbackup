@@ -128,6 +128,7 @@ try{
 PreparedStatement pstmt = conn.prepareStatement(query);
 		        pstmt.executeUpdate();
         this.campi_modificati.clear();
+        System.out.println(query);
 }
 catch(SQLException e){
 	System.out.println(e.toString());
