@@ -92,8 +92,7 @@ catch(SQLException e){
 		
 		String ciao = componi_campi2();
 		String query = "INSERT INTO AC01_ANAGRAFICHE" +ciao;
-System.out.println(ciao);
-System.out.println(query);
+
 		if(this.campi_modificati.size()>0){
 			
 			String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");

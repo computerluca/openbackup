@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    
+    >
+<h:head>
+    <script name="jquery/jquery.js" library="primefaces"></script>
+</h:head>
+<h:body>
+
+
+ <h:form id="form">
+ 
+    <h3 style="margin-top:0">Gestione Nuovo Bene</h3>
+    <p:tabView>
+        <p:tab title="Dati fiscali">
+            <h:panelGrid columns="2" cellpadding="10">
+  <h3>CODICE FISCALE</h3>
+      <h:inputText value="#{newbene.codice_bene}" id="codice_bene" required="true" 
+      onchange="submit()"
+	valueChangeListener="#{newbene.valueChangeMethod}">
+	  </h:inputText>
+      <h3>PARTITA IVA</h3>
+      <h:inputText value="#{newbene.descrizione}" required="true" onchange="submit()"
+	valueChangeListener="#{newbene.valueChangeMethod}" id="descrizione"/>
+            </h:panelGrid>
+        </p:tab>
+        
+    </p:tabView>
+<h:commandButton value="Annulla" type="submit" actionListener="#{newbene.annulla}" />	
+<h:commandButton value="Salva" type="submit" actionListener="#{newbene.salva}" />
+	    </h:form>
+</h:body>
+</html>
+

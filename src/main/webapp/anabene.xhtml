@@ -16,20 +16,19 @@
     <h3 style="margin-top:0">Gestione Anagrafiche</h3>
     
 <h:form>
-    	<h:commandButton action="#{anamana.newana}" value="Crea nuova anagrafica" />
-    	<h:commandButton action="#{anamana.configurazione}" value="Configura anagrafica principale" />
+    	<h:commandButton action="#{anabene.newbene}" value="Crea nuovo bene" />
       <h:outputText id="anagrafica" value="#{param['id']}" />
-      <h:dataTable value="#{anamana.lista_anagrafiche_lista}" var="employee"
+      <h:dataTable value="#{anabene.lista_beni}" var="employee"
    styleClass="employeeTable"
    headerClass="employeeTableHeader"
    rowClasses="employeeTableOddRow,employeeTableEvenRow">
    <h:column>    				
-      <f:facet name="header">Codice Fiscale</f:facet>    				
-      #{employee.partita_iva}
+      <f:facet name="header">Codice Bene Servizio</f:facet>    				
+      #{employee.codice_bene}
    </h:column>
    <h:column>
-      <f:facet name="header">Partita IVA</f:facet>
-      #{employee.codice_fiscale}
+      <f:facet name="header">Descrizione</f:facet>
+      #{employee.descrizione}
    </h:column>
    
 </h:dataTable>
