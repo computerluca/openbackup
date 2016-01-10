@@ -122,7 +122,7 @@ try{
 String insertTableSQL = "INSERT INTO AC02_BENI"
 		+ "(id_bene, codice_bene, descrizione) VALUES"
 		+ "(?,?,?,?)";
-PreparedStatement preparedStatement = dbConnection.prepareStatement(insertTableSQL);
+PreparedStatement preparedStatement = conn.prepareStatement(insertTableSQL);
 preparedStatement.setInt(1, 11);
 preparedStatement.setString(2, this.campi_modificati.get("codice_bene"));
 preparedStatement.setString(3, this.campi_modificati.get("descrizione"));
