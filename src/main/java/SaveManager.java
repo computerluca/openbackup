@@ -71,10 +71,10 @@ ciao2.append(")");
 	for(String key:keys){
 	
 	ciao2.append(key);
-	ciao2.append("),");
+	ciao2.append(")");
 }	
 	
-ciao2.append("VALUES (");
+ciao2.append(",VALUES (");
 
 for(String key:keys){
 	ciao2.append("'");
@@ -126,9 +126,10 @@ try{
 	conn = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
 
 PreparedStatement pstmt = conn.prepareStatement(query);
+        System.out.println(query);
+
 		        pstmt.executeUpdate();
         this.campi_modificati.clear();
-        System.out.println(query);
 }
 catch(SQLException e){
 	System.out.println(e.toString());
