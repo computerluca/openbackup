@@ -9,12 +9,12 @@ import javax.validation.constraints.*;
 @ManagedBean(name = "newiva")
 
 @RequestScoped
-public class NewBene extends AC03_CODICI_IVA{
+public class NewIva extends AC03_CODICI_IVA{
 	
 
 	public SaveManager sm;
 
-	public NewBene(){
+	public NewIva(){
 		super();
 		sm = new SaveManager();
 			this.titolo = "Codice IVA -> Creazione";
