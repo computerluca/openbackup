@@ -9,7 +9,7 @@ public class anabene implements Serializable {
 
 	public AC02_BENI_UTILITIES beni = new AC02_BENI_UTILITIES();
 	public List lista_beni;
-	public void anabeni(){
+	public anabene(){
 		inizializza();
 	}
 	 public List getlista_beni() {
