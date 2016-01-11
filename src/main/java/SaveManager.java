@@ -135,6 +135,39 @@ catch(SQLException e){
 		
 		
 	}
+	public void Salva4(){
+		
+
+		if(this.campi_modificati.size()>0){
+			
+			String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+String PASSWORD = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+
+String URL = "jdbc:mysql://127.13.47.2:3306/computerlucaworld";
+Connection conn = null;
+try{
+	conn = DriverManager.getConnection(URL , USERNAME , PASSWORD); 
+
+String insertTableSQL = "INSERT INTO AC03_CODICI_IVA"
+		+ "(codice_iva, descrizione,aliquota) VALUES"
+		+ "(?,?)";
+PreparedStatement preparedStatement = conn.prepareStatement(insertTableSQL);
+preparedStatement.setString(1, this.campi_modificati.get("codice_iva"));
+preparedStatement.setString(2, this.campi_modificati.get("descrizione"));
+preparedStatement.setDouble(2, this.campi_modificati.get("aliquota"));
+
+// execute insert SQL stetement
+preparedStatement .executeUpdate();
+        this.campi_modificati.clear();
+}
+catch(SQLException e){
+	System.out.println(e.toString());
+	
+}  
+		}
+		
+		
+	}
 	public void Salva2(){
 		
 		String ciao = componi_campi2();

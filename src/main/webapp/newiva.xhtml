@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    
+    >
+<h:head>
+    <script name="jquery/jquery.js" library="primefaces"></script>
+</h:head>
+<h:body>
+
+
+ <h:form id="form">
+ 
+    <h3 style="margin-top:0">Gestione Codici Iva</h3>
+            <h:panelGrid columns="2" cellpadding="10">
+  <h3>CODICE_IVA</h3>
+      <h:inputText value="#{newiva.codice_iva}" id="codice_iva" required="true" 
+      onchange="submit()"
+	valueChangeListener="#{newiva.valueChangeMethod}">
+	  </h:inputText>
+      <h3>DESCRIZIONE</h3>
+      <h:inputText value="#{newiva.descrizione}" required="true" onchange="submit()"
+	valueChangeListener="#{newiva.valueChangeMethod}" id="descrizione"/>
+            </h:panelGrid>
+            <h3>ALIQUOTA </h3>
+      <h:inputText value="#{newiva.aliquota}" required="true" onchange="submit()"
+	valueChangeListener="#{newiva.valueChangeMethod}" id="aliquota"/>
+            </h:panelGrid>
+        
+<h:commandButton value="Annulla" type="submit" actionListener="#{newbene.annulla}" />	
+<h:commandButton value="Salva" type="submit" actionListener="#{newbene.salva}" />
+	    </h:form>
+</h:body>
+</html>
+
+

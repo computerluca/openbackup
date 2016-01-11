@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    
+    >
+<h:head>
+    <script name="jquery/jquery.js" library="primefaces"></script>
+
+</h:head>
+<h:body>
+     <h3 style="margin-top:0">Gestione Beni</h3>
+    <p:dataTable var="car" value="#{anaiva.lista_ive}">
+    <p:column headerText="Id_codice_iva">
+        <h:outputText value="#{car.id_codice_iva}" />
+    </p:column>
+ 
+    <p:column headerText="Codice iva">
+        <h:outputText value="#{car.codice_iva}" />
+    </p:column>
+ 
+    <p:column headerText="Descrizione">
+        <h:outputText value="#{car.descrizione}" />
+    </p:column>
+    <p:column headerText="Aliquota">
+        <h:outputText value="#{car.aliquota}" />
+    </p:column>
+ 
+   
+</p:dataTable>
+
+      </h:body>
+</html>
+
