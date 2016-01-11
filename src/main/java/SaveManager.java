@@ -154,7 +154,7 @@ String insertTableSQL = "INSERT INTO AC03_CODICI_IVA"
 PreparedStatement preparedStatement = conn.prepareStatement(insertTableSQL);
 preparedStatement.setString(1, this.campi_modificati.get("codice_iva"));
 preparedStatement.setString(2, this.campi_modificati.get("descrizione"));
-preparedStatement.setDouble(2, this.campi_modificati.get("aliquota"));
+preparedStatement.setDouble(3, this.campi_modificati.get("aliquota"));
 
 // execute insert SQL stetement
 preparedStatement .executeUpdate();
