@@ -16,7 +16,7 @@ public class AC03_CODICI_IVA{
         this.id_codice_iva = id_codice_iva;
         this.codice_iva = codice_iva;
         this.aliquota = aliquota;
-        this.descrizione = descrizione
+        this.descrizione = descrizione;
         
     }
 
