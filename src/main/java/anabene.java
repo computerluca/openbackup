@@ -1,6 +1,7 @@
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
  import java.util.*;
+ import java.io.Serializable;
 @ManagedBean
 @SessionScoped
 public class anabene implements Serializable {
