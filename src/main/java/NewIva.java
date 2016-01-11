@@ -13,7 +13,7 @@ public class NewIva extends AC03_CODICI_IVA{
 	
 
 	public SaveManager sm;
-	public titolo;
+	public String titolo;
 
 	public NewIva(){
 		super();
