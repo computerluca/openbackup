@@ -46,7 +46,7 @@ public class AC03_CODICI_IVA{
     public Double getaliquota(){
 		return aliquota;
 	}
-	public void setaliquota(){
+	public void setaliquota(Double aliquota){
 		return aliquota;
 	}
 
