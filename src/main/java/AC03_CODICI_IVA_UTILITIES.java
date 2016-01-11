@@ -46,7 +46,7 @@ System.out.println(pstmt.toString());
           	car.setId_codice_iva(rs.getInt("id_codice_iva"));
 			car.setcodice_iva(rs.getString("codice_iva"));
 			car.setdescrizione(rs.getString("descrizione"));
-			car.setaliquota(rs.getString("aliquota"));
+			car.setaliquota(rs.getDouble("aliquota"));
 
 			
 			cars.add(car);
