@@ -47,7 +47,7 @@ public class AC03_CODICI_IVA{
 		return aliquota;
 	}
 	public void setaliquota(Double aliquota){
-		return aliquota;
+		this.aliquota = aliquota;
 	}
 
    
