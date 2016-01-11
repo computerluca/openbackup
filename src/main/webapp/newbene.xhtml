@@ -15,20 +15,18 @@
  
     <h3 style="margin-top:0">Gestione Nuovo Bene</h3>
     <p:tabView>
-        <p:tab title="Dati fiscali">
             <h:panelGrid columns="2" cellpadding="10">
-  <h3>CODICE FISCALE</h3>
+  <h3>CODICE BENE</h3>
       <h:inputText value="#{newbene.codice_bene}" id="codice_bene" required="true" 
       onchange="submit()"
 	valueChangeListener="#{newbene.valueChangeMethod}">
 	  </h:inputText>
-      <h3>PARTITA IVA</h3>
+      <h3>DESCRIZIONE</h3>
       <h:inputText value="#{newbene.descrizione}" required="true" onchange="submit()"
 	valueChangeListener="#{newbene.valueChangeMethod}" id="descrizione"/>
             </h:panelGrid>
         </p:tab>
         
-    </p:tabView>
 <h:commandButton value="Annulla" type="submit" actionListener="#{newbene.annulla}" />	
 <h:commandButton value="Salva" type="submit" actionListener="#{newbene.salva}" />
 	    </h:form>
