@@ -66,9 +66,11 @@ catch(SQLException e){
 
 }
 
+    public static void main(String[] args) 
+{
+	AC02_BENI_UTILITIES  Lista_beni= new AC02_BENI_UTILITIES();
+	System.out.println(Lista_beni.select_all_ac02_beni().toString());
 	  
 }
 
-
-
-
+}
