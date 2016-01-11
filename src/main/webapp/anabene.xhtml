@@ -10,27 +10,23 @@
 
 </h:head>
 <h:body>
-
-              
+     <h3 style="margin-top:0">Gestione Beni</h3>
+    <p:dataTable var="car" value="#{anabene.lista_beni}">
+    <p:column headerText="Id_bene">
+        <h:outputText value="#{car.id_bene}" />
+    </p:column>
  
-    <h3 style="margin-top:0">Gestione Anagrafiche</h3>
-    
-<h:form>
-      <h:dataTable value="#{anabene.lista_beni}" var="employee"
-   styleClass="employeeTable"
-   headerClass="employeeTableHeader"
-   rowClasses="employeeTableOddRow,employeeTableEvenRow">
-   <h:column>    				
-      <f:facet name="header">Codice Bene Servizio</f:facet>    				
-      #{employee.codice_bene}
-   </h:column>
-   <h:column>
-      <f:facet name="header">Descrizione</f:facet>
-      #{employee.descrizione}
-   </h:column>
+    <p:column headerText="Codice Bene">
+        <h:outputText value="#{car.codice_bene}" />
+    </p:column>
+ 
+    <p:column headerText="Descrizione">
+        <h:outputText value="#{car.descrizione}" />
+    </p:column>
+ 
    
-</h:dataTable>
-      </h:form>
+</p:dataTable>
+
       </h:body>
 </html>
 
