@@ -43,8 +43,7 @@ System.out.println(pstmt.toString());
             //per ogni riga nella tabella aggiungi
             //un elemento a una lista
 
-          			car.setIdbene(rs.getInt("id_bene"));
-
+          	car.setId_bene(rs.getInt("id_bene"));
 			car.setcodice_bene(rs.getString("codice_bene"));
 			car.setdescrizione(rs.getString("descrizione"));
 			
