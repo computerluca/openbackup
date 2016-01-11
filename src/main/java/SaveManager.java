@@ -150,7 +150,7 @@ try{
 
 String insertTableSQL = "INSERT INTO AC03_CODICI_IVA"
 		+ "(codice_iva, descrizione,aliquota) VALUES"
-		+ "(?,?)";
+		+ "(?,?,?)";
 PreparedStatement preparedStatement = conn.prepareStatement(insertTableSQL);
 preparedStatement.setString(1, this.campi_modificati.get("codice_iva"));
 preparedStatement.setString(2, this.campi_modificati.get("descrizione"));
