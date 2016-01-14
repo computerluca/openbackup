@@ -13,9 +13,9 @@
 </h:head>
 <h:body>
 <p:tabView>
- <c:forEach var="tabbo" items="#{tab.tabs}">
-   <p:tab  title="#{tabbo.titolo}">
-     <ui:include src="#{tabbo.descrizione}"/>
+ <c:forEach  items="#{tab.tabs}">
+   <p:tab  title="#{tab.tabs.titolo}">
+     <ui:include src="#{tab.tabs.descrizione}"/>
    </p:tab>
  </c:forEach>
 </p:tabView>
