@@ -10,7 +10,7 @@ import javax.validation.constraints.*;
 
 public class DesignTab{
 	
-	public List<Tab> tabs;
+	public ArrayList<Tab> tabs;
 	public DesignTab(){
 		this.tabs = new ArrayList<Tab>(); 
 		this.tabs.add(new Tab("dddd","222"));
@@ -19,11 +19,11 @@ public class DesignTab{
 
 
 	}
-	public List<Tab> gettabs(){
+	public ArrayList<Tab> gettabs(){
 		return this.tabs;
 		
 	}
-	public void settabs(List<Tab> tabs){
+	public void settabs(ArrayList<Tab> tabs){
 		this.tabs = tabs;
 	}
 	
