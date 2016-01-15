@@ -13,8 +13,8 @@
 </h:head>
 <h:body>
 <p:tabView>
- <c:forEach  items="#{tab.tabs}">
-   <p:tab  title="#{tabs.titolo}">
+ <c:forTokens items="tab.tabs"  var="name">
+	   <p:tab  title="#{name.titolo}">
      
    </p:tab>
  </c:forEach>
