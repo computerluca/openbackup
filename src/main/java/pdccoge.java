@@ -18,7 +18,7 @@ public class pdccoge implements Serializable {
 		C002_PDC_COGE_UTILITIES pianodeiconti= new C002_PDC_COGE_UTILITIES();
 		List<C002_PDC_COGE> padre = pianodeiconti.get_pdc_padre();
         root = new DefaultTreeNode(padre.get(0).cd_voce_coge  +"=>     "+ padre.get(0).denominazione,null);
-        TreeNode node0 = new DefaultTreeNode("Node 0", root);
+        TreeNode node0 = new DefaultTreeNode(padre.get(0).cd_voce_coge  +"=>     "+ padre.get(0).denominazione,null,root);
         TreeNode node1 = new DefaultTreeNode("Node 1", root);
          
         TreeNode node00 = new DefaultTreeNode("Node 0.0", node0);
