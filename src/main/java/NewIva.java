@@ -14,7 +14,7 @@ public class NewIva extends AC03_CODICI_IVA{
 
 	public SaveManager sm;
 	public String titolo;
-
+	public String errori;
 	public NewIva(){
 		super();
 		sm = new SaveManager();
@@ -32,7 +32,10 @@ public class NewIva extends AC03_CODICI_IVA{
 	
 }
 	public void salva(){
-		this.sm.Salva4();
+		this.errori=this.sm.Salva4().toString();
+		if(this.errori=="vero"){
+		this.errori="";
+	}
 	}
    
     

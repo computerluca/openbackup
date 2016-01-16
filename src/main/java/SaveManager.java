@@ -135,9 +135,9 @@ catch(SQLException e){
 		
 		
 	}
-	public void Salva4(){
+	public String Salva4(){
 		
-
+String risultato="";
 		if(this.campi_modificati.size()>0){
 			
 			String USERNAME = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
@@ -159,14 +159,15 @@ preparedStatement.setString(3, this.campi_modificati.get("aliquota"));
 // execute insert SQL stetement
 preparedStatement .executeUpdate();
         this.campi_modificati.clear();
+        risultato = "vero";
 }
 catch(SQLException e){
 	System.out.println(e.toString());
-	
+	risultato=e.toString();
 }  
 		}
 		
-		
+		return risultato;
 	}
 	public void Salva2(){
 		

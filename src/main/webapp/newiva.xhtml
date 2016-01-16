@@ -15,6 +15,7 @@
  
     <h3 style="margin-top:0">Gestione Codici Iva</h3>
             <h:panelGrid columns="2" cellpadding="10">
+
   <h3>CODICE_IVA</h3>
       <h:inputText value="#{newiva.codice_iva}" id="codice_iva" required="true" 
       onchange="submit()"
@@ -27,7 +28,7 @@
       <h:inputText value="#{newiva.aliquota}" required="true" onchange="submit()"
 	valueChangeListener="#{newiva.valueChangeMethod}" id="aliquota"/>
             </h:panelGrid>
-        
+<h:outputText value="#{newiva.errori}"></h:outputText>
 <h:commandButton value="Annulla" type="submit" actionListener="#{newiva.annulla}" />	
 <h:commandButton value="Salva" type="submit" actionListener="#{newiva.salva}" />
 	    </h:form>
