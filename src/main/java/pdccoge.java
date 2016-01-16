@@ -7,7 +7,7 @@ import org.primefaces.model.TreeNode;
  
 @ManagedBean(name="pdccoge")
 @ViewScoped
-public class BasicView implements Serializable {
+public class pdccoge implements Serializable {
      
     private TreeNode root;
      
