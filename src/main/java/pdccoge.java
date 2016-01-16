@@ -19,20 +19,18 @@ public class pdccoge implements Serializable {
 		List<C002_PDC_COGE> padre = pianodeiconti.get_pdc_padre();
 		String stringa_padre = padre.get(0).getdenominazione();
         root = new DefaultTreeNode("Root",null);
+        
         TreeNode node0 = new DefaultTreeNode(stringa_padre,root);
-        TreeNode node1 = new DefaultTreeNode("Node 1", root);
-         
-        TreeNode node00 = new DefaultTreeNode("Node 0.0", node0);
+       
+        TreeNode node1 = new DefaultTreeNode("Attività", root);
+        
+       /* TreeNode node00 = new DefaultTreeNode("Node 0.0", node0);
         TreeNode node01 = new DefaultTreeNode("Node 0.1", node0);
          
-        TreeNode node10 = new DefaultTreeNode("Node 1.0", node1);
-         
-        node1.getChildren().add(new DefaultTreeNode("Node 1.1"));
+       
         node00.getChildren().add(new DefaultTreeNode("Node 0.0.0"));
         node00.getChildren().add(new DefaultTreeNode("Node 0.0.1"));
-        node01.getChildren().add(new DefaultTreeNode("Node 0.1.0"));
-        node10.getChildren().add(new DefaultTreeNode("Node 1.0.0"));
-        root.getChildren().add(new DefaultTreeNode("Node 2"));
+        node01.getChildren().add(new DefaultTreeNode("Node 0.1.0"));*/
     }
      
  
