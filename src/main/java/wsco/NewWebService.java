@@ -8,12 +8,13 @@ package wsco;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+
 /**
  *
  * @author root
  */
-@WebService(serviceName = "wsco")
-public class checkfepa {
+@WebService(serviceName = "NewWebService")
+public class NewWebService {
 
     /**
      * This is a sample web service operation
