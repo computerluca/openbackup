@@ -2,4 +2,6 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:8080/computerlucaworld/wsco?wsdl" uri="wsdl/localhost_8080/computerlucaworld/wsco.wsdl"/>
     <system systemId="http://localhost:8080/computerlucaworld/wsco?xsd=1" uri="wsdl/localhost_8080/computerlucaworld/wsco.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/computerlucaworld.git/ciao?wsdl" uri="wsdl/localhost_8080/computerlucaworld.git/ciao.wsdl"/>
+    <system systemId="http://localhost:8080/computerlucaworld.git/ciao?xsd=1" uri="wsdl/localhost_8080/computerlucaworld.git/ciao.xsd_1.xsd"/>
 </catalog>
