@@ -38,7 +38,7 @@ public class NewIva extends AC03_CODICI_IVA{
 	}
 	}
 	public String geterrori() {
-        return errori;
+        return this.errori;
     }
 
     public void seterrori(String errori) {
