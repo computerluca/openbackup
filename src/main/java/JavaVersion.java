@@ -263,17 +263,15 @@ catch (XPathExpressionException ex) {
  }
  public void format(){
 	 try{
-	 FormatXML formatter = new
-    
-    
-    
-    
-     FormatXML();
+	 FormatXML formatter = new FormatXML();
 	  String book =  this.file.toString();
-	  
-     String ciao = formatter.format(book);
+	  if(this.file !=null){
+	  String ciao = formatter.format(book);
      this.file = ciao;  
+ }
+ else{
 	 
+	}
 }
 catch(IOException e){
 	
