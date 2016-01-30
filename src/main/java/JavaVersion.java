@@ -265,7 +265,7 @@ catch (XPathExpressionException ex) {
 	 try{
 	 FormatXML formatter = new FormatXML();
 	  String book =  this.file.toString();
-	  if(this.file !=null){
+	  if(this.file != " "){
 	  String ciao = formatter.format(book);
      this.file = ciao;  
  }
