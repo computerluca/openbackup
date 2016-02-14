@@ -910,6 +910,20 @@ public class Commerciale {
         }
         return lista_anomalie;
     }
+    
+    public String return_tipo_dg() throws XPathExpressionException {
+       
+        XPath xpath3 = XPathFactory.newInstance().newXPath();
+
+        String expression3 = "FatturaElettronica/FatturaElettronicaBody/DatiGenerali/DatiGeneraliDocumento";
+        String tipo_dg = (String)xpath3.compile(expression3).evaluate(getDoc(), XPathConstants.STRING);
+
+        
+
+
+        return tipo_dg;
+    }
+
     /*
      }       
             

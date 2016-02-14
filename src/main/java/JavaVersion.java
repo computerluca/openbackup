@@ -24,6 +24,8 @@ public class JavaVersion {
  private Double somma_iva_riepilogo;
  private Double somma_dettaglio;
  private Double somma_imponibile_riepilogo;
+ private String tipo_dg;
+ private String esigibilita_iva;
  public List<User> lista_somme= new ArrayList<User>();
 
  public  class User
@@ -67,7 +69,7 @@ public String giorno;
     
 } 
 
- public JavaVersion(){
+ public JavaVersion() throws XPathExpressionException{
 	
 	 
 this.lista_anomalie = new ArrayList<String>();
@@ -78,9 +80,17 @@ this.somma_imponibile_riepilogo = 0.00;
 this.somma_iva_dettaglio = 0.00;
 this.somma_iva_riepilogo = 0.00;
 this.file = "";
+this.tipo_dg = calcola_tipo_dg();
 
 	
 	}
+ public  String calcola_tipo_dg() throws XPathExpressionException{
+		Commerciale comm = new Commerciale(this.file);	
+		String tipo_dg = comm.return_tipo_dg();
+		return tipo_dg;
+	 
+	 
+ }
  public  String getfile() {
 		return file;
 	}
@@ -278,6 +288,30 @@ catch(IOException e){
 	
 }
 
+}
+/**
+ * @return the tipo_dg
+ */
+public String getTipo_dg() {
+	return tipo_dg;
+}
+/**
+ * @param tipo_dg the tipo_dg to set
+ */
+public void setTipo_dg(String tipo_dg) {
+	this.tipo_dg = tipo_dg;
+}
+/**
+ * @return the esigibilita_iva
+ */
+public String getEsigibilita_iva() {
+	return esigibilita_iva;
+}
+/**
+ * @param esigibilita_iva the esigibilita_iva to set
+ */
+public void setEsigibilita_iva(String esigibilita_iva) {
+	this.esigibilita_iva = esigibilita_iva;
 }
 
 }
