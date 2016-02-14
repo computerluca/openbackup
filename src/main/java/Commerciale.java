@@ -916,13 +916,18 @@ public class Commerciale {
         XPath xpath3 = XPathFactory.newInstance().newXPath();
 
         String expression3 = "FatturaElettronica/FatturaElettronicaBody/DatiGenerali/DatiGeneraliDocumento/TipoDocumento";
-        String tipo_dg = (String)xpath3.compile(expression3).evaluate(getDoc(), XPathConstants.STRING);
-        
+        NodeList nodo = 
+        (NodeList) xpath3.compile(expression3).evaluate(getDoc(), XPathConstants.NODESET);
+        String tipo =null;
+        for (int i = 0; i < nodo.getLength(); i++) {
 
+            Node nNode3 = nodo.item(i); 
+            Element eElement2 = (Element) nNode3;
+            tipo= (String)eElement2.getElementsByTagName("TipoDocumento").toString();
+        }
+        return tipo;
 
-        return tipo_dg;
     }
-
     /*
      }       
             
