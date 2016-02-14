@@ -69,7 +69,7 @@ public String giorno;
     
 } 
 
- public JavaVersion() throws XPathExpressionException{
+ public JavaVersion(){
 	
 	 
 this.lista_anomalie = new ArrayList<String>();
@@ -84,9 +84,15 @@ this.tipo_dg = calcola_tipo_dg();
 
 	
 	}
- public  String calcola_tipo_dg() throws XPathExpressionException{
+ public  String calcola_tipo_dg(){
 		Commerciale comm = new Commerciale(this.file);	
-		String tipo_dg = comm.return_tipo_dg();
+		String tipo_dg=null;
+		try {
+			tipo_dg = comm.return_tipo_dg();
+		} catch (XPathExpressionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return tipo_dg;
 	 
 	 
