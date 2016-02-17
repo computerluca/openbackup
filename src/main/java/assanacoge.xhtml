@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    
+    >
+<h:head>
+    <script name="jquery/jquery.js" library="primefaces"></script>
+</h:head>
+<h:body>
+
+              <h:outputText value="#{configurazione.titolo}" />
+
+ <h:form id="form">
+    <p:growl id="msgs" showDetail="true" />
+ 
+    <h3 style="margin-top:0">Configurazione</h3>
+    <p:tabView>
+        <p:tab title="Dati fiscali">
+            <h:panelGrid columns="2" cellpadding="10">
+  <h3>CODICE FISCALE</h3>
+      <h:inputText value="#{configurazione.codice_fiscale}" id="codice_fiscale" required="true" 
+      onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}">
+	  </h:inputText>
+      <h3>PARTITA IVA</h3>
+      <h:inputText value="#{configurazione.partita_iva}" required="true" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="partita_iva"/>
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="Dati anagrafici">
+            <h:panelGrid columns="2" cellpadding="10">
+              <h3>DENOMINAZIONE</h3>
+      <h:inputText value="#{configurazione.denominazione}" required="true" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="denominazione"/>
+      <h3>INDIRIZZO</h3>
+      <h:inputText value="#{configurazione.indirizzo}" required="true" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="indirizzo"/>
+      <h3>CAP</h3>
+      <h:inputText value="#{configurazione.cap}" required="true" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="cap" />
+      <h3>COMUNE</h3>
+       <h:inputText value="#{configurazione.comune}" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="comune" required="true"/>
+      <h3>PROVINCIA</h3>
+      <h:inputText value="#{configurazione.provincia}" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="provincia" required="true"/>
+      <h3>NAZIONE</h3>
+      <h:inputText value="#{configurazione.nazione}" onchange="submit()"
+	valueChangeListener="#{configurazione.valueChangeMethod}" id="nazione" required="true"/>
+            </h:panelGrid>
+        </p:tab>    
+    </p:tabView>
+<h:commandButton value="Annulla" type="submit" actionListener="#{configurazione.annulla}" />	
+<h:commandButton value="Salva" type="submit" actionListener="#{configurazione.salva}" />
+	    </h:form>
+</h:body>
+</html>
+

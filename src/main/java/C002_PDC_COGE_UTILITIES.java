@@ -65,6 +65,43 @@ catch(SQLException e){
     
 
 }
+public static List<C002_PDC_COGE> get_all(){
+	Connection conn = get_connection();
+	
+	List<C002_PDC_COGE> cars = new ArrayList<C002_PDC_COGE>();
+try{
+        PreparedStatement pstmt = conn.prepareStatement("select * from C002_PDC_COGE");
+System.out.println(pstmt.toString());
+        ResultSet rs = pstmt.executeQuery();
+
+        while (rs.next()) {
+
+            C002_PDC_COGE car = new C002_PDC_COGE();
+            //per ogni riga nella tabella aggiungi
+            //un elemento a una lista
+
+			car.setcd_voce_coge(rs.getString("CD_VOCE_COGE"));
+			car.setdenominazione(rs.getString("DENOMINAZIONE"));
+
+			
+			cars.add(car);
+			System.out.println("car");
+        }
+        
+
+        rs.close();
+
+        pstmt.close();
+
+        conn.close();}
+catch(SQLException e){
+	
+}
+        return cars;
+
+    
+
+}
 
     
 public static List<C002_PDC_COGE> getvoci_per_livello(int livello){
