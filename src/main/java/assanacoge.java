@@ -13,10 +13,10 @@ public class assanacoge {
 	public List<AC01_ANAGRAFICHE> list_ana;
 	public List<C002_PDC_COGE> list_coge;
 				public SaveManager sm;
+				
 
 	public assanacoge(){
 		sm = new SaveManager();
-			this.titolo = "Configurazioni -> Associazioni ana-coge";
 			this.list_ana = new ArrayList<AC01_ANAGRAFICHE>();
 			this.list_coge = new ArrayList<C002_PDC_COGE>();
 			valorizza_liste();
