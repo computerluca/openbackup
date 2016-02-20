@@ -7,7 +7,7 @@ import javax.faces.bean.RequestScoped;
 public class anacoge implements Serializable {
  	private static final long serialVersionUID = 1L;
 
-	public C002_PDC_COGE_UTILITIES coge = new CO02_PDC_COGE_UTILITIES();
+	public C002_PDC_COGE_UTILITIES coge = new C002_PDC_COGE_UTILITIES();
 	public List lista_coge;
 	public anacoge(){
 		inizializza();
