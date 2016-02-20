@@ -9,7 +9,7 @@ public class anacoge implements Serializable {
 
 	public C002_PDC_COGE_UTILITIES coge = new CO02_PDC_COGE_UTILITIES();
 	public List lista_coge;
-	public anaiva(){
+	public anacoge(){
 		inizializza();
 	}
 	 public List getlista_coge() {
