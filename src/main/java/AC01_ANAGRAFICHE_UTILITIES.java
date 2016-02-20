@@ -128,7 +128,7 @@ catch(SQLException e){
     
 
 }
-public static List<AC01_ANAGRAFICHE> cercaana(String id){
+public static List<AC01_ANAGRAFICHE> cercaana(int id){
 	Connection conn = get_connection();
 	List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
 	String risultato; 
