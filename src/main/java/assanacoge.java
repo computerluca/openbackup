@@ -23,6 +23,7 @@ public void cercacoge(){
 public void cercaana(){
 			AC01_ANAGRAFICHE_UTILITIES anautil = new AC01_ANAGRAFICHE_UTILITIES();
 			List<AC01_ANAGRAFICHE> risultati_ricerca = new ArrayList<AC01_ANAGRAFICHE>();
+			risultati_ricerca = anautil.cercaana(this.scelta_ana.toString());
 			this.ds_scelta_ana= risultati_ricerca.get(0).getDenominazione();
 	
 }
