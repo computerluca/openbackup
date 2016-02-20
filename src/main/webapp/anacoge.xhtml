@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    
+    >
+<h:head>
+    <script name="jquery/jquery.js" library="primefaces"></script>
+
+</h:head>
+<h:body>
+     <h3 style="margin-top:0">Piano dei Conti Coge</h3>
+    <p:dataTable var="car" value="#{anacoge.lista_coge}">
+    <p:column headerText="id_voce_coge">
+        <h:outputText value="#{car.id_voce_coge}" />
+    </p:column>
+ 
+    <p:column headerText="cd_voce_coge">
+        <h:outputText value="#{car.cd_voce_coge}" />
+    </p:column>
+ 
+    <p:column headerText="Denominazione">
+        <h:outputText value="#{car.denominazione}" />
+    </p:column>
+ 
+   
+</p:dataTable>
+
+      </h:body>
+</html>
+
