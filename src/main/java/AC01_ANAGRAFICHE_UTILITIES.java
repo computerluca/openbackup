@@ -128,11 +128,10 @@ catch(SQLException e){
     
 
 }
-public static List<AC01_ANAGRAFICHE> cercaana(int id){
+public static List cercaana(int id){
 	Connection conn = get_connection();
 	List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
-	String risultato; 
-	String query = "select * from AC01_ANAGRAFICHE where id_configurazione = 1 and id_anagrafica = "+id;
+	String query = "select * from AC01_ANAGRAFICHE and id_anagrafica = "+id;
 try{
         PreparedStatement pstmt = conn.prepareStatement(query);
 System.out.println(pstmt.toString());

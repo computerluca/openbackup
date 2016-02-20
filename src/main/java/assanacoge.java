@@ -24,7 +24,7 @@ public void cercacoge(){
 public void cercaana(){
 			AC01_ANAGRAFICHE_UTILITIES anautil = new AC01_ANAGRAFICHE_UTILITIES();
 			this.risultati_ricerca = new ArrayList<AC01_ANAGRAFICHE>();
-			this.risultati_ricerca = anautil.cercaana(13);
+			this.risultati_ricerca = anautil.cercaana(this.scelta_ana);
 	        
 }
 	public assanacoge(){
