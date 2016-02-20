@@ -19,7 +19,7 @@
             <h:outputLabel for="scelta_coge" value="Voce coge di Contropartita: *" />
             <p:inputText id="scelta_coge" value="#{assanacoge.scelta_coge}" required="true" label="Voce Coge" 
             onchange="submit()"
-	valueChangeListener="#{assanacoge.cerca}">
+	valueChangeListener="#{assanacoge.cercacoge}">
                 <f:validateLength minimum="2" />
             </p:inputText>
             <p:message for="scelta_coge" />
@@ -29,7 +29,7 @@
         <h:panelGrid columns="4" cellpadding="5">
             <h:outputLabel for="scelta_ana" value="Anagrafica: *" />
             <p:inputText id="scelta_ana" value="#{assanacoge.scelta_ana}" required="true" label="Anagrafica" onchange="submit()"
-	valueChangeListener="#{assanacoge.cerca}">
+	valueChangeListener="#{assanacoge.cercaana}">
                 <f:validateLength minimum="2" />
             </p:inputText>
             <p:message for="scelta_ana" />
