@@ -25,7 +25,7 @@ public class assanacoge {
 		this.list_ana = anautil.select_all_ac01_anagrafiche();
 		this.list_coge = cogeutil.get_all();
 		for(int i=0;i<this.list_coge.size();i++){
-			System.out.println(this.list_coge.getdenominazione());
+			System.out.println(this.list_coge.getDenominazione());
 		}
 	
 	}
