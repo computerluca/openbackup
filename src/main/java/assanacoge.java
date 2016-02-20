@@ -12,8 +12,8 @@ import javax.validation.constraints.*;
 public class assanacoge {
 	public List<AC01_ANAGRAFICHE> list_ana;
 	public List<C002_PDC_COGE> list_coge;
-		public String scelta_coge;
-		public String scelta_ana;
+		public int scelta_coge;
+		public int scelta_ana;
 				public String ds_scelta_ana;
 		public String ds_scelta_coge;
 		public List<AC01_ANAGRAFICHE> risultati_ricerca;
@@ -50,16 +50,16 @@ public void cercaana(){
 	 public void setds_scelta_coge(String ds_scelta_coge) {
 		this.ds_scelta_coge = ds_scelta_coge;
     }
-	  public String getscelta_coge() {
+	  public int getscelta_coge() {
         return scelta_coge;
     }
-	 public void setscelta_coge(String scelta_coge) {
+	 public void setscelta_coge(int scelta_coge) {
 		this.scelta_coge = scelta_coge;
     }
-     public String getscelta_ana() {
+     public int getscelta_ana() {
         return scelta_ana;
     }
-	 public void setscelta_ana(String scelta_ana) {
+	 public void setscelta_ana(int scelta_ana) {
 		this.scelta_ana = scelta_ana;
     }
 
