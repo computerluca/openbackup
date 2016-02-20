@@ -16,22 +16,28 @@ public class assanacoge {
 		public String scelta_ana;
 				public String ds_scelta_ana;
 		public String ds_scelta_coge;
+		public List<AC01_ANAGRAFICHE> risultati_ricerca;
 
 public void cercacoge(){
 	
 }
 public void cercaana(){
 			AC01_ANAGRAFICHE_UTILITIES anautil = new AC01_ANAGRAFICHE_UTILITIES();
-			List<AC01_ANAGRAFICHE> risultati_ricerca = new ArrayList<AC01_ANAGRAFICHE>();
-			risultati_ricerca = anautil.cercaana(13);
-			System.out.println(risultati_ricerca.get(0).getDenominazione().toString());
-	
+			this.risultati_ricerca = new ArrayList<AC01_ANAGRAFICHE>();
+			this.risultati_ricerca = anautil.cercaana(13);
+	        
 }
 	public assanacoge(){
 			this.list_ana = new ArrayList<AC01_ANAGRAFICHE>();
 			this.list_coge = new ArrayList<C002_PDC_COGE>();
 			valorizza_liste();
 	}
+	 public List<AC01_ANAGRAFICHE> getrisultati_ricerca() {
+        return risultati_ricerca;
+    }
+	 public void setrisultati_ricerca(String risultati_ricerca) {
+		this.risultati_ricerca = risultati_ricerca;
+    }
 	 public String getds_scelta_ana() {
         return ds_scelta_ana;
     }

@@ -36,6 +36,22 @@
             <h:outputText value="#{assanacoge.ds_scelta_ana}" />
 
         </h:panelGrid>
+        
+        
+        <h:dataTable value="#{assanacoge.lista_anagrafiche_lista}" var="employee"
+   styleClass="employeeTable"
+   headerClass="employeeTableHeader"
+   rowClasses="employeeTableOddRow,employeeTableEvenRow">
+   <h:column>    				
+      <f:facet name="header">Codice Fiscale</f:facet>    				
+      #{employee.partita_iva}
+   </h:column>
+   <h:column>
+      <f:facet name="header">Partita IVA</f:facet>
+      #{employee.codice_fiscale}
+   </h:column>
+   
+</h:dataTable>
     </p:panel>
  
     <h:panelGrid columns="2">
