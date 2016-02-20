@@ -10,6 +10,7 @@ public class anacoge implements Serializable {
 	public C002_PDC_COGE_UTILITIES coge = new C002_PDC_COGE_UTILITIES();
 	public List lista_coge;
 	public anacoge(){
+		
 		inizializza();
 	}
 	 public List getlista_coge() {
@@ -21,7 +22,7 @@ public class anacoge implements Serializable {
     } 
 	
 	public void inizializza(){
-		this.lista_coge=coge.getall();
+		this.lista_coge=coge.get_all();
 	}
 
 	
