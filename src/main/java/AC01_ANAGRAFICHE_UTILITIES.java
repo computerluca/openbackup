@@ -128,6 +128,57 @@ catch(SQLException e){
     
 
 }
+public static List<AC01_ANAGRAFICHE> cercaana(String parametro){
+	Connection conn = get_connection();
+	List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
+	String risultato; 
+	String query = "select * from AC01_ANAGRAFICHE where id_configurazione = 1 and denominazione like '"+parametro+"'";
+try{
+        PreparedStatement pstmt = conn.prepareStatement(query);
+System.out.println(pstmt.toString());
+        ResultSet rs = pstmt.executeQuery();
+
+        while (rs.next()) {
+
+            AC01_ANAGRAFICHE car = new AC01_ANAGRAFICHE();
+            //per ogni riga nella tabella aggiungi
+            //un elemento a una lista
+
+           /*  car.setCid(rs.getInt("car_id"));
+
+            car.setCname(rs.getString("cname"));
+
+            car.setColor(rs.getString("color"));
+
+            car.setSpeed(rs.getInt("speed"));
+
+            car.setMfdctry(rs.getString("Manufactured_Country"));
+
+            cars.add(car);*/
+			car.setCodice_fiscale(rs.getString("codice_fiscale"));
+			car.setPartita_iva(rs.getString("partita_iva"));
+			car.setDenominazione(rs.getString("denominazione"));
+			car.setIndirizzo(rs.getString("indirizzo"));
+			car.setCap(rs.getString("cap"));
+			car.setComune(rs.getString("comune"));
+			car.setProvincia(rs.getString("provincia"));
+			car.setNazione(rs.getString("nazione"));
+			cars.add(car);
+        }
+
+        rs.close();
+
+        pstmt.close();
+
+        conn.close();}
+catch(SQLException e){
+	
+}
+        return cars;
+
+    
+
+}
 	  
 }
 

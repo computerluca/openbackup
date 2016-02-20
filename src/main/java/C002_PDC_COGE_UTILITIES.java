@@ -79,7 +79,7 @@ System.out.println(pstmt.toString());
             C002_PDC_COGE car = new C002_PDC_COGE();
             //per ogni riga nella tabella aggiungi
             //un elemento a una lista
-
+			car.setid_voce_coge(rs.getInt("ID_VOCE_COGE"));
 			car.setcd_voce_coge(rs.getString("CD_VOCE_COGE"));
 			car.setdenominazione(rs.getString("DENOMINAZIONE"));
 
