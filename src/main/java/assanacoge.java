@@ -24,7 +24,7 @@ public void cercaana(){
 			AC01_ANAGRAFICHE_UTILITIES anautil = new AC01_ANAGRAFICHE_UTILITIES();
 			List<AC01_ANAGRAFICHE> risultati_ricerca = new ArrayList<AC01_ANAGRAFICHE>();
 			risultati_ricerca = anautil.cercaana(13);
-			this.ds_scelta_ana= risultati_ricerca.get(0).getDenominazione();
+			System.out.println(risultati_ricerca.get(0).getDenominazione().toString);
 	
 }
 	public assanacoge(){
