@@ -128,11 +128,11 @@ catch(SQLException e){
     
 
 }
-public static List<AC01_ANAGRAFICHE> cercaana(String parametro){
+public static List<AC01_ANAGRAFICHE> cercaana(String id){
 	Connection conn = get_connection();
 	List<AC01_ANAGRAFICHE> cars = new ArrayList<AC01_ANAGRAFICHE>();
 	String risultato; 
-	String query = "select * from AC01_ANAGRAFICHE where id_configurazione = 1 and denominazione like '"+parametro+"'";
+	String query = "select * from AC01_ANAGRAFICHE where id_configurazione = 1 and id_anagrafica = "+id;
 try{
         PreparedStatement pstmt = conn.prepareStatement(query);
 System.out.println(pstmt.toString());
