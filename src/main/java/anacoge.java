@@ -21,7 +21,7 @@ public class anacoge implements Serializable {
     } 
 	
 	public void inizializza(){
-		this.lista_coge=lista_coge.getall();
+		this.lista_coge=coge.getall();
 	}
 
 	
