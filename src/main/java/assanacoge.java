@@ -35,7 +35,7 @@ public void cercaana(){
 	 public List<AC01_ANAGRAFICHE> getrisultati_ricerca() {
         return risultati_ricerca;
     }
-	 public void setrisultati_ricerca(String risultati_ricerca) {
+	 public void setrisultati_ricerca(List<AC01_ANAGRAFICHE> risultati_ricerca) {
 		this.risultati_ricerca = risultati_ricerca;
     }
 	 public String getds_scelta_ana() {
