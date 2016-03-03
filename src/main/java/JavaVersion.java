@@ -83,9 +83,38 @@ this.file = "";
 
 	
 	}
+	public void calcola_esigibilita_iva(){
+		
+		Commerciale comm = new Commerciale(this.file);
+		NodeList nl = comm.return_lista_imponibili_riepilogo();
+		for (int i = 0; i < nl.getLength(); i++) {
+           
+            Node nNode2 = getNode().item(i);
+            System.out.println("\nCurrent Element :"
+                    + nNode2.getNodeName());
+            if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement2 = (Element) nNode2;
+
+                System.out.println("ImponibileImporto "
+                        + eElement2
+                        .getElementsByTagName("ImponibileImporto")
+                        .item(0)
+                        .getTextContent());
+                if (eElement2.getElementsByTagName("ImponibileImporto").getLength() >= 1) {
+
+                    arr = eElement2.getElementsByTagName("ImponibileImporto").item(0).getTextContent().trim();
+                    String sc = eElement2.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim();
+                    Double sconto = Double.parseDouble(sc);
+                    
+                }
+            }
+		
+	}
+}
  public  String calcola_tipo_dg(){
 		Commerciale comm = new Commerciale(this.file);	
 		String tipo_dg=null;
+		calcola_esigibilita_iva();
 		try {
 			tipo_dg = comm.return_tipo_dg();
 			if (tipo_dg.equals("TD04")){

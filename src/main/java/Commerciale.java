@@ -523,6 +523,44 @@ public class Commerciale {
         }
         return list;
     }
+    public NodeList return_lista_imponibili_riepilogo() {
+        setXpath2(XPathFactory.newInstance().newXPath());
+        NodeList nl = null;
+        String expression2 = "FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DatiRiepilogo";
+        try {
+            nl=((NodeList) getXpath2().compile(expression2).evaluate(getDoc(), XPathConstants.NODESET));
+
+        } catch (XPathExpressionException ex) {
+          
+        }
+        /*
+        for (int i = 0; i < getNode().getLength(); i++) {
+           
+            Node nNode2 = getNode().item(i);
+            System.out.println("\nCurrent Element :"
+                    + nNode2.getNodeName());
+            if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement2 = (Element) nNode2;
+
+                System.out.println("ImponibileImporto "
+                        + eElement2
+                        .getElementsByTagName("ImponibileImporto")
+                        .item(0)
+                        .getTextContent());
+                if (eElement2.getElementsByTagName("ImponibileImporto").getLength() >= 1) {
+
+                    arr = eElement2.getElementsByTagName("ImponibileImporto").item(0).getTextContent().trim();
+                    String sc = eElement2.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim();
+                    Double sconto = Double.parseDouble(sc);
+                    if (sconto.equals(al)) {
+                        arro = Double.parseDouble(arr);
+                        list.add(arro);
+                    }
+                }
+            }
+        }*/
+        return list;
+    }
 
     public Double totale_spese_accessorie() {
         XPath xpath3 = XPathFactory.newInstance().newXPath();
@@ -959,7 +997,32 @@ public class Commerciale {
      non coincide con iva del riepilogo, AIAIAI
      return null;
      */
+public  String return_esigibilita_iva() {
+        NodeList node2 = this.return_lista_imponi
 
+        for (int i = 0; i < getNode2().getLength(); i++) {
+            Node nNode = getNode2().item(i);
+            System.out.println("\nCurrent Element :"
+                    + nNode.getNodeName());
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nNode;
+
+                /* System.out.println("Arrotondamento : " 
+                 + eElement
+                 .getElementsByTagName("Arrotondamento")
+                 .item(0)
+                 .getTextContent());*/
+                if (eElement.getElementsByTagName("TipoDocumento").getLength() >= 1) {
+                    abb = eElement.getElementsByTagName("TipoDocumento").item(0).getTextContent().trim();
+                }
+
+            
+            
+		}
+        }
+        return abb;
+
+     }
     public Double return_somma_iva_riepilogo() {
         XPath xpath3 = XPathFactory.newInstance().newXPath();
         String prezzo_totale = null;
