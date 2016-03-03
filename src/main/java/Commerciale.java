@@ -915,7 +915,7 @@ public class Commerciale {
        
         XPath xpath3 = XPathFactory.newInstance().newXPath();
 
-        String expression3 = "FatturaElettronica/FatturaElettronicaBody/DatiGenerali/DatiGeneraliDocumento/TipoDocumento";
+        String expression3 = "FatturaElettronica/FatturaElettronicaBody/DatiGenerali/DatiGeneraliDocumento/";
         NodeList nodo = 
         (NodeList) xpath3.compile(expression3).evaluate(getDoc(), XPathConstants.NODESET);
         String tipo =null;
