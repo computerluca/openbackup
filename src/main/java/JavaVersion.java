@@ -90,7 +90,6 @@ this.file = "";
 			tipo_dg = comm.return_tipo_dg();
 		} catch (XPathExpressionException e) {
 			// TODO Auto-generated catch block
-			System.out.println(e.printStackTrace());
 		}
 		return tipo_dg;
 	 
