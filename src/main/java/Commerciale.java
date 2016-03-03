@@ -1013,7 +1013,7 @@ public  String return_esigibilita_iva() {
                  .item(0)
                  .getTextContent());*/
                 if (eElement.getElementsByTagName("TipoDocumento").getLength() >= 1) {
-                    abb = eElement.getElementsByTagName("TipoDocumento").item(0).getTextContent().trim();
+                    System.out.println(eElement.getElementsByTagName("TipoDocumento").item(0).getTextContent().trim());
                 }
 
             
