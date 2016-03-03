@@ -924,6 +924,7 @@ public class Commerciale {
             Node nNode3 = nodo.item(i); 
             Element eElement2 = (Element) nNode3;
             tipo= (String)eElement2.getElementsByTagName("TipoDocumento").toString();
+            System.out.println(tipo);
         }
         return tipo;
 
