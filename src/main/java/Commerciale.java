@@ -1020,7 +1020,7 @@ public  String return_esigibilita_iva() {
             
 		}
         }
-        return abb;
+        return node2;
 
      }
     public Double return_somma_iva_riepilogo() {
