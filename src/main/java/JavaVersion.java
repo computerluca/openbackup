@@ -87,7 +87,7 @@ this.file = "";
 	public void calcola_esigibilita_iva(){
 		
 		Commerciale comm = new Commerciale(this.file);
-		NodeList nl = comm.return_lista_imponibili_riepilogo();
+		NodeList nl = (NodeList)comm.return_lista_imponibili_riepilogo();
 		for (int i = 0; i < nl.getLength(); i++) {
            
             Node nNode2 = getNode().item(i);
