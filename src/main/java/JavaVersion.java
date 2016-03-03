@@ -92,7 +92,7 @@ this.file = "";
 		NodeList nl = (NodeList)comm.return_lista_imponibili_riepilogo();
 		for (int i = 0; i < nl.getLength(); i++) {
            
-            Node nNode2 = getNode().item(i);
+            Node nNode2 = nl.item(i);
             System.out.println("\nCurrent Element :"
                     + nNode2.getNodeName());
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
