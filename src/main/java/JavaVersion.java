@@ -6,6 +6,7 @@ import javax.faces.event.ValueChangeEvent;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import java.util.List;import java.util.ArrayList;
+import java.util.NodeList;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
 
