@@ -83,7 +83,7 @@ this.file = "";
 
 	
 	}
- public  String calcola_tipo_dg throws XPathExpressionException(){
+ public  String calcola_tipo_dg(){
 		Commerciale comm = new Commerciale(this.file);	
 		String tipo_dg=null;
 		try {
