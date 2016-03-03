@@ -1,7 +1,7 @@
 
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import javax.faces.event.ValueChangeEvent;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
@@ -11,7 +11,7 @@ import java.io.IOException;
 
 
 @ManagedBean(name = "javaVersion")
-@RequestScoped
+@SessionScoped
 
 public class JavaVersion {
  
@@ -80,7 +80,6 @@ this.somma_imponibile_riepilogo = 0.00;
 this.somma_iva_dettaglio = 0.00;
 this.somma_iva_riepilogo = 0.00;
 this.file = "";
-this.tipo_dg = calcola_tipo_dg();
 
 	
 	}
@@ -175,7 +174,8 @@ this.tipo_dg = calcola_tipo_dg();
  }
  public void aliquotacambiata(ValueChangeEvent event ) {
 	         
-  
+  this.tipo_dg = calcola_tipo_dg();
+
 
   try{
 	  if(Double.parseDouble(event.getNewValue().toString())==-1.0){
