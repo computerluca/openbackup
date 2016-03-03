@@ -85,23 +85,23 @@ this.file = "";
 	}
  public  String calcola_tipo_dg(){
 		Commerciale comm = new Commerciale(this.file);	
-		String abb=null;
+		String tipo_dg=null;
 		try {
-			abb = comm.return_tipo_dg();
-			if (abb.equals("TD04")){
-				abb = "Nota Credito Acquisto";
+			tipo_dg = comm.return_tipo_dg();
+			if (tipo_dg.equals("TD04")){
+				tipo_dg = "Nota Credito Acquisto";
 			}
-			if (abb.equals("TD01")){
-				if(comm.return_somma_iva_riepilogo >0 && comm.return_somma_imponibili_riepilogo >0){
+			if (tipo_dg.equals("TD01")){
+				if(comm.return_somma_iva_riepilogo() >0 && comm.return_somma_imponibili_riepilogo() >0){
 					tipo_dg = "Fattura Acquisto";
 				}
-				if(comm.return_somma_iva_riepilogo <0 && comm.return_somma_imponibili_riepilogo ==0){
+				if(comm.return_somma_iva_riepilogo() <0 && comm.return_somma_imponibili_riepilogo() ==0){
 					tipo_dg = "Nota Credito Acquisto";
 				}
-				if(comm.return_somma_iva_riepilogo ==0 && comm.return_somma_imponibili_riepilogo <0){
+				if(comm.return_somma_iva_riepilogo() ==0 && comm.return_somma_imponibili_riepilogo() <0){
 					tipo_dg = "Nota Credito Acquisto";
 				}
-				if(comm.return_somma_iva_riepilogo <0 && comm.return_somma_imponibili_riepilogo <0){
+				if(comm.return_somma_iva_riepilogo() <0 && comm.return_somma_imponibili_riepilogo() <0){
 					tipo_dg = "Nota Credito Acquisto";
 				}
 			}
