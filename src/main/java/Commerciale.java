@@ -911,15 +911,40 @@ public class Commerciale {
         return lista_anomalie;
     }
     
-    public String return_tipo_dg() throws XPathExpressionException {
-		        XPath xpatho = XPathFactory.newInstance().newXPath();
-String tipo_dg =null;
-       String expression = "TipoDocumento";
-NodeList nodeList = (NodeList) xpatho.compile(expression).evaluate(getDoc(), XPathConstants.NODESET);
-for (int i = 0; i < nodeList.getLength(); i++) {
-    tipo_dg = nodeList.item(i).getFirstChild().getNodeValue(); 
-    System.out.println(tipo_dg);
-}
+   public  String return_tipo_dg() {
+        setxPath(XPathFactory.newInstance().newXPath());
+        String abb = null;
+
+        String expression = "FatturaElettronica/FatturaElettronicaBody/DatiGenerali/DatiGeneraliDocumento";
+        try {
+
+            this.setNode2((NodeList) getxPath().compile(expression).evaluate(getDoc(), XPathConstants.NODESET));
+
+        } catch (XPathExpressionException ex) {
+
+        }
+
+        for (int i = 0; i < getNode2().getLength(); i++) {
+            Node nNode = getNode2().item(i);
+            System.out.println("\nCurrent Element :"
+                    + nNode.getNodeName());
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nNode;
+
+                /* System.out.println("Arrotondamento : " 
+                 + eElement
+                 .getElementsByTagName("Arrotondamento")
+                 .item(0)
+                 .getTextContent());*/
+                if (eElement.getElementsByTagName("TipoDocumento").getLength() >= 1) {
+                    abb = eElement.getElementsByTagName("TipoDocumento").item(0).getTextContent().trim();
+                }
+
+            }
+        }
+        return abbuo;
+
+    }
 
         
 return tipo_dg;
