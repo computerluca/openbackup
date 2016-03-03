@@ -914,7 +914,7 @@ public class Commerciale {
     public String return_tipo_dg() throws XPathExpressionException {
 		        XPath xpatho = XPathFactory.newInstance().newXPath();
 String tipo_dg =null;
-       String expression = "FatturaElettronica/FatturaElettronicaBody/DatiGenerali/DatiGeneraliDocumento/TipoDocumento";
+       String expression = "TipoDocumento";
 System.out.println(expression);
 NodeList nodeList = (NodeList) xpatho.compile(expression).evaluate(getDoc(), XPathConstants.NODESET);
 for (int i = 0; i < nodeList.getLength(); i++) {
