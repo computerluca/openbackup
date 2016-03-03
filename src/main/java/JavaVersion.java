@@ -88,6 +88,7 @@ this.file = "";
 		String tipo_dg=null;
 		try {
 			tipo_dg = comm.return_tipo_dg();
+			    throw new XPathExpressionException("I am Exception Alpha!");
 		} catch (XPathExpressionException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
