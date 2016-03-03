@@ -940,7 +940,9 @@ public class Commerciale {
                     abb = eElement.getElementsByTagName("TipoDocumento").item(0).getTextContent().trim();
                 }
 
-            }
+            
+            
+		}
         }
         return abb;
 
