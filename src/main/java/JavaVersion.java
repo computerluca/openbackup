@@ -105,9 +105,7 @@ this.file = "";
                         .getTextContent());
                 if (eElement2.getElementsByTagName("ImponibileImporto").getLength() >= 1) {
 
-                    arr = eElement2.getElementsByTagName("ImponibileImporto").item(0).getTextContent().trim();
-                    String sc = eElement2.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim();
-                    Double sconto = Double.parseDouble(sc);
+
                     
                 }
             }
