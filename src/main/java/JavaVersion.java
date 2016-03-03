@@ -9,7 +9,9 @@ import java.util.List;import java.util.ArrayList;
 import java.util.*;
 import javax.xml.xpath.XPathExpressionException;
 import java.io.IOException;
-
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.xpath.*; 
+import org.w3c.dom.*;
 
 @ManagedBean(name = "javaVersion")
 @SessionScoped
