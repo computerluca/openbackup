@@ -230,6 +230,7 @@ catch (XPathExpressionException ex) {
 	  if((event.getNewValue().toString()) != ""){
 	  this.file= (event.getNewValue().toString());
 		Commerciale comm = new Commerciale(this.file);
+		this.tipo_dg = calcola_tipo_dg();
   somma_iva_dettaglio= comm.return_somma_imponibili();
 	    AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
 
