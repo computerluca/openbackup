@@ -915,10 +915,10 @@ public class Commerciale {
 		        XPath xpatho = XPathFactory.newInstance().newXPath();
 String tipo_dg =null;
        String expression = "TipoDocumento";
-System.out.println(expression);
 NodeList nodeList = (NodeList) xpatho.compile(expression).evaluate(getDoc(), XPathConstants.NODESET);
 for (int i = 0; i < nodeList.getLength(); i++) {
     tipo_dg = nodeList.item(i).getFirstChild().getNodeValue(); 
+    System.out.println(tipo_dg);
 }
 
         
