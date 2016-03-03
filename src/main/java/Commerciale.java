@@ -942,13 +942,10 @@ public class Commerciale {
 
             }
         }
-        return abbuo;
+        return abb;
 
-    }
-
-        
-return tipo_dg;
-    }
+     }
+ 
     /*
      }       
             
