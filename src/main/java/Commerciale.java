@@ -912,22 +912,17 @@ public class Commerciale {
     }
     
     public String return_tipo_dg() throws XPathExpressionException {
-       
-        XPath xpath3 = XPathFactory.newInstance().newXPath();
+		        XPath xpatho = XPathFactory.newInstance().newXPath();
+String tipo_dg =null;
+       String expression = "FatturaElettronica/FatturaElettronicaBody/DatiGenerali/DatiGeneraliDocumento/TipoDocumento";
+System.out.println(expression);
+NodeList nodeList = (NodeList) xpatho.compile(expression).evaluate(getDoc(), XPathConstants.NODESET);
+for (int i = 0; i < nodeList.getLength(); i++) {
+    tipo_dg = nodeList.item(i).getFirstChild().getNodeValue(); 
+}
 
-        String expression3 = "FatturaElettronica/FatturaElettronicaBody/DatiGenerali/DatiGeneraliDocumento/";
-        NodeList nodo = 
-        (NodeList) xpath3.compile(expression3).evaluate(getDoc(), XPathConstants.NODESET);
-        String tipo =null;
-        for (int i = 0; i < nodo.getLength(); i++) {
-
-            Node nNode3 = nodo.item(i); 
-            Element eElement2 = (Element) nNode3;
-            tipo= (String)eElement2.getElementsByTagName("TipoDocumento").toString();
-            System.out.println(tipo);
-        }
-        return tipo;
-
+        
+return tipo_dg;
     }
     /*
      }       
