@@ -85,13 +85,13 @@ this.file = "";
 	}
  public  String calcola_tipo_dg(){
 		Commerciale comm = new Commerciale(this.file);	
-		String tipo_dg=null;
+		String abb=null;
 		try {
-			tipo_dg = comm.return_tipo_dg();
-			if (abb.equals("TD04"){
-				tipo_dg = "Nota Credito Acquisto";
+			abb = comm.return_tipo_dg();
+			if (abb.equals("TD04")){
+				abb = "Nota Credito Acquisto";
 			}
-			if (abb.equals("TD01"){
+			if (abb.equals("TD01")){
 				if(comm.return_somma_iva_riepilogo >0 && comm.return_somma_imponibili_riepilogo >0){
 					tipo_dg = "Fattura Acquisto";
 				}
@@ -105,7 +105,6 @@ this.file = "";
 					tipo_dg = "Nota Credito Acquisto";
 				}
 			}
-			if(
 			    throw new XPathExpressionException("I am Exception Alpha!");
 		} catch (XPathExpressionException e) {
 			// TODO Auto-generated catch block
