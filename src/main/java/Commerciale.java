@@ -998,7 +998,7 @@ public class Commerciale {
      return null;
      */
 public  String return_esigibilita_iva() {
-        NodeList node2 = this.return_lista_imponi
+        NodeList node2 = null;
 
         for (int i = 0; i < getNode2().getLength(); i++) {
             Node nNode = getNode2().item(i);
