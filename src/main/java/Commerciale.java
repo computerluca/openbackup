@@ -997,7 +997,7 @@ public class Commerciale {
      non coincide con iva del riepilogo, AIAIAI
      return null;
      */
-public  String return_esigibilita_iva() {
+public  NodeList return_esigibilita_iva() {
         NodeList node2 = null;
 
         for (int i = 0; i < getNode2().getLength(); i++) {
