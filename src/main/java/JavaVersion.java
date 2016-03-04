@@ -101,7 +101,6 @@ this.file = "";
 		Commerciale comm = new Commerciale(this.file);	
 		String tipo_dg=null;
 		calcola_esigibilita_iva();
-		try {
 			tipo_dg = comm.return_tipo_dg();
 			if (tipo_dg.equals("TD04")){
 				tipo_dg = "Nota Credito Acquisto";
@@ -120,12 +119,7 @@ this.file = "";
 					tipo_dg = "Nota Credito Acquisto";
 				}
 			}
-		} catch (XPathExpressionException e) {
-						    throw new XPathExpressionException("I am Exception Alpha!");
-
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		return tipo_dg;
 	 
 	 
