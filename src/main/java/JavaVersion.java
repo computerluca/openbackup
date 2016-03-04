@@ -92,15 +92,26 @@ this.file = "";
 		List<String> nl = comm.return_lista_imponibili_riepilogo();
 		System.out.println("ciao");
 		int count = 0;
+		int count2 = 0;
 		for (String es: nl) {
 				if(es.equals("I")){
-					System.out.println("Sono presenti dettagli sia split paymentche non split payment. Occorre creare due documenti");
 				count ++;
+				}
+				if(es.equals("S")){
+					count2++;
 				}
             
             }
-            if(count ==0){
+            if(count==0 && count2 >0){
 				System.out.println("La fattura è split payment");
+				
+			}
+			if(count>0 && count2 >0){
+				System.out.println("La fattura presenta sia dettagli split che non split payment");
+				
+			}
+			if(count>0 && count2 == 0){
+				System.out.println("La fattura non è soggetta a split payment");
 				
 			}
 		
