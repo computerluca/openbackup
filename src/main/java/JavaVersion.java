@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -16,7 +17,7 @@ import org.w3c.dom.*;
 @ManagedBean(name = "javaVersion")
 @SessionScoped
 
-public class JavaVersion {
+public class JavaVersion implements Serializable{
  
  private Double iva;
  private String file;
