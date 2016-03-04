@@ -552,7 +552,7 @@ public class Commerciale {
                 }
             }
     }
-    return null;
+    return list_es;
 }
 
     public Double totale_spese_accessorie() {
