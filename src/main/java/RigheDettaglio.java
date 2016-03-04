@@ -55,7 +55,7 @@ public void crea_dettagli_riepilogativi(){
                 prezzoUnitario = Double.parseDouble(eElement.getElementsByTagName("ImponibileImporto").item(0).getTextContent().trim());
                 Double quantita;
 				quantita = 1.0;
-                Double prezzo_totale = prezzo_unitario*quantita;
+                Double prezzo_totale = prezzoUnitario*quantita;
                 Double aliquota = 0.00;
                 aliquota = Double.parseDouble(eElement.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim());
                 Double importo_iva = 0.00;
