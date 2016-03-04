@@ -29,6 +29,7 @@
 
 
 	  </h:commandButton>
+	 
    
 	   
 	   <h:inputTextarea value="#{javaVersion.file}" onchange="submit()"
@@ -60,6 +61,13 @@
 
         
         <p:tab title="Righe Dettaglio">
+			<h:commandButton id="riepiloga" 
+		value="Crea Dettagli Riepilogativi">
+		<f:actionListener type="CDRActionListener" />
+
+
+
+	  </h:commandButton>
             <p:dataTable var="car" value="#{righedettaglio.orderList}"
             rows="10"
                          paginator="true"

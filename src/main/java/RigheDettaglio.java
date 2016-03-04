@@ -36,7 +36,40 @@ public class RigheDettaglio implements Serializable{
 	public Commerciale comm;
 	NodeList righe_dettaglio;
 	private List<Order>  orderList;
-
+public void crea_dettagli_riepilogativi(){
+	this.file_xml=this.userData.getfile();
+			this.comm = new Commerciale(this.file_xml);
+			this.righe_dettaglio=comm.return_lista_imponibili_riepilogo2();
+		 	this.orderList = new ArrayList<Order>();
+		 	for (int i = 0; i < righe_dettaglio.getLength(); i++) {
+            Node nNode = righe_dettaglio.item(i);
+            System.out.println("\n Current Element :"
+                    + nNode.getNodeName());
+                    int count =0;
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+				count++;
+                Element eElement = (Element) nNode;
+                String nrlinea = "riga"+count;
+                String descrizione = "dettaglio riepilogativo";
+                Double prezzoUnitario;
+                prezzoUnitario = Double.parseDouble(eElement.getElementsByTagName("ImponibileImporto").item(0).getTextContent().trim());
+                Double quantita;
+				quantita = 1.0;
+                Double prezzo_totale = prezzo_unitario*quantita;
+                Double aliquota = 0.00;
+                aliquota = Double.parseDouble(eElement.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim());
+                Double importo_iva = 0.00;
+                importo_iva = Double.parseDouble(eElement.getElementsByTagName("Imposta").item(0).getTextContent().trim());
+                Double totale = 0.00;
+                totale = this.comm.round(prezzo_totale+importo_iva);
+                		 	Order prova = new Order(nrlinea,descrizione,prezzoUnitario,quantita,prezzo_totale,aliquota,importo_iva,totale);
+				
+		 	this.orderList.add(prova);
+	
+	
+}
+}
+}
 	 public void inizializza(){
 		 this.file_xml=this.userData.getfile();
 			this.comm = new Commerciale(this.file_xml);

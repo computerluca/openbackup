@@ -549,11 +549,27 @@ public class Commerciale {
 																		list_es.add(sc);
 
 						}
+						if(eElement2.getElementsByTagName("EsigibilitaIVA").getLength()==0){
+							list_es.add("S");
+						}
+
                 }
             }
     }
     return list_es;
 }
+public NodeList return_lista_imponibili_riepilogo2() {
+        setXpath2(XPathFactory.newInstance().newXPath());
+        List<String> list_es = new ArrayList<String>();
+        String expression2 = "FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DatiRiepilogo";
+        try {
+            this.setNode((NodeList) getXpath2().compile(expression2).evaluate(getDoc(), XPathConstants.NODESET));
+
+        } catch (XPathExpressionException ex) {
+          
+        }
+        return this.getNode();
+  }
 
     public Double totale_spese_accessorie() {
         XPath xpath3 = XPathFactory.newInstance().newXPath();
