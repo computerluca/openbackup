@@ -12,10 +12,12 @@ public class CRDActionListener implements ActionListener{
          @Override
 	 public void processAction(ActionEvent event) 
    throws AbortProcessingException {
-	   
+
       //access userData bean directly
       RigheDettaglio userData = (RigheDettaglio) FacesContext.getCurrentInstance().
          getExternalContext().getSessionMap().get("righedettaglio"); 
+                  		this.buttonId = event.getComponent().getClientId();
+
 userData.crea_dettagli_riepilogativi();
    
 	
