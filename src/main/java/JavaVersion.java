@@ -90,7 +90,7 @@ this.file = "";
 		
 		Commerciale comm = new Commerciale(this.file);
 		List<String> nl = comm.return_lista_imponibili_riepilogo();
-		
+		System.out.println("ciao");
 		for (String es: nl) {
            System.out.println(es);
             
