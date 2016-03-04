@@ -120,7 +120,6 @@ this.file = "";
 					tipo_dg = "Nota Credito Acquisto";
 				}
 			}
-			    throw new XPathExpressionException("I am Exception Alpha!");
 		} catch (XPathExpressionException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
