@@ -537,18 +537,18 @@ public class Commerciale {
         for (int i = 0; i < getNode().getLength(); i++) {
            
             Node nNode2 = getNode().item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
+           
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
 
                
                 if (eElement2.getElementsByTagName("ImponibileImporto").getLength() >= 1) {
 
-                    String sc = eElement2.getElementsByTagName("EsigibilitaIVA").item(0).getTextContent().trim();
-                    if(!(list_es.contains(sc))){
+						if(eElement2.getElementsByTagName("EsigibilitaIVA").getLength()>=1){
+							                    String sc = eElement2.getElementsByTagName("EsigibilitaIVA").item(0).getTextContent().trim();
+
+						}
 						list_es.add(sc);
-					}
                 }
             }
     }

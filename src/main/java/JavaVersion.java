@@ -91,10 +91,18 @@ this.file = "";
 		Commerciale comm = new Commerciale(this.file);
 		List<String> nl = comm.return_lista_imponibili_riepilogo();
 		System.out.println("ciao");
+		int count = 0;
 		for (String es: nl) {
-           System.out.println(es);
+				if(es.equals("I")){
+					System.out.println("Sono presenti dettagli sia split paymentche non split payment. Occorre creare due documenti");
+				count ++;
+				}
             
             }
+            if(count ==0){
+				System.out.println("La fattura è split payment");
+				
+			}
 		
 	}
  public  String calcola_tipo_dg(){
