@@ -89,29 +89,14 @@ this.file = "";
 	public void calcola_esigibilita_iva(){
 		
 		Commerciale comm = new Commerciale(this.file);
-		NodeList nl = (NodeList)comm.return_lista_imponibili_riepilogo();
-		for (int i = 0; i < nl.getLength(); i++) {
-           
-            Node nNode2 = nl.item(i);
-            System.out.println("\nCurrent Element :"
-                    + nNode2.getNodeName());
-            if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
-                Element eElement2 = (Element) nNode2;
-
-                System.out.println("ImponibileImporto "
-                        + eElement2
-                        .getElementsByTagName("ImponibileImporto")
-                        .item(0)
-                        .getTextContent());
-                if (eElement2.getElementsByTagName("ImponibileImporto").getLength() >= 1) {
-
-
-                    
-                }
+		List<String> nl = comm.return_lista_imponibili_riepilogo();
+		
+		for (String es: nl) {
+           System.out.println(es);
+            
             }
 		
 	}
-}
  public  String calcola_tipo_dg(){
 		Commerciale comm = new Commerciale(this.file);	
 		String tipo_dg=null;

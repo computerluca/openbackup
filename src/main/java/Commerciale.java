@@ -523,17 +523,17 @@ public class Commerciale {
         }
         return list;
     }
-    public NodeList return_lista_imponibili_riepilogo() {
+    public List<String> return_lista_imponibili_riepilogo() {
         setXpath2(XPathFactory.newInstance().newXPath());
-        NodeList nl = null;
+        List<String> list_es = new ArrayList<String>();
         String expression2 = "FatturaElettronica/FatturaElettronicaBody/DatiBeniServizi/DatiRiepilogo";
         try {
-            nl=((NodeList) getXpath2().compile(expression2).evaluate(getDoc(), XPathConstants.NODESET));
+            this.setNode((NodeList) getXpath2().compile(expression2).evaluate(getDoc(), XPathConstants.NODESET));
 
         } catch (XPathExpressionException ex) {
           
         }
-        /*
+        
         for (int i = 0; i < getNode().getLength(); i++) {
            
             Node nNode2 = getNode().item(i);
@@ -542,25 +542,18 @@ public class Commerciale {
             if (nNode2.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement2 = (Element) nNode2;
 
-                System.out.println("ImponibileImporto "
-                        + eElement2
-                        .getElementsByTagName("ImponibileImporto")
-                        .item(0)
-                        .getTextContent());
+               
                 if (eElement2.getElementsByTagName("ImponibileImporto").getLength() >= 1) {
 
-                    arr = eElement2.getElementsByTagName("ImponibileImporto").item(0).getTextContent().trim();
-                    String sc = eElement2.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim();
-                    Double sconto = Double.parseDouble(sc);
-                    if (sconto.equals(al)) {
-                        arro = Double.parseDouble(arr);
-                        list.add(arro);
-                    }
+                    String sc = eElement2.getElementsByTagName("EsigibilitaIVA").item(0).getTextContent().trim();
+                    if(!(list_es.contains(sc))){
+						list_es.add(sc);
+					}
                 }
             }
-        }*/
-        return nl;
     }
+    return null;
+}
 
     public Double totale_spese_accessorie() {
         XPath xpath3 = XPathFactory.newInstance().newXPath();
