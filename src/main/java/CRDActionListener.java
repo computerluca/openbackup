@@ -12,6 +12,7 @@ public class CRDActionListener implements ActionListener{
          @Override
 	 public void processAction(ActionEvent event) 
    throws AbortProcessingException {
+	   
       //access userData bean directly
       RigheDettaglio userData = (RigheDettaglio) FacesContext.getCurrentInstance().
          getExternalContext().getSessionMap().get("righedettaglio"); 
