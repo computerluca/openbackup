@@ -121,6 +121,8 @@ this.file = "";
 				}
 			}
 		} catch (XPathExpressionException e) {
+						    throw new XPathExpressionException("I am Exception Alpha!");
+
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
