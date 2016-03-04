@@ -546,9 +546,9 @@ public class Commerciale {
 
 						if(eElement2.getElementsByTagName("EsigibilitaIVA").getLength()>=1){
 							                    String sc = eElement2.getElementsByTagName("EsigibilitaIVA").item(0).getTextContent().trim();
+																		list_es.add(sc);
 
 						}
-						list_es.add(sc);
                 }
             }
     }
