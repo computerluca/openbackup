@@ -85,8 +85,11 @@ public void crea_dettagli_riepilogativi(){
                 String descrizione = eElement.getElementsByTagName("Descrizione").item(0).getTextContent().trim();
                 Double prezzoUnitario;
                 prezzoUnitario = Double.parseDouble(eElement.getElementsByTagName("PrezzoUnitario").item(0).getTextContent().trim());
-                Double quantita;
+                Double quantita = 1.0;
+                                if (eElement.getElementsByTagName("Quantita").getLength() >= 1) {
+
 				quantita = Double.parseDouble(eElement.getElementsByTagName("Quantita").item(0).getTextContent().trim());
+			}
                 Double prezzo_totale = Double.parseDouble(eElement.getElementsByTagName("PrezzoTotale").item(0).getTextContent().trim());
                 Double aliquota = 0.00;
                 aliquota = Double.parseDouble(eElement.getElementsByTagName("AliquotaIVA").item(0).getTextContent().trim());
