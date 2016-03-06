@@ -64,13 +64,15 @@
 			<h:commandButton id="riepiloga" 
 		value="Crea Dettagli Riepilogativi">
 		<f:actionListener type="CRDActionListener" />
-			<h:commandButton id="save" 
-		value="Salva file xml">
-		<f:actionListener type="SaveActionListener" />
+
 
 
 
 	  </h:commandButton>
+	  			<h:commandButton id="save" 
+		value="Salva file xml">
+		<f:actionListener type="SaveActionListener" />
+		</h:commandButton>
             <p:dataTable var="car" value="#{righedettaglio.orderList}"
             rows="10" selectionMode="single" rowKey="#{car.orderNo}"
                          paginator="true"
