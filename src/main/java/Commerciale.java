@@ -730,11 +730,12 @@ public NodeList return_lista_imponibili_riepilogo2() {
         }
 
         if (!(round(totale_calcolato)).equals(round(toto))) {
+			System.out.println("Totale calcolato" + totale_calcolato);
+			System.ou.println("Totale Calcolato" + toto);
             lista_anomalie.add("Riga dettaglio numero "
-                    + n_linea + "Sconto: Errore di quadratura sul totale Prezzo Unitario* Quantità -sconti +maggiorazioni farebbe" + round(totale_calcolato)
-                    + " ma nel file è indicato " + round(toto));
+                    + n_linea + "Sconto: Errore di quadratura sul totale Prezzo Unitario* Quantità -sconti +maggiorazioni farebbe" + totale_calcolato
+                    + " ma nel file è indicato " + toto));
         }
-        System.out.println("ciao" + conta);
         return lista_anomalie;
     }
 
