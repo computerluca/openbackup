@@ -103,10 +103,8 @@ public class Commerciale {
     }
 
     public Double round(Double number) {
-        double numero;
-        numero = Math.pow(10, 2);
-        numero = Math.round(numero * number) / numero;
-        return numero;
+double numero = Math.round(number * 100.0) / 100.0;     
+   return numero;
     }
 
     public Double somma_sconti_dettaglio(String dett) {
