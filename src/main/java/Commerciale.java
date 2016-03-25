@@ -648,7 +648,7 @@ public NodeList return_lista_imponibili_riepilogo2() {
         Double somma_maggiorazione = 0.00;
         Double somma_sconto = 0.00;
         Double conta = 0.00;
-        Double totale_calcolato = prezzo_totale;
+        Double totale_calcolato = round(prezzo_totale);
 
         for (int i = 0; i < nodo.getLength(); i++) {
             conta++;
@@ -810,7 +810,7 @@ public NodeList return_lista_imponibili_riepilogo2() {
                 }
                 if (eElement2.getElementsByTagName("ScontoMaggiorazione").getLength() >= 1) {
 
-                    anomalie.addAll(check_quadratura_scontomaggiorazione_dettaglio(lineadett, tot, totale2));
+                    anomalie.addAll(check_quadratura_scontomaggiorazione_dettaglio(lineadett, tot, round(totale2)));
                 }
 
             }
