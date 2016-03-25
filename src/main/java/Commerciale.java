@@ -682,7 +682,7 @@ public NodeList return_lista_imponibili_riepilogo2() {
                     somma_sconto += round(impo_calc);
                     totale_calcolato += round(impo_calc);
                 }
-                if (!impo_calc.equals(impo)) {
+                if (!round(impo_calc).equals(round(impo))) {
                     if ("SC".equals(tipo)) {
                         lista_anomalie.add(" Riga dettaglio numero " + n_linea
                                 + "Errore di quadratura tra percentuale e importo sconto nel file" + "l'importo dello sconto dovrebbe essere" + impo_calc + " ma invece risulta" + impo);
