@@ -734,7 +734,7 @@ public NodeList return_lista_imponibili_riepilogo2() {
 			System.out.println("Totale Calcolato" + toto);
             lista_anomalie.add("Riga dettaglio numero "
                     + n_linea + "Sconto: Errore di quadratura sul totale Prezzo Unitario* Quantità -sconti +maggiorazioni farebbe" + totale_calcolato
-                    + " ma nel file è indicato " + toto));
+                    + " ma nel file è indicato " + toto);
         }
         return lista_anomalie;
     }
