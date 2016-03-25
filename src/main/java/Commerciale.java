@@ -675,12 +675,12 @@ public NodeList return_lista_imponibili_riepilogo2() {
                 System.out.println("Importo calcolato" + impo_calc);
                 if ("SC".equals(tipo)) {
 
-                    somma_sconto += impo_calc;
-                    totale_calcolato -= impo_calc;
+                    somma_sconto += round(impo_calc);
+                    totale_calcolato -= round(impo_calc);
                 }
                 if ("MG".equals(tipo)) {
-                    somma_sconto += impo_calc;
-                    totale_calcolato += impo_calc;
+                    somma_sconto += round(impo_calc);
+                    totale_calcolato += round(impo_calc);
                 }
                 if (!impo_calc.equals(impo)) {
                     if ("SC".equals(tipo)) {
