@@ -660,7 +660,7 @@ public NodeList return_lista_imponibili_riepilogo2() {
             if (eElement2.getElementsByTagName("Importo").getLength() >= 1
                     && eElement2.getElementsByTagName("Percentuale").getLength() >= 1) {
                 String per = eElement2.getElementsByTagName("Percentuale").item(0).getTextContent().trim();
-                Double perc = round(Double.parseDouble(per));
+                Double perc = Double.parseDouble(per);
                 System.out.println("Percentuale" + perc);
 
                 String imp = eElement2.getElementsByTagName("Importo").item(0).getTextContent().trim();
