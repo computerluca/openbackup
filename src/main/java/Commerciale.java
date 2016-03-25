@@ -670,7 +670,7 @@ public NodeList return_lista_imponibili_riepilogo2() {
 
                 String tipo = eElement2.getElementsByTagName("Tipo").item(0).getTextContent().trim();
                 System.out.println("Tipologia" + tipo);
-                Double impo_calc = (totale_calcolato * perc) / 100;
+                Double impo_calc = round((totale_calcolato * perc) / 100);
                 System.out.println("Totale calcolato" + totale_calcolato);
                 System.out.println("Importo calcolato" + impo_calc);
                 if ("SC".equals(tipo)) {
