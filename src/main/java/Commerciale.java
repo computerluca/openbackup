@@ -103,7 +103,7 @@ public class Commerciale {
     }
 
     public Double round(Double number) {
-BigDecimal bdTest = new BigDecimal(  number);
+BigDecimal bdTest = new BigDecimal(  number.toString());
   bdTest = bdTest.setScale(2, BigDecimal.ROUND_HALF_UP);
    Double numero = Double.valueOf(bdTest.doubleValue());  
    return numero;
