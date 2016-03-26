@@ -88,10 +88,11 @@ this.file = "";
 
 	
 	}
-	public void calcola_esigibilita_iva(){
+	public String calcola_esigibilita_iva(){
 		
 		Commerciale comm = new Commerciale(this.file);
 		List<String> nl = comm.return_lista_imponibili_riepilogo();
+		String esigibilita;
 		System.out.println("ciao");
 		int count = 0;
 		int count2 = 0;
@@ -106,18 +107,19 @@ this.file = "";
             }
             if(count==0 && count2 >0){
 				System.out.println("La fattura è split payment");
-				this.esigibilita_iva="Split Payment";
+				esigibilita="Split Payment";
 				
 			}
 			if(count>0 && count2 >0){
 				System.out.println("La fattura presenta sia dettagli split che non split payment");
-				this.esigibilita_iva="Sia split payment che non split payment";
+				esigibilita="Sia split payment che non split payment";
 			}
 			if(count>0 && count2 == 0){
 				System.out.println("La fattura non è soggetta a split payment");
-				this.esigibilita_iva="Non soggetta a Split Payment";
+				esigibilita="Non soggetta a Split Payment";
 				
 			}
+			return esigibilita;
 		
 	}
  public  String calcola_tipo_dg(){
@@ -282,7 +284,7 @@ catch (XPathExpressionException ex) {
 		Commerciale comm = new Commerciale(this.file);
 		this.tipo_dg = calcola_tipo_dg();
 		this.numero_documento = comm.return_numero_documento();
-		calcola_esigibilita_iva();
+		this.esigibilita_iva=calcola_esigibilita_iva();
   somma_iva_dettaglio= comm.return_somma_imponibili();
               this.lista_anomalie.clear();
 
