@@ -15,7 +15,10 @@
     <p:tabView>
 		        <p:tab title="Testata">
  <h3>Dati Generali del Documento </h3>
- 
+        Tipo DG<h:outputText value="#{javaVersion.tipo_dg}" />
+       Numero Documento<h:outputText value="#{javaVersion.numero_documento}" />
+		        Esigibilità IVA<h:outputText value="#{javaVersion.esigibilita_iva}" />
+
 	 
 	 
    
@@ -52,7 +55,6 @@
    </div>         </p:tab>
         <p:tab title="Riepilogo per aliquota">
        <p:outputLabel for="basic" value="Riepilogo per aliquota" />
-       Tipo DG<h:outputText value="#{javaVersion.tipo_dg}" />
         <p:selectOneListbox id="basic" value="#{javaVersion.aliquota}" onchange="submit()" valueChangeListener="#{javaVersion.aliquotacambiata}"    >
         <f:selectItems value="#{javaVersion.lista_aliquote}" />        </p:selectOneListbox>
            <strong>Somma iva dettagli </strong> 

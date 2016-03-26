@@ -30,6 +30,7 @@ public class JavaVersion implements Serializable{
  private Double somma_imponibile_riepilogo;
  private String tipo_dg;
  private String esigibilita_iva;
+ private String numero_documento;
  public List<User> lista_somme= new ArrayList<User>();
 
  public  class User
@@ -105,14 +106,16 @@ this.file = "";
             }
             if(count==0 && count2 >0){
 				System.out.println("La fattura è split payment");
+				this.esigibilita_iva="Split Payment";
 				
 			}
 			if(count>0 && count2 >0){
 				System.out.println("La fattura presenta sia dettagli split che non split payment");
-				
+				this.esigibilita_iva="Sia split payment che non split payment";
 			}
 			if(count>0 && count2 == 0){
 				System.out.println("La fattura non è soggetta a split payment");
+				this.esigibilita_iva="Non soggetta a Split Payment";
 				
 			}
 		
@@ -222,7 +225,6 @@ this.file = "";
  }
  public void aliquotacambiata(ValueChangeEvent event ) {
 	         
-  this.tipo_dg = calcola_tipo_dg();
 
 
   try{
@@ -272,13 +274,15 @@ catch (XPathExpressionException ex) {
  }
  public void ivacambiata(ValueChangeEvent event) {
 	         
-  
+
 
   try{
 	  if((event.getNewValue().toString()) != ""){
 	  this.file= (event.getNewValue().toString());
 		Commerciale comm = new Commerciale(this.file);
 		this.tipo_dg = calcola_tipo_dg();
+		this.numero_documento = comm.return_numero_documento();
+		calcola_esigibilita_iva();
   somma_iva_dettaglio= comm.return_somma_imponibili();
               this.lista_anomalie.clear();
 
@@ -356,6 +360,18 @@ public String getTipo_dg() {
  */
 public void setTipo_dg(String tipo_dg) {
 	this.tipo_dg = tipo_dg;
+}
+/**
+ * @return the tipo_dg
+ */
+public String getnumero_documento() {
+	return numero_documento;
+}
+/**
+ * @param tipo_dg the tipo_dg to set
+ */
+public void setnumero_documento(String numero_documento) {
+	this.numero_documento = numero_documento;
 }
 /**
  * @return the esigibilita_iva
