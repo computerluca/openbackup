@@ -341,15 +341,16 @@ catch (XPathExpressionException ex) {
 	 try{
 	 FormatXML formatter = new FormatXML();
 	  String book =  this.file.toString();
-	  if(this.file != " "){
-	  String ciao = formatter.format(book);
-     this.file = ciao;  
- }
- else{
-	  FacesContext context = FacesContext.getCurrentInstance();
+	  if(this.file ==""){
+		  FacesContext context = FacesContext.getCurrentInstance();
 
         context.addMessage(null, new FacesMessage("Si è verificato un errore che ha reso la funzione instabile"));
 	}
+	else{
+	  String ciao = formatter.format(book);
+     this.file = ciao;  
+ }
+
 }
 catch(IOException e){
 	
