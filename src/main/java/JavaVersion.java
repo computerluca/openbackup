@@ -285,6 +285,7 @@ catch (XPathExpressionException ex) {
 		this.tipo_dg = calcola_tipo_dg();
 		this.numero_documento = comm.return_numero_documento();
 		this.esigibilita_iva=calcola_esigibilita_iva();
+		this.data_documento = comm.return_data_documento();
   somma_iva_dettaglio= comm.return_somma_imponibili();
               this.lista_anomalie.clear();
 
@@ -370,10 +371,20 @@ public String getnumero_documento() {
 	return numero_documento;
 }
 /**
+ * 
  * @param tipo_dg the tipo_dg to set
  */
 public void setnumero_documento(String numero_documento) {
 	this.numero_documento = numero_documento;
+}
+public String getdata_documento() {
+	return data_documento;
+}
+/**
+ * @param tipo_dg the tipo_dg to set
+ */
+public void setdata_documento(String data_documento) {
+	this.data_documento = data_documento;
 }
 /**
  * @return the esigibilita_iva
