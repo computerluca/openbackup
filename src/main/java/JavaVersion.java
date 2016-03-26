@@ -344,7 +344,7 @@ catch (XPathExpressionException ex) {
 	  if(this.file ==""){
 		  FacesContext context = FacesContext.getCurrentInstance();
 
-        context.addMessage(null, new FacesMessage("Si è verificato un errore che ha reso la funzione instabile"));
+        context.addMessage(null, new FacesMessage("E' necessario valorizzare il file xml"));
 	}
 	else{
 	  String ciao = formatter.format(book);
