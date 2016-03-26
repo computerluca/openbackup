@@ -346,7 +346,9 @@ catch (XPathExpressionException ex) {
      this.file = ciao;  
  }
  else{
-	 
+	  FacesContext context = FacesContext.getCurrentInstance();
+
+        context.addMessage(null, new FacesMessage("Si è verificato un errore che ha reso la funzione instabile"));
 	}
 }
 catch(IOException e){
