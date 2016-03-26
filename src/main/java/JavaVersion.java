@@ -31,6 +31,7 @@ public class JavaVersion implements Serializable{
  private String tipo_dg;
  private String esigibilita_iva;
  private String numero_documento;
+ private String data_documento;
  public List<User> lista_somme= new ArrayList<User>();
 
  public  class User
