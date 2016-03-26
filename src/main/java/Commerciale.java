@@ -1032,6 +1032,42 @@ public NodeList return_lista_imponibili_riepilogo2() {
         return abb;
 
      }
+     public  String return_descrizione() {
+        setxPath(XPathFactory.newInstance().newXPath());
+        String abb = null;
+
+        String expression = "FatturaElettronica/FatturaElettronicaBody/DatiGenerali/DatiGeneraliDocumento";
+        try {
+
+            this.setNode2((NodeList) getxPath().compile(expression).evaluate(getDoc(), XPathConstants.NODESET));
+
+        } catch (XPathExpressionException ex) {
+
+        }
+
+        for (int i = 0; i < getNode2().getLength(); i++) {
+            Node nNode = getNode2().item(i);
+            System.out.println("\nCurrent Element :"
+                    + nNode.getNodeName());
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nNode;
+
+                /* System.out.println("Arrotondamento : " 
+                 + eElement
+                 .getElementsByTagName("Arrotondamento")
+                 .item(0)
+                 .getTextContent());*/
+                if (eElement.getElementsByTagName("Causale").getLength() >= 1) {
+                    abb = eElement.getElementsByTagName("Causale").item(0).getTextContent().trim();
+                }
+
+            
+            
+		}
+        }
+        return abb;
+
+     }
      public  String return_data_documento() {
         setxPath(XPathFactory.newInstance().newXPath());
         String abb = null;

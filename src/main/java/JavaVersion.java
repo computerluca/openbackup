@@ -32,6 +32,7 @@ public class JavaVersion implements Serializable{
  private String esigibilita_iva;
  private String numero_documento;
  private String data_documento;
+ private String descrizione;
  public List<User> lista_somme= new ArrayList<User>();
 
  public  class User
@@ -287,6 +288,7 @@ catch (XPathExpressionException ex) {
 		this.numero_documento = comm.return_numero_documento();
 		this.esigibilita_iva=calcola_esigibilita_iva();
 		this.data_documento = comm.return_data_documento();
+		this.descrizione = comm.return_descrizione();
   somma_iva_dettaglio= comm.return_somma_imponibili();
               this.lista_anomalie.clear();
 
@@ -386,6 +388,15 @@ public String getdata_documento() {
  */
 public void setdata_documento(String data_documento) {
 	this.data_documento = data_documento;
+}
+public String getdescrizione() {
+	return descrizione;
+}
+/**
+ * @param tipo_dg the tipo_dg to set
+ */
+public void setdescrizione(String descrizione) {
+	this.descrizione = descrizione;
 }
 /**
  * @return the esigibilita_iva
