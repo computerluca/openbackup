@@ -287,6 +287,7 @@ catch (XPathExpressionException ex) {
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
                 RigheDettaglio userData = (RigheDettaglio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("righedettaglio"); 
             userData.inizializza();
+            this.lista_anomalie.clear();
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
                 this.lista_aliquote = comm.return_lista_aliquote();
                 for(Double aliquote : this.lista_aliquote){
