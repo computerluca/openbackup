@@ -280,6 +280,8 @@ catch (XPathExpressionException ex) {
 		Commerciale comm = new Commerciale(this.file);
 		this.tipo_dg = calcola_tipo_dg();
   somma_iva_dettaglio= comm.return_somma_imponibili();
+              this.lista_anomalie.clear();
+
 	    AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
 
    nuovo2.verifica_quadratura_imponibile();
@@ -287,7 +289,6 @@ catch (XPathExpressionException ex) {
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
                 RigheDettaglio userData = (RigheDettaglio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("righedettaglio"); 
             userData.inizializza();
-            this.lista_anomalie.clear();
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
                 this.lista_aliquote = comm.return_lista_aliquote();
                 for(Double aliquote : this.lista_aliquote){
