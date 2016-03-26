@@ -92,7 +92,7 @@ this.file = "";
 		
 		Commerciale comm = new Commerciale(this.file);
 		List<String> nl = comm.return_lista_imponibili_riepilogo();
-		String esigibilita;
+		String esigibilita=null;
 		System.out.println("ciao");
 		int count = 0;
 		int count2 = 0;
