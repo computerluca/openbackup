@@ -33,6 +33,8 @@ public class JavaVersion implements Serializable{
  private String numero_documento;
  private String data_documento;
  private String descrizione;
+ private Double somma_sconti_dettaglio;
+ private Double somma_maggiorazioni_dettaglio;
  public List<User> lista_somme= new ArrayList<User>();
 
  public  class User
@@ -219,7 +221,13 @@ this.file = "";
  public Double getiva() {
   return iva;
  }
- 
+   public void setsomma_sconti_dettaglio(Double somma_sconti_dettaglio) {
+  this.somma_sconti_dettaglio = somma_sconti_dettaglio;
+ }
+
+ public Double getsomma_sconti_dettaglio() {
+  return somma_sconti_dettaglio;
+ }
  public void setsomma_iva_dettaglio(Double sid) {
   this.somma_iva_dettaglio = 10.0;
  }
@@ -290,6 +298,7 @@ catch (XPathExpressionException ex) {
 		this.data_documento = comm.return_data_documento();
 		this.descrizione = comm.return_descrizione();
   somma_iva_dettaglio= comm.return_somma_imponibili();
+  this.somma_sconti_dettaglio = comm.return_somma_sconti_dettaglio;
  
               this.lista_anomalie.clear();
 
