@@ -296,7 +296,7 @@ catch (XPathExpressionException ex) {
 		this.esigibilita_iva=calcola_esigibilita_iva();
 		this.data_documento = comm.return_data_documento();
 		this.descrizione = comm.return_descrizione();
-  somma_iva_dettaglio= comm.return_somma_imponibili();
+  this.somma_iva_dettaglio= comm.return_somma_imponibili();
   this.somma_sconti_dettaglio = comm.return_somma_sconti_dettaglio();
  
               this.lista_anomalie.clear();
