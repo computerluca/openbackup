@@ -30,8 +30,8 @@
    
     
           </p:tab>
-        <p:tab title="Commerciale">
- <h3>Commerciale</h3>
+        <p:tab title="Caricamento File XML">
+ <h3>Caricamento file xml</h3>
  <h:commandButton id="reset"  
 		value="Reset">
 		<f:actionListener type="JavaVersionActionListener" />
@@ -141,6 +141,19 @@
     </f:facet>
 </p:dataTable>
         </p:tab>
+         <p:tab title="Totali Generali Documenot">
+             <h3 style="margin-top: 0">Totali generali documento</h3>
+							<h1>Prezzo Totale   </h1><p:outputLabel value = '#{javaversion.somma_prezzo_totale}'></p:outputLabel>
+							<h1>Sconto   di dettaglio</h1><p:outputLabel></p:outputLabel>
+							<h1>Maggiorazione di dettaglio</h1>
+							<h1>Totale al netto dello sconto</h1>
+							<h1>Totale iva</h1>
+							<h1>Totale comprensivo d'iva</h1>
+							<h1>Arrotondamento</h1>
+							<h1>Abbuono</h1>
+							<h1>Totale con arrotondamento ed abbuono</h1>
+        </p:tab>
+        
         <p:tab title="Visualizza Anomalie">
              <h3 style="margin-top: 0">Lista Anomalie (vengono caricate automaticamente)</h3>
     <p:orderList value="#{javaVersion.lista_anomalie}" var="city"  itemLabel="#{city}" itemValue="#{city}" />
