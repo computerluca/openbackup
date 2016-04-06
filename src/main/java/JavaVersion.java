@@ -34,6 +34,7 @@ public class JavaVersion implements Serializable{
  private String data_documento;
  private String descrizione;
  private Double somma_sconti_dettaglio;
+ public Double prezzo_totale;
  public List<User> lista_somme= new ArrayList<User>();
 
  public  class User
@@ -233,6 +234,13 @@ this.file = "";
 
  public Double getsomma_iva_dettaglio() {
   return somma_iva_dettaglio;
+ }
+ public void setprezzo_totale(Double prezzo_totale) {
+  this.prezzo_totale = prezzo_totale
+ }
+
+ public Double getprezzo_totale() {
+  return prezzo_totale;
  }
  public void aliquotacambiata(ValueChangeEvent event ) {
 	         
