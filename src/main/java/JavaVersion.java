@@ -92,6 +92,11 @@ this.somma_imponibile_riepilogo = 0.00;
 this.somma_iva_dettaglio = 0.00;
 this.somma_iva_riepilogo = 0.00;
 this.file = "";
+this.totalone = 0.00;
+this.arrotondamento = 0.00;
+this.abbuono = 0.00;
+this.prezzo_totale = 0.00;
+this.iva_riepilogo = 0.00;
 
 	
 	}
