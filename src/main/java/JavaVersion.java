@@ -224,13 +224,7 @@ this.file = "";
  public Double getiva() {
   return iva;
  }
-   public void setsomma_sconti_dettaglio(Double somma_sconti_dettaglio) {
-  this.somma_sconti_dettaglio = somma_sconti_dettaglio;
- }
-
- public Double getsomma_sconti_dettaglio() {
-  return somma_sconti_dettaglio;
- }
+   
  public void setsomma_iva_dettaglio(Double sid) {
   this.somma_iva_dettaglio = 10.0;
  }
