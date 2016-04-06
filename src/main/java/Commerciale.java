@@ -871,7 +871,7 @@ public NodeList return_lista_imponibili_riepilogo2() {
                         somma_iva_riepilogo_file += round(imposto_arr);
                         if (!imposto_arr.equals(imposta_calcolata_arr)) {
 
-                            String anomalia = an.Crea_Anomalia("Riepilogo iva  " + aliquota + "numero" + n_riepilogo_per_aliquota, "Q", "Errore di quadratura dell'iva sul riepilogo", imposto_arr, imposta_calcolata);
+                            String anomalia = an.Crea_Anomalia("Riepilogo iva  " + aliquota + "numero" + n_riepilogo_per_aliquota, "Q", "Errore di quadratura dell'iva sul riepilogo", round(imposto_arr), round(imposta_calcolata));
                             lista_anomalie.add(anomalia);
                             System.out.println(anomalia);
                         }
