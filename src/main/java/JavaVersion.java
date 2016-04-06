@@ -305,7 +305,7 @@ catch (XPathExpressionException ex) {
    this.iva_riepilogo = comm.return_somma_iva_riepilogo();
    this.arrotondamento = comm.return_abbuono_di_testa();
    this.abbuono = comm.return_arrotondamento_di_testa();
-   this.totalone = round(this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono);
+   this.totalone = this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono;
               this.lista_anomalie.clear();
 
 	    AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
