@@ -305,7 +305,7 @@ catch (XPathExpressionException ex) {
 		this.data_documento = comm.return_data_documento();
 		this.descrizione = comm.return_descrizione();
   this.somma_sconti_dettaglio = comm.return_somma_sconti_dettaglio();
-   this.prezzo_totale  = round(comm.return_somma_imponibili());
+   this.prezzo_totale  = comm.return_somma_imponibili();
               this.lista_anomalie.clear();
 
 	    AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());

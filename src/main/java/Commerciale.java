@@ -268,7 +268,7 @@ BigDecimal bdTest = new BigDecimal(  number.toString());
           
         }
 
-        prezzo_tot = Double.parseDouble(prezzo_totale);
+        prezzo_tot = round(Double.parseDouble(prezzo_totale));
 
         return prezzo_tot;
 
