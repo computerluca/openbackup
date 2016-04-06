@@ -302,7 +302,7 @@ catch (XPathExpressionException ex) {
 		this.data_documento = comm.return_data_documento();
 		this.descrizione = comm.return_descrizione();
    this.prezzo_totale  = comm.return_somma_imponibili();
-   this.iva_riepilogo = round(comm.return_somma_iva_riepilogo());
+   this.iva_riepilogo = comm.return_somma_iva_riepilogo();
    this.arrotondamento = comm.return_abbuono_di_testa();
    this.abbuono = comm.return_arrotondamento_di_testa();
    this.totalone = round(this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono);
