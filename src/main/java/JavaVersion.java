@@ -236,7 +236,7 @@ this.file = "";
   return somma_iva_dettaglio;
  }
  public void setprezzo_totale(Double prezzo_totale) {
-  this.prezzo_totale = prezzo_totale
+  this.prezzo_totale = prezzo_totale;
  }
 
  public Double getprezzo_totale() {
