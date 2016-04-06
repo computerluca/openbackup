@@ -307,12 +307,11 @@ catch (XPathExpressionException ex) {
 		this.esigibilita_iva=calcola_esigibilita_iva();
 		this.data_documento = comm.return_data_documento();
 		this.descrizione = comm.return_descrizione();
-  this.somma_sconti_dettaglio = comm.return_somma_sconti_dettaglio();
    this.prezzo_totale  = comm.return_somma_imponibili();
    this.iva_riepilogo = round(comm.return_somma_iva_riepilogo());
    this.arrotondamento = comm.return_abbuono_di_testa();
    this.abbuono = comm.return_arrotondamento_di_testa();
-   this.totale = round(this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono);
+   this.totalone = round(this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono);
               this.lista_anomalie.clear();
 
 	    AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
