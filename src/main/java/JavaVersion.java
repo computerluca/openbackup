@@ -292,7 +292,7 @@ catch (XPathExpressionException ex) {
 		this.data_documento = comm.return_data_documento();
 		this.descrizione = comm.return_descrizione();
   somma_iva_dettaglio= comm.return_somma_imponibili();
-  this.somma_prezzo_totale = somma_iva_dettaglio;
+  this.somma_prezzo_totale = this.somma_iva_dettaglio;
  
               this.lista_anomalie.clear();
 
