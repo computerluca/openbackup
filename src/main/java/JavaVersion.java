@@ -33,8 +33,11 @@ public class JavaVersion implements Serializable{
  private String numero_documento;
  private String data_documento;
  private String descrizione;
- private Double somma_sconti_dettaglio;
  public Double prezzo_totale;
+ public Double iva_riepilogo;
+ public Double arrotondamento;
+ public Double abbuono;
+ public Double totalone;
  public List<User> lista_somme= new ArrayList<User>();
 
  public  class User
@@ -306,6 +309,10 @@ catch (XPathExpressionException ex) {
 		this.descrizione = comm.return_descrizione();
   this.somma_sconti_dettaglio = comm.return_somma_sconti_dettaglio();
    this.prezzo_totale  = comm.return_somma_imponibili();
+   this.iva_riepilogo = round(comm.return_somma_iva_riepilogo());
+   this.arrotondamento = comm.return_abbuono_di_testa();
+   this.abbuono = comm.return_arrotondamento_di_testa();
+   this.totale = round(this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono);
               this.lista_anomalie.clear();
 
 	    AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
