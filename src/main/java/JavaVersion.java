@@ -39,6 +39,7 @@ public class JavaVersion implements Serializable{
  public Double abbuono;
  private Double totalone;
  public List<User> lista_somme= new ArrayList<User>();
+private double totale;
 
  public  class User
 {
@@ -101,6 +102,14 @@ this.iva_riepilogo = 0.00;
 	
 	}
  
+	public Double getIva_riepilogo() {
+	return iva_riepilogo;
+}
+
+public void setIva_riepilogo(Double iva_riepilogo) {
+	this.iva_riepilogo = iva_riepilogo;
+}
+
 	public Double getTotalone() {
 	return totalone;
 }
@@ -253,7 +262,24 @@ public void setTotalone(Double totalone) {
  public Double getprezzo_totale() {
   return prezzo_totale;
  }
- public void aliquotacambiata(ValueChangeEvent event ) {
+ 
+ public Double getArrotondamento() {
+	return arrotondamento;
+}
+
+public void setArrotondamento(Double arrotondamento) {
+	this.arrotondamento = arrotondamento;
+}
+
+public Double getAbbuono() {
+	return abbuono;
+}
+
+public void setAbbuono(Double abbuono) {
+	this.abbuono = abbuono;
+}
+
+public void aliquotacambiata(ValueChangeEvent event ) {
 	         
 
 
@@ -319,6 +345,8 @@ catch (XPathExpressionException ex) {
    this.iva_riepilogo = comm.return_somma_iva_riepilogo();
    this.arrotondamento = comm.return_abbuono_di_testa();
    this.abbuono = comm.return_arrotondamento_di_testa();
+   this.setTotale(this.prezzo_totale+this.iva_riepilogo);
+
    this.totalone = this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono;
               	this.lista_anomalie.clear();
 
@@ -442,6 +470,14 @@ public String getEsigibilita_iva() {
  */
 public void setEsigibilita_iva(String esigibilita_iva) {
 	this.esigibilita_iva = esigibilita_iva;
+}
+
+public double getTotale() {
+	return totale;
+}
+
+public void setTotale(double totale) {
+	this.totale = totale;
 }
 
 }
