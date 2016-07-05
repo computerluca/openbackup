@@ -31,13 +31,13 @@
     
           </p:tab>
            <p:tab title="Commerciale">
- <h3>Dati Generali del Documento </h3>
-        Tipo Documento Gestionale<h:outputText value="#{javaVersion.tipo_dg}" /><br />
-       Numero Documento<h:outputText value="#{javaVersion.numero_documento}" /><br />
-		        Esigibilità IVA<h:outputText value="#{javaVersion.esigibilita_iva}" /><br/>
-	Data Documento<h:outputText value="#{javaVersion.totalone}" /><br/>
-	Descrizione<h:outputText value="#{javaVersion.descrizione}" /><br/>
-
+ <h3>Commerciale </h3>
+        Imponibile<h:outputText value="#{javaVersion.prezzo_totale}" /><br />
+       IVA<h:outputText value="#{javaVersion.iva_riepilogo}" /><br />
+		       Totale<h:outputText value="#{javaVersion.totale}" /><br/>
+	Arrotondamento di testa<h:outputText value="#{javaVersion.arrotondamento}" /><br/>
+	Abbuono di testa<h:outputText value="#{javaVersion.abbuono}" /><br/>
+Totale fattura <h:outputText value="#{javaVersion.totalone}" />
 
 	 
 	 
