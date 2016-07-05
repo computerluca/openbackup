@@ -37,7 +37,7 @@ public class JavaVersion implements Serializable{
  public Double iva_riepilogo;
  public Double arrotondamento;
  public Double abbuono;
- public Double totalone;
+ private Double totalone;
  public List<User> lista_somme= new ArrayList<User>();
 
  public  class User
@@ -100,6 +100,15 @@ this.iva_riepilogo = 0.00;
 
 	
 	}
+ 
+	public Double getTotalone() {
+	return totalone;
+}
+
+public void setTotalone(Double totalone) {
+	this.totalone = totalone;
+}
+
 	public String calcola_esigibilita_iva(){
 		
 		Commerciale comm = new Commerciale(this.file);
@@ -311,15 +320,15 @@ catch (XPathExpressionException ex) {
    this.arrotondamento = comm.return_abbuono_di_testa();
    this.abbuono = comm.return_arrotondamento_di_testa();
    this.totalone = this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono;
-              this.lista_anomalie.clear();
+              	this.lista_anomalie.clear();
 
-	    AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
+              	AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
 
-   nuovo2.verifica_quadratura_imponibile();
+	    		nuovo2.verifica_quadratura_imponibile();
                 nuovo2.verifica_quadratura_iva();
                 nuovo2.verifica_quadratura_prezzo_unitario_prezzototale();
                 RigheDettaglio userData = (RigheDettaglio) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("righedettaglio"); 
-            userData.inizializza();
+                userData.inizializza();
                 this.lista_anomalie = nuovo2.return_lista_anomalie();
                 this.lista_aliquote = comm.return_lista_aliquote();
                 for(Double aliquote : this.lista_aliquote){
