@@ -79,7 +79,7 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
 <h:form enctype="multipart/form-data">
     <p:growl id="messages" showDetail="true" />
  
-    <p:fileUpload value="#{javaVersion.file}" mode="simple" skinSimple="true"/>
+    <p:fileUpload value="#{javaVersion.input_file}" mode="simple" skinSimple="true"/>
  
     <p:commandButton value="Submit" ajax="false" actionListener="#{javaVersion.upload}" />
 </h:form>

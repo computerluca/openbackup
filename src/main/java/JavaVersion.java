@@ -17,7 +17,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.XPathExpressionException;
-import org.primefaces.event.FileUploadEvent;
 import org.primefaces.model.UploadedFile;
 
 import java.io.IOException;
@@ -27,7 +26,11 @@ import java.io.IOException;
 
 public class JavaVersion implements Serializable{
  
- private Double iva;
+ /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+private Double iva;
  private String file;
  private List<String> lista_anomalie;
  private List<Double> lista_aliquote;
@@ -47,7 +50,7 @@ public class JavaVersion implements Serializable{
  public Double abbuono;
  private Double totalone;
  public List<User> lista_somme= new ArrayList<User>();
- private UploadedFile input_file;
+ public UploadedFile input_file;
 
 private double totale;
 
@@ -128,11 +131,11 @@ public void setTotalone(Double totalone) {
 	this.totalone = totalone;
 }
 
-public UploadedFile getFile() {
+public UploadedFile getinput_file() {
     return input_file;
 }
 
-public void setFile(UploadedFile input_file) {
+public void setinput_file(UploadedFile input_file) {
     this.input_file = input_file;
 }
  
