@@ -138,8 +138,9 @@ public void setFile(UploadedFile input_file) {
  
 public void upload() {
     if(input_file != null) {
-        FacesMessage message = new FacesMessage("Succesful", input_file.getFileName() + " is uploaded.");
-        FacesContext.getCurrentInstance().addMessage(null, message);
+        FacesContext context = FacesContext.getCurrentInstance();
+        context.addMessage(null, new FacesMessage("Succesful", input_file.getFileName() + " is uploaded."));
+
     }
 }
 	public String calcola_esigibilita_iva(){
