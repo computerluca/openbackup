@@ -132,13 +132,13 @@ public UploadedFile getFile() {
     return input_file;
 }
 
-public void setFile(UploadedFile file) {
-    this.input_file = file;
+public void setFile(UploadedFile input_file) {
+    this.input_file = input_file;
 }
  
 public void upload() {
     if(input_file != null) {
-        FacesMessage message = new FacesMessage("Succesful", input_file.toString() + " is uploaded.");
+        FacesMessage message = new FacesMessage("Succesful", input_file.getFileName() + " is uploaded.");
         FacesContext.getCurrentInstance().addMessage(null, message);
     }
 }
