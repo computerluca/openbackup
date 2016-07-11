@@ -1,4 +1,6 @@
 
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
@@ -6,12 +8,21 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.event.ValueChangeEvent;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
-import java.util.List;import java.util.ArrayList;
+
 import java.util.*;
+
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.XPathExpressionException;
+
 import java.io.IOException;
+
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.*; 
+
 import org.w3c.dom.*;
 
 @ManagedBean(name = "javaVersion")
@@ -341,13 +352,13 @@ catch (XPathExpressionException ex) {
 		this.esigibilita_iva=calcola_esigibilita_iva();
 		this.data_documento = comm.return_data_documento();
 		this.descrizione = comm.return_descrizione();
-   this.prezzo_totale  = comm.return_somma_imponibili();
-   this.iva_riepilogo = comm.return_somma_iva_riepilogo();
-   this.arrotondamento = comm.return_abbuono_di_testa();
-   this.abbuono = comm.return_arrotondamento_di_testa();
-   this.setTotale(this.prezzo_totale+this.iva_riepilogo);
+   this.prezzo_totale  = comm.round(comm.return_somma_imponibili());
+   this.iva_riepilogo = comm.round(comm.return_somma_iva_riepilogo());
+   this.abbuono = comm.round(comm.return_abbuono_di_testa());
+   this.arrotondamento = comm.round(comm.return_arrotondamento_di_testa());
+   this.setTotale(comm.round(this.prezzo_totale+this.iva_riepilogo));
 
-   this.totalone = this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono;
+   this.totalone = comm.round(this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono);
               	this.lista_anomalie.clear();
 
               	AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
@@ -378,6 +389,25 @@ catch (XPathExpressionException ex) {
             }
                
  }
+ public void create_html(){
+	 try
+     {
+         TransformerFactory tFactory = TransformerFactory.newInstance();
+
+         Source xslDoc = new StreamSource("src/xmlToHtml/catalog.xsl");
+         Source xmlDoc = new StreamSource(file);
+
+         String outputFileName = "src/xmlToHtml/catalog.html";
+         OutputStream htmlFile = new FileOutputStream(outputFileName);
+
+         Transformer transformer = tFactory.newTransformer(xslDoc);
+         transformer.transform(xmlDoc, new StreamResult(htmlFile));
+     }
+     catch(Exception e)
+     {
+         e.printStackTrace();
+     }
+ }
 	public void resetta(){
 	this.somma_iva_dettaglio = 0.00;
 	this.somma_iva_riepilogo = 0.00;
@@ -395,6 +425,7 @@ catch (XPathExpressionException ex) {
 
 	 
  }
+	
  public void format(){
 	 try{
 	 FormatXML formatter = new FormatXML();
