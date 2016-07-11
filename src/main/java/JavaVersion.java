@@ -17,13 +17,10 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.XPathExpressionException;
+import org.primefaces.event.FileUploadEvent;
+import org.primefaces.model.UploadedFile;
 
 import java.io.IOException;
-
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.xpath.*; 
-
-import org.w3c.dom.*;
 
 @ManagedBean(name = "javaVersion")
 @SessionScoped
@@ -50,6 +47,8 @@ public class JavaVersion implements Serializable{
  public Double abbuono;
  private Double totalone;
  public List<User> lista_somme= new ArrayList<User>();
+ private UploadedFile input_file;
+
 private double totale;
 
  public  class User
@@ -129,6 +128,20 @@ public void setTotalone(Double totalone) {
 	this.totalone = totalone;
 }
 
+public UploadedFile getFile() {
+    return input_file;
+}
+
+public void setFile(UploadedFile file) {
+    this.input_file = file;
+}
+ 
+public void upload() {
+    if(file != null) {
+        FacesMessage message = new FacesMessage("Succesful", input_file.getContents() + " is uploaded.");
+        FacesContext.getCurrentInstance().addMessage(null, message);
+    }
+}
 	public String calcola_esigibilita_iva(){
 		
 		Commerciale comm = new Commerciale(this.file);

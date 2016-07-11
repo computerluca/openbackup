@@ -75,7 +75,15 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
 	   
 	   <h:inputTextarea value="#{javaVersion.file}" onchange="submit()"
 	valueChangeListener="#{javaVersion.ivacambiata}" style="width:1000px;heigth:2000px;"/>
-	<h:inputFile value="{#javaVersion.input_file}" />
+
+<h:form enctype="multipart/form-data">
+    <p:growl id="messages" showDetail="true" />
+ 
+    <p:fileUpload value="#{javaVersion.file}" mode="simple" skinSimple="true"/>
+ 
+    <p:commandButton value="Submit" ajax="false" actionListener="#{javaVersion.upload}" disabled="true" />
+</h:form>
+
    <div>
    
     
