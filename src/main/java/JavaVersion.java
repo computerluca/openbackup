@@ -139,7 +139,7 @@ public void setFile(UploadedFile input_file) {
 public void upload() {
     if(input_file != null) {
         FacesContext context = FacesContext.getCurrentInstance();
-        context.addMessage(null, new FacesMessage("Succesful", input_file.getContentType() + " is uploaded."));
+        context.addMessage(null, new FacesMessage("Succesful", input_file.getContentType().toString() + " is uploaded."));
 
     }
 }
