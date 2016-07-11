@@ -138,7 +138,7 @@ public void setFile(UploadedFile file) {
  
 public void upload() {
     if(file != null) {
-        FacesMessage message = new FacesMessage("Succesful", input_file.getContents() + " is uploaded.");
+        FacesMessage message = new FacesMessage("Succesful", input_file.getContents().toString() + " is uploaded.");
         FacesContext.getCurrentInstance().addMessage(null, message);
     }
 }
