@@ -47,6 +47,18 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
    
     
           </p:tab>
+          <p:tab title="Dati del soggetto">
+ 
+     
+
+	 
+	 
+   
+	   
+    
+   
+    
+          </p:tab>
         <p:tab title="Caricamento File XML">
  <h3>Caricamento file xml</h3>
  <h:commandButton id="reset"  
@@ -63,26 +75,14 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
 
 
 	  </h:commandButton>
-	  <h:commandButton id="savehistory" 
-		value="Salva file nello storico">
-		<f:actionListener type="SaveActionListener" />
-
-
-
-	  </h:commandButton>
+	 
 	 
    
 	   
 	   <h:inputTextarea value="#{javaVersion.file}" onchange="submit()"
 	valueChangeListener="#{javaVersion.ivacambiata}" style="width:1000px;heigth:2000px;"/>
 
-<h:form enctype="multipart/form-data">
-    <p:growl id="messages" showDetail="true" />
- 
-    <p:fileUpload value="#{javaVersion.input_file}" mode="simple" skinSimple="true"/>
- 
-    <p:commandButton value="Submit" ajax="false" actionListener="#{javaVersion.upload}" />
-</h:form>
+
 
    <div>
    
@@ -117,10 +117,7 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
 
 
 	  </h:commandButton>
-	  			<h:commandButton id="save" 
-		value="Salva file xml">
-		<f:actionListener type="SaveActionListener" />
-		</h:commandButton>
+	  			
             <p:dataTable var="car" value="#{righedettaglio.orderList}"
             rows="10" selectionMode="single" rowKey="#{car.orderNo}"
                          paginator="true"
