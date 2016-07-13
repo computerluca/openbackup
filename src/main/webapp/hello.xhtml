@@ -126,7 +126,7 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
                                         emptyMessage="Nessun risultato trovato">
   
      <p:column filterBy="#{car.orderNo}" headerText="Numero Riga" footerText="contains" filterMatchMode="contains">
-            <h:outputText value="#{car.id}" />
+            <h:outputText value="#{car.orderNo}" />
         </p:column>
  
     <p:column headerText="Descrizione" sortBy="#{car.productName}" footerText="contains" filterMatchMode="contains">
