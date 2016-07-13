@@ -124,7 +124,7 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
                          paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                          rowsPerPageTemplate="5,10,15"
                                         emptyMessage="Nessun risultato trovato">
-    <p:column headerText="Numero Riga" sortBy="#{car.orderNo}" editable="true">
+    <p:column headerText="Numero Riga" sortBy="#{car.orderNo}" footerText="contains" filterMatchMode="contains">
         <h:outputText value="#{car.orderNo}" />
     </p:column>
     
