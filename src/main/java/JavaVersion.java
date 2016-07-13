@@ -50,6 +50,7 @@ private Double iva;
  public Double abbuono;
  private Double totalone;
  private String partita_iva;
+ private String denominazione;
  public List<User> lista_somme= new ArrayList<User>();
  public UploadedFile input_file;
 
@@ -376,6 +377,7 @@ catch (XPathExpressionException ex) {
 
    this.totalone = comm.round(this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono);
    this.partita_iva = comm.return_partita_iva_soggetto();
+   this.denominazione = comm.return_denominazione_soggetto();
               	this.lista_anomalie.clear();
 
               	AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
@@ -534,6 +536,14 @@ public String getPartita_iva() {
 
 public void setPartita_iva(String partita_iva) {
 	this.partita_iva = partita_iva;
+}
+
+public String getDenominazione() {
+	return denominazione;
+}
+
+public void setDenominazione(String denominazione) {
+	this.denominazione = denominazione;
 }
 
 }
