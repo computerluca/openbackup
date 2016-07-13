@@ -49,6 +49,7 @@ private Double iva;
  public Double arrotondamento;
  public Double abbuono;
  private Double totalone;
+ private String partita_iva;
  public List<User> lista_somme= new ArrayList<User>();
  public UploadedFile input_file;
 
@@ -374,6 +375,7 @@ catch (XPathExpressionException ex) {
    this.setTotale(comm.round(this.prezzo_totale+this.iva_riepilogo));
 
    this.totalone = comm.round(this.prezzo_totale+this.iva_riepilogo+this.arrotondamento-this.abbuono);
+   this.partita_iva = comm.return_partita_iva_soggetto();
               	this.lista_anomalie.clear();
 
               	AnomalieQuadratura nuovo2 = new AnomalieQuadratura(event.getNewValue().toString());
@@ -524,6 +526,14 @@ public double getTotale() {
 
 public void setTotale(double totale) {
 	this.totale = totale;
+}
+
+public String getPartita_iva() {
+	return partita_iva;
+}
+
+public void setPartita_iva(String partita_iva) {
+	this.partita_iva = partita_iva;
 }
 
 }

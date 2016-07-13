@@ -101,6 +101,43 @@ public class Commerciale {
         return righe_dettaglio;
 
     }
+    public String return_partita_iva_soggetto() {
+        setxPath(XPathFactory.newInstance().newXPath());
+        String abb = "";
+
+        String expression = "FatturaElettronica/FatturaElettronicaHeader/CedentePrestatore/DatiAnagrafici/IdFiscaleIVA";
+        try {
+
+            this.setNode2((NodeList) getxPath().compile(expression).evaluate(getDoc(), XPathConstants.NODESET));
+
+        } catch (XPathExpressionException ex) {
+
+        }
+
+        for (int i = 0; i < getNode2().getLength(); i++) {
+            Node nNode = getNode2().item(i);
+            System.out.println("\nCurrent Element :"
+                    + nNode.getNodeName());
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nNode;
+
+                /* System.out.println("Arrotondamento : " 
+                 + eElement
+                 .getElementsByTagName("Arrotondamento")
+                 .item(0)
+                 .getTextContent());*/
+                if (eElement.getElementsByTagName("IdPaese").getLength() >= 1) {
+                    abb = abb+ eElement.getElementsByTagName("IdPaese").item(0).getTextContent().trim();
+                }
+                if (eElement.getElementsByTagName("IdCodice").getLength() >= 1) {
+                    abb = abb+ eElement.getElementsByTagName("IdCodice").item(0).getTextContent().trim();
+                }
+
+            }
+        }
+        return abb;
+
+    }
 
     public Double round(Double number) {
 BigDecimal bdTest = new BigDecimal(  number.toString());
