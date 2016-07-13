@@ -48,7 +48,7 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
     
           </p:tab>
           <p:tab title="Dati del soggetto">
- Partita IVA <h:outputText value="#{javaVersion.partita_iva}" />
+ Partita IVA <h:outputText value="#{javaVersion.partita_iva}" /><br />
  Denominazione <h:outputText value="#{javaVersion.denominazione}"/>
 
 	 
@@ -128,10 +128,10 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
         <h:outputText value="#{car.orderNo}" />
     </p:column>
  
-    <p:column headerText="Descrizione" sortBy="productName" footerText="contains" filterMatchMode="contains">
+    <p:column headerText="Descrizione" sortBy="#{car.productName}" footerText="contains" filterMatchMode="contains">
         <h:outputText value="#{car.productName}" />
     </p:column>
-    <p:column headerText="PrezzoUnitario" >
+    <p:column headerText="PrezzoUnitario" sortBy="#{car.prezzo_unitario}" >
         <h:outputText value="#{car.prezzo_unitario}" />
     </p:column>
     <p:column headerText="Quantità">
