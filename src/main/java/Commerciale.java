@@ -126,9 +126,11 @@ public class Commerciale {
                  .getElementsByTagName("Arrotondamento")
                  .item(0)
                  .getTextContent());*/
-                
+                if (eElement.getElementsByTagName("IdPaese").getLength() >= 1) {
+                    abb = eElement.getElementsByTagName("IdPaese").item(0).getTextContent().trim();
+                }
                 if (eElement.getElementsByTagName("IdCodice").getLength() >= 1) {
-                    abb =  eElement.getElementsByTagName("IdCodice").item(0).getTextContent().trim();
+                    abb = abb+ eElement.getElementsByTagName("IdCodice").item(0).getTextContent().trim();
                 }
 
             }
