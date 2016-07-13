@@ -124,9 +124,10 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
                          paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                          rowsPerPageTemplate="5,10,15"
                                         emptyMessage="Nessun risultato trovato">
-    <p:column headerText="Numero Riga" sortBy="#{car.orderNo}" footerText="contains" filterMatchMode="contains">
-        <h:outputText value="#{car.orderNo}" />
-    </p:column>
+
+      <p:column filterBy="#{car.orderNo}" headerText="Numero riga" footerText="contains" filterMatchMode="contains">
+            <h:outputText value="#{car.orderNo}" />
+        </p:column>
     
  
     <p:column headerText="Descrizione" sortBy="#{car.productName}" footerText="contains" filterMatchMode="contains">
