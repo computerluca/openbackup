@@ -134,19 +134,19 @@ Totale fattura <h:outputText value="#{javaVersion.totalone}" />
     <p:column headerText="PrezzoUnitario" sortBy="#{car.prezzo_unitario}" >
         <h:outputText value="#{car.prezzo_unitario}" />
     </p:column>
-    <p:column headerText="Quantità">
+    <p:column headerText="Quantità" sortBy="#{car.quantita}">
         <h:outputText value="#{car.quantita}" />
     </p:column>
-    <p:column headerText="PrezzoTotale" >
+    <p:column headerText="PrezzoTotale" sortBy="#{car.prezzo_totale}">
         <h:outputText value="#{car.prezzo_totale}" />
     </p:column>
-    <p:column headerText="AliquotaIVA" >
+    <p:column headerText="AliquotaIVA" sortBy="#{car.aliquota_iva}">
         <h:outputText value="#{car.aliquota_iva}" />
     </p:column>
-    <p:column headerText="ImportoIva" >
+    <p:column headerText="ImportoIva" sortBy="#{car.importo_iva}">
         <h:outputText value="#{car.importo_iva}" />
     </p:column>
-    <p:column headerText="Totale" >
+    <p:column headerText="Totale" sortBy="#{car.totale}">
         <h:outputText value="#{car.totale}" />
     </p:column>
    <!-- Anche questo commento non verrà renderizzato 
