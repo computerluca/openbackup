@@ -7,6 +7,14 @@ public class AC03_CODICI_IVA{
 	public Double aliquota;
 	public String descrizione;
 	
+	
+	
+	
+	
+	
+	
+	
+	
 		AC03_CODICI_IVA (){
 	
 	
